@@ -1,0 +1,252 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 5</title>
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="../index.html">back</a>
+    </nav>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+            <p>What is javascript?</p>
+            <p>a lightweight programming language ("scripting language") that allows for interativity, using data, performing calculations, and changing HTML elements on the page.</p>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+            <p>The DOM is a programming interface for web documents. </p>
+            <p>It represents the page so that programs can change the document structure, style, and content. </p> 
+            <p>The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <p>p5.js is a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else! p5.js is free and open-source because we believe software, and the tools to learn it, should be accessible to everyone.</p>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <p>Lets take a look at the basics: <a href="https://editor.p5js.org/">https://editor.p5js.org/</a></p>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <pre><code>//this runs at the start and only runs once
+setup(){
+
+}
+            
+//this loops every frame
+draw(){
+     
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+            <pre><code>//this runs at start and only runs once
+
+//usually you will include the canvas size 
+and assign values to varriables or populate
+arrays of values
+                
+setup(){
+
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <a href="https://p5js.org/reference/#/p5/createCanvas">createCanvas(length, width);</a>
+        <pre><code>//lets make a canvas that has dimensions of 1000 x 1000
+
+setup(){
+
+    createCanvas(800,800) 
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+            <a href="https://p5js.org/reference/#/p5/background">background(r,g,b);</a>
+            <pre><code>//lets make a background
+that is your favorite shade of 
+pink using r, g, b notation
+
+setup(){
+
+    createCanvas(800,800)
+    background(255,0,255);
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <a href="https://p5js.org/reference/#/p5/background">background(#ffffff)</a>
+        <pre><code>//lets make a background that is your favorite shade 
+of blue in six-digit hexidecimal notation
+
+setup(){
+
+    createCanvas(800,800)
+    background(255,0,255); 
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <pre><code>//you will want to draw most of everything in the draw 
+function because of the fact that it loops constantly, 
+allowing for animation and changing over time.
+
+draw(){
+
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <a href="https://p5js.org/reference/#/p5/ellipse">ellipse(x, y, w, [h])</a>
+        <pre><code>//lets draw a circle, using the parameters above, 
+input numerical values to draw a circle at the 
+top right corner of the canvas
+
+draw(){
+            
+ellipse(800,100, 100, 100); 
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <a href="https://p5js.org/reference/#/p5/rect">rect(x, y, w, [h])</a>
+        <pre><code>//lets draw a rectangle, using the parameters 
+above, input numerical values to draw a rectangle 
+at the bottom right corner of the canvas
+
+draw(){
+
+    rect(800,800, 100, 100); 
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <a href="https://p5js.org/reference/#/p5/line">line(x1, y1, x2, y2)</a>
+        <pre><code>//lets draw a line, using the parameters above, input 
+numerical values to draw a diagonal line at the bottom 
+left corner of the canvas
+
+draw(){
+
+    line(100, 600, 400, 900); 
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <a href="https://p5js.org/reference/#/p5/triangle">triangle(x1, y1, x2, y2, x3, y3)</a>
+        <pre><code>//lets draw a triangle, using the parameters above, 
+input numerical values to draw a triangle at the top 
+left corner of the canvas
+
+draw(){
+
+    triangle(130, 175, 158, 120, 186, 175); 
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <a href="https://p5js.org/reference/#/p5/quad">quad(x1, y1, x2, y2, x3, y3, x4, y4)</a>
+        <pre><code>//lets draw a quad, using the parameters above, 
+input numerical values to draw a quad at the top 
+center of the canvas
+
+draw(){
+
+    quad(438, 131, 586, 220, 469, 363, 330, 276); 
+}</code></pre>
+        </div>
+    </div>
+
+    <div class="slide-item">
+        <div class="slide-content">
+        <a href="https://p5js.org/reference/#/p5/fill">fill(v1, v2, v3, [alpha]);</a>
+        <pre><code>//as long as you write this above the line that 
+draws a shape, the shape will fill with that color.
+Fill each shape with your chosen colors. 
+In order to switch color, write a new color 
+above the next shape. 
+If you want them to all be one color, 
+just write it above. Think of it as 
+checking a setting off before you draw a shape
+
+draw(){
+    fill(0, 255, 0);
+    ellipse(800,100, 100, 100);
+}</code></pre>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        <p>In javascript, we have these things called variables. We declare them with a name and set a value to them.</p>
+        <ol>Variables can be
+            <li>Numbers</li>
+            <li>Strings or words</li>
+            <li>Boolean or True/False</li>
+        </ol>
+        <p>Declaring a variable looks something like <br> 
+            <code>let x = 10;</code><br>
+            <code>let name = "jane"</code><br>
+            <code>let happy = true</code></p>
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+            We are going to look at some javascript together <a href="example/index.html">here.</a> Lets make an image show up when we click and drag it.
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        
+        </div>
+    </div>
+    <div class="slide-item">
+        <div class="slide-content">
+        
+        </div>
+    </div>
+    </div>
+</body>
+</html>

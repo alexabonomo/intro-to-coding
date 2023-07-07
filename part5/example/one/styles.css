@@ -1,0 +1,8 @@
+#appear{
+    display: none;
+}
+
+.dragme{
+    position:relative;
+    cursor: move;
+}
