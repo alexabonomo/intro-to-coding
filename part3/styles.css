@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'ITC Garamond';
+    src: url(../fonts/font.woff);
+    src: url(../fonts/font.woff2);
+}
+
+@font-face {
+    font-family: 'ABC Diatype-Light';
+    src: url(../fonts/ABCDiatype-Light.woff);
+    src: url(../fonts/ABCDiatype-Light.woff2);
+}
+
+body{
+    font-family: 'ITC Garamond';
+    font-size: 3rem;
+    background-color: black;
+}
+nav{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+nav a:visited {
+    color: white;
+    
+}
+#slide-container{
+    width: 1200px;
+    margin: auto;
+}
+
+.slide-item{
+    border: 1px black solid;
+    margin: 100px 0px;
+    min-height: 800px;
+    background-color: white;
+}
+.slide-content{
+    margin: 100px;
+    min-height: 600px;
+}
+
+ul{
+    padding: 0px 100px;
+}
+
+a{
+
+}
+
+a:visited{
+    color: black;
+}
+
+code{
+    background-color: #dedcdc;
+    padding: 3px 7px;
+    font-size: 2rem;
+}
+
+.hover-item{
+    width: 500px;
+    height: 500px;
+    background-color: black;
+  }
+  
+  #one:hover {
+    background-color: hotpink;
+    transition: 2s;
+  }
+
+  #two {
+    transition: 2s;
+  }
+  
+  #two:hover {
+    background-color: hotpink;
+    transition: 2s;
+  }
+  #three {
+    transform: scale(1);
+    transition: .5s;
+  }
+  
+  #three:hover {
+    transform: scale(1.05);
+    transition: .5s;
+  }
+  #four{
+    background-color: #ffffff;
+    background-image: url("../images/pink-praying-mantis.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    transition: .5s;
+  }
+  #four:hover{
+    background-image: url("../images/cat.png");
+    transition: .5s;
+  }
+
+  #five{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .5s;
+  }
+  
+  #five:hover{
+    background-image: url("../images/bearhug.png");
+    transition: .5s;
+  }
+  
+  #five:hover p {
+    display: none;
+  }

@@ -1,0 +1,212 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 3</title>
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">back</a>
+    </nav>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+             <p>Interactions, Input & Output</p>
+             <p>Lets talk about interactivity and how you can make your site become more dynamic and lively!</p>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+             <p>One common way to incorporate interaction is to add a hover state. You can do this by adding a selector with a psuedoclass of <code>:hover</code></p>
+             <p>for example:</p>
+             <p>HTML</p>
+             <pre><code>&lt;div class=&quot;hover-item&quot;&gt;&lt;/div&gt;</code>
+             </pre>
+             <p>CSS</p>
+             <pre><code>.hover-item{
+    background-color: black;
+}
+.hover-item:hover{
+    background-color: hotpink;
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+             <div class="hover-item" id="one">
+             </div>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>If you want a more smooth transition, you can add the <code> transition</code> property.</p>
+                <p>for example:</p>
+                <pre><code>.hover-item{
+    background-color: black;
+    transition:2s
+}
+.hover-item:hover{
+    background-color: hotpink;
+    transition: 2s;
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <div class="hover-item" id="two">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>If you want to increase the size, you can add the <code> scale</code> property.</p>
+                <p>for example:</p>
+                <pre><code>.hover-item{
+    background-color: black;
+    transform: scale(1);
+    transition: .5s;
+}
+.hover-item:hover{
+    transform: scale(1);
+    transition: .5s;
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <div class="hover-item" id="three">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>If you want to switch between images on hover, you can use the <code>background</code> properties.</p>
+                <p>for example:</p>
+                <pre><code>.hover-item{
+    background-color: #ffffff;
+    background-image: url("../images/pink-praying-mantis.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat; 
+    transition: .5s;
+}
+.hover-item:hover{
+    background-image: url("../images/cat.png");
+    transition: .5s;
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <div class="hover-item" id="four">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>If you want to switch between images on hover, you can use the <code>background</code> properties.</p>
+                <p>for example:</p>
+                <pre><code>.hover-item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .5s;
+}
+.hover-item:hover{
+    background-image: url("../images/bearhug.png");
+    transition: .5s;
+}
+.hover-item:hover p{
+    display: none;
+}
+</code></pre>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <div class="hover-item" id="five">
+                    <p>hover to see</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+             
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+             
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+             
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+             
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+             
+            </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+             
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
