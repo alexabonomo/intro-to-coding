@@ -1,0 +1,36 @@
+body{
+    background-color: lightblue;
+}
+
+.container{
+    display: flex;
+    width: 1600px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.item{
+    border: 1px solid black;
+    background-color: pink;
+    height: 400px;
+    width: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: pink;
+      width: 400px;
+      margin: auto;
+    }
+
+    .container{
+        display: block;
+    }
+
+    .item{
+        background-color: lightblue;
+    }
+  }
