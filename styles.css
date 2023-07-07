@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'ITC Garamond';
+    src: url(fonts/font.woff);
+    src: url(fonts/font.woff2);
+}
+
+@font-face {
+    font-family: 'ABC Diatype-Light';
+    src: url(fonts/ABCDiatype-Light.woff);
+    src: url(fonts/ABCDiatype-Light.woff2);
+}
+
+body{
+    font-family: 'ITC Garamond';
+    font-size: 8.5rem;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+
+}
+
+a:visited{
+    color: black;
+}
