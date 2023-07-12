@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'ITC Garamond';
+    src: url(../../fonts/font.woff);
+    src: url(../../fonts/font.woff2);
+}
+
+@font-face {
+    font-family: 'ABC Diatype-Light';
+    src: url(../../fonts/ABCDiatype-Light.woff);
+    src: url(../../fonts/ABCDiatype-Light.woff2);
+}
+
+body{
+    font-size: 24px;
+}
+
+.container{
+    display:flex;
+    width: 1800px;
+    margin:auto;
+    height: 1000px;
+}
+
+a{
+    font-size: 50px;
+    color: black;
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+
+#prev{
+    width: 10%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#next{
+    width:10%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#left-page{
+    width:40%;
+}
+
+#right-page{
+    width:40%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    grid-template-rows: repeat(4,200px);
+    grid-gap: 20px;
+    padding: 20px;
+    margin: auto;
+    justify-content: center;
+}
+
+.grid-container div {
+    overflow: hidden;
+    height: 1fr;
+}
+
+.title-page{
+    padding: 350px 100px 0px 100px;
+    font-family: 'ABC Diatype-Light';
+}
+
+.title-page p{
+    margin: 0;
+}
+
+
+.title{
+    font-size: 100px;
+    font-family: 'ITC Garamond';
+}
+
+.about-page{
+    padding: 100px 100px 0px 100px;
+    font-family: 'ABC Diatype-Light';
+    font-size: 1.25rem;
+}
+
+.about-page p{
+    margin: 0;
+}
+
+
+.about{
+    font-size: 100px;
+    font-family: 'ITC Garamond';
+}
+
+.bio-page{
+    padding: 100px 100px 0px 100px;
+    font-family: 'ABC Diatype-Light';
+    font-size: 1.25rem;
+}
+
+.bio-page p{
+    margin: 0;
+}
+
+
+.bio{
+    font-size: 100px;
+    font-family: 'ITC Garamond';
+}
+
+.bio-page img{
+    padding-bottom: 20px;
+}
