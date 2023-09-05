@@ -10,58 +10,256 @@
     src: url(../fonts/ABCDiatype-Light.woff2);
 }
 
-nav{
-    position: fixed;
-    top: 20px;
-    left: 20px;
-
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-nav a:visited {
-    color: white;
-    text-decoration: none;
+@font-face {
+    font-family: 'ITC Garamond Italic';
+    src: url(../fonts/font-italic.woff);
+    src: url(../fonts/font-italic.woff2);
 }
 
 body{
+    margin: 0px;
     font-family: 'ITC Garamond';
-    font-size: 3rem;
-    background-color: black;
+    font-size: 40px;
+    font-weight: 100;
 }
 
-#slide-container{
-    width: 1200px;
-    margin: auto;
+h1{
+    font-size: 170px;
+    font-family: 'ITC Garamond';
+    margin: 0px;
 }
 
-.slide-item{
-    border: 1px black solid;
-    margin: 100px 0px;
-    min-height: 800px;
-    background-color: white;
-}
-.slide-content{
-    margin: 100px;
-    min-height: 600px;
+h1, h2, h3, h4, h5, h6{
+    font-weight: 100;
 }
 
-ul{
-    padding: 0px 100px;
-}
-
-a{
+a {
     color: black;
 }
 
-a:visited{
-    color: black;
+em{
+    font-family: 'ITC Garamond Italic';
+}
+
+li{
+    font-family: 'ABC Diatype-Light';
+    font-size: 40px;
+}
+
+p{
+    font-family: 'ITC Garamond';
+    font-size: 40px;
+    font-weight: 100;
 }
 
 code{
     background-color: #dedcdc;
     padding: 3px 7px;
     font-size: 2rem;
+}
+
+.slide-item{
+    height: 100%;
+    margin-bottom: 500px;
+}
+
+.slide-content{
+    height: 100%;
+}
+
+.cover{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #2CAD60;
+}
+
+.cover > .slide-item{
+    margin: 0px 0px 500px 0px;
+}
+
+.cover > .slide-content{
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cover h1{
+    font-size: 150px;
+    font-family: 'ITC Garamond';
+    font-weight: 100;
+    margin: 50px;
+}
+
+.table-of-contents{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.table-of-contents > .slide-item{
+    margin: 0px 0px 500px 0px;
+}
+
+.table-of-contents > .slide-content{
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.table-of-contents a{
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border: .5px black solid;
+    border-radius: 5px;
+}
+
+.table-of-contents a:hover{
+    background-color: black;
+    color: white;
+    transition: .25s;
+}
+
+.table-of-contents h1{
+    font-size: 150px;
+    font-family: 'ITC Garamond';
+    font-weight: 100;
+    margin: 50px;
+    line-height: .95em;
+}
+
+.table-of-contents ol{
+    list-style: none;
+}
+
+.table-of-contents li{
+    font-family: 'ABC Diatype-Light';
+    font-size: 40px;
+    line-height: 2em;
+    font-weight: 100;
+}
+
+.bumper{
+    background-color: black;
+    color: white;
+    border-radius: 40px;
+    border: white solid 10px;
+}
+
+.bumper > .slide-item{
+    margin: 0px 0px 500px 0px;
+}
+
+.bumper > .slide-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bumper p{
+        font-family: 'ABC Diatype-Light';
+        font-size: 50px;
+        font-weight: 100;
+        margin: 0px;
+}
+
+.single-col-text{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.single-col-text > .slide-item{
+    margin: 0px 0px 500px 0px;
+}
+
+.single-col-text > .slide-content {
+    grid-column: 1 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+.single-col-text h1{
+    padding-top: 50px;
+    font-size: 80px;
+}
+
+.single-col-text div{
+    padding-bottom: 50px;
+}
+
+.double-col-text-image{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.double-col-text-image > .slide-item{
+    margin: 0px 0px 500px 0px;
+}
+
+.double-col-text-image > .slide-content {
+    grid-column: 1 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.double-col-text-image h1{
+    font-size: 80px;
+    margin: 50px;
+}
+
+
+.half-page-text h1{
+    margin: 50px;
+}
+
+.half-page-text p{
+    margin: 50px;
+}
+
+.half-page-output{
+    border-radius: 20px;
+    border: white solid 10px;
+}
+
+.double-col-text-image > .half-page-image{
+    grid-column: 7 / 13;
+    height: 100vh;
+    background-size: cover;
+}
+
+.summary > .slide-content{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.summary {
+    margin-bottom: 0px;
+}
+
+.message{
+    grid-column: 1 / 6;
+    margin: 50px;
+}
+.completed{
+    grid-column: 7 / 12;
+    margin: 50px;
+}
+.summary p{
+    font-family: 'ABC Diatype-Light';
+    font-size: 24px;
+    font-weight: 100;
+    margin: 0px;
+}
+
+.summary li{
+    font-family: 'ABC Diatype-Light';
+    font-size: 55px;
 }

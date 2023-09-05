@@ -7,190 +7,156 @@
     <title>Part 3</title>
 
     <link href="styles.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav>
-        <a href="../index.html">back</a>
-    </nav>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content" id="hover-properties">
-             <p>Interactions, Input & Output</p>
-             <p>Lets talk about interactivity and how you can make your site become more dynamic and lively!</p>
-             <p>In this video we will go over:</p>
-             <form>
-                <input type="checkbox">
-                <label> <a href="#hover-properties">Input, Output, and Interaction</a></label><br>
-                <input type="checkbox">
-                <label><a href="#hover-properties">Hover interactions</a></label><br>
-                <input type="checkbox">
-                <label> <a href="example/index.html">Interactive Poetry Example</a></label><br>
-              </form>
+    <div class="slide-item cover">
+        <div class="slide-content">
+            <h1>Intro to Coding <br> for Designers</h1>
+            <h1>Part 3</h1>
+        </div>
+    </div>
+    <div class="slide-item table-of-contents">
+        <div class="slide-content">
+            <h1>In this video,<br>we’ll cover:</h1>
+            <ol>
+                <li><a href="#interaction">Input, Output, and Interaction</a></li>
+                <li><a href="#hover-properties">Hover interactions</a></li>
+                <li><a href="#interactive-poetry">Interactive Poetry Example</a></label></li>
+            </ol>
+        </div>
+    </div>
+    <div class="slide-item bumper" id="interaction">
+        <div class="slide-content">
+            <div>
+                <p>Here’s what’s up next:</p>
+                <h1>Input, Output, and Interaction</h1>
             </div>
         </div>
     </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-             <p>One common way to incorporate interaction is to add a hover state. You can do this by adding a selector with a psuedoclass of <code>:hover</code></p>
-             <p>for example:</p>
-             <p>HTML</p>
-             <pre><code>&lt;div class=&quot;hover-item&quot;&gt;&lt;/div&gt;</code>
-             </pre>
-             <p>CSS</p>
-             <pre><code>.hover-item{
-    background-color: black;
-}
-.hover-item:hover{
-    background-color: hotpink;
-}</code></pre>
+    <div class="slide-item bumper" id="hover-properties">
+        <div class="slide-content">
+            <div>
+                <p>All done! Here’s what’s up next:</p>
+                <h1>Hover States</h1>
             </div>
         </div>
     </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-             <div class="hover-item" id="one">
-             </div>
+    <div class="slide-item double-col-text-image">
+        <div class="slide-content">
+            <div>
+                <p>Last part, we looked at hover states by adding a selector with a psuedoclass of <code>:hover</code></p>
+                <p>for example:</p>
+                <p>HTML</p>
+                <pre><code>&lt;div class=&quot;hover-item&quot;&gt;&lt;/div&gt;</code>
+                </pre>
+                <p>CSS</p>
+                <pre><code>.hover-item{
+        background-color: #3825ae;
+    }
+    .hover-item:hover{
+        background-color: #ae2563;
+    }</code></pre>
             </div>
         </div>
+        <div class="half-page-output">
+            <div class="hover-item" id="one"></div>    
+        </div>
     </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
+    <div class="slide-item double-col-text-image">
+        <div class="slide-content">
+            <div>
                 <p>If you want a more smooth transition, you can add the <code> transition</code> property.</p>
                 <p>for example:</p>
                 <pre><code>.hover-item{
-    background-color: black;
+    background-color: #3825ae;
     transition:2s
 }
 .hover-item:hover{
-    background-color: hotpink;
+    background-color: ae2563;
     transition: 2s;
 }</code></pre>
             </div>
         </div>
-    </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-                <div class="hover-item" id="two">
-                </div>
-            </div>
+        <div class="half-page-output">
+            <div class="hover-item" id="two"></div>    
         </div>
     </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-                <p>If you want to increase the size, you can add the <code> scale</code> property.</p>
+    <div class="slide-item double-col-text-image">
+        <div class="slide-content">
+           <div>
+            <p>If you want to change the size, you can add the <code> scale</code> property.</p>
                 <p>for example:</p>
                 <pre><code>.hover-item{
-    background-color: black;
+    background-color: #3825ae;
     transform: scale(1);
     transition: .5s;
 }
 .hover-item:hover{
-    transform: scale(1);
+    transform: scale(.75);
     transition: .5s;
 }</code></pre>
-            </div>
+           </div>
+        </div>
+        <div class="half-page-output">
+            <div class="hover-item" id="three"></div>
         </div>
     </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-                <div class="hover-item" id="three">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-                <p>If you want to switch between images on hover, you can use the <code>background</code> properties.</p>
+    <div class="slide-item double-col-text-image">
+        <div class="slide-content">
+           <div>
+            <p>If you want to switch between images on hover, you can use the <code>background</code> properties.</p>
                 <p>for example:</p>
                 <pre><code>.hover-item{
     background-color: #ffffff;
-    background-image: url("../images/pink-praying-mantis.png");
-    background-size: 100%;
+    background-image: url("../images/
+    pink-praying-mantis.png");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
     transition: .5s;
 }
 .hover-item:hover{
-    background-image: url("../images/cat.png");
+    background-image: url("../images/
+    cat.png");
     transition: .5s;
 }</code></pre>
+           </div>
+        </div>
+        <div class="half-page-output">
+            <div class="hover-item" id="four"></div>   
+        </div>
+    </div>
+    <div class="slide-item bumper" id="interactive-poetry">
+        <div class="slide-content">
+            <div>
+                <p>All done! Here’s what’s up next:</p>
+                <h1>Interactive Poetry Example</h1>
             </div>
         </div>
     </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-                <div class="hover-item" id="four">
-                </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <h1>Make your poetry interactive!</h1>
+            <div>
+                <p>You can see an example of a finished <em>interactive poetry</em> site, <a href="example/index.html">here</a>. Take your poetry to a whole new level of metaphorical. You can follow along in the video and reference example code by downloading this <a href="example/" download>project folder</a>.</p>
             </div>
         </div>
     </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-                <p>If you want to switch between images on hover, you can use the <code>background</code> properties.</p>
-                <p>for example:</p>
-                <pre><code>.hover-item{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    color:white;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: .5s;
-}
-.hover-item:hover{
-    background-image: url("../images/bearhug.png");
-    transition: .5s;
-}
-.hover-item:hover p{
-    display: none;
-}
-</code></pre>
+    <div class="slide-item summary">
+        <div class="slide-content">
+            <div class="message">
+                <p>All done!</p>
+                <p style="font-size: 100px; font-family: 'ITC Garamond';">In this module,<br>you should have completed:</p>
+            </div>
+            <div class="completed">
+                <ul>
+                    <li>Input, Output, and Interaction</li>
+                    <li>Hover interactions</li>
+                    <li>Interactive Poetry Example</li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-                <div class="hover-item" id="five">
-                    <p>hover to see</p>
-                  </div>
-            </div>
-        </div>
-    </div>
-    <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content">
-                Now lets take a look at this <a href="example/index.html">example</a> of an interactive poem using hover states!
-            </div>
-        </div>
-    </div>
-    <div id="slide-container">
-        <div class="slide-item">
-                <div class="slide-content">
-                    Awesome! You have finished Part 3:
-                    <p>In this module you should have completed</p>
-                    <form>
-                        <input type="checkbox">
-                        <label> <a href="#hover-properties">Input, Output, and Interaction</a></label><br>
-                        <input type="checkbox">
-                        <label><a href="#hover-properties">Hover interactions</a></label><br>
-                        <input type="checkbox">
-                        <label> <a href="example/index.html">Interactive Poetry Example</a></label><br>
-                      </form>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 </html>

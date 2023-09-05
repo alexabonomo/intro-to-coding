@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'ITC Garamond';
+    src: url(../fonts/font.woff);
+    src: url(../fonts/font.woff2);
+}
+
+@font-face {
+    font-family: 'ABC Diatype-Light';
+    src: url(../fonts/ABCDiatype-Light.woff);
+    src: url(../fonts/ABCDiatype-Light.woff2);
+}
+
+body{
+    font-family: 'ITC Garamond';
+    font-size: 3rem;
+    background-color: black;
+}
+
+nav{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+nav a:visited {
+    color: white;
+}
+
+#slide-container{
+    width: 1200px;
+    margin: auto;
+}
+
+.slide-item{
+    border: 1px black solid;
+    margin: 100px 0px;
+    min-height: 800px;
+    background-color: white;
+}
+.slide-content{
+    margin: 100px;
+    min-height: 600px;
+}
+
+ul{
+    padding: 0px 100px;
+}
+
+a{
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+code{
+    background-color: #dedcdc;
+    padding: 3px 7px;
+    font-size: 1rem;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px 200px 1fr;
+    grid-template-rows: 100px 100px 1fr;
+}
+td{
+    color: black;
+}
+
+.normal-container{
+    display: block;
+}
+
+.normal-item{
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    background-color: pink;
+}
+
+.flex-container{
+    display: flex;
+}
+
+#flex-item{
+    width: 200px;
+    height: 100px;
+    background-color: pink;
+    margin: 0px 10px;
+}
+
+#swan {
+    position: relative;
+    top: -200px;
+    left: 1050px;
+}

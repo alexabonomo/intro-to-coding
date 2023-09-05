@@ -1,0 +1,329 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 1</title>
+
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html">back</a>
+    </nav>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content" id="intro">
+                <p>Hello!</p>
+                <p>Welcome to Part 1 of Intro to Coding for Designers.</p>
+                <p>In this video we will go over :
+                    <form>
+                        <input type="checkbox">
+                        <label> <a href="#intro">Welcome & Introduction to the Handmade Web</a></label><br>
+                        <input type="checkbox">
+                        <label><a href="#vs-code">Set Up Visual Studio Code</a></label><br>
+                        <input type="checkbox">
+                        <label> <a href="#command-line-tool">Set Up Command Line Tool</a></label><br>
+                        <input type="checkbox">
+                        <label> <a href="#html-basics">HTML Basics</a></label><br>
+                        <input type="checkbox">
+                        <label> <a href="example/index.html">“Welcome to My Home Page” HTML Example</a></label><br>
+                      </form>
+                </p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>For the next three sessions, we are going to dive deep into the make up of the web and code our own small little site. And in doing so, we will start to make small little plots of our own on the internet. </p> 
+                <p>Once you learn the components of what makes up the internet, coding websites can start to feel like a handmade craft. Each line being written and composed carefully. This is called <em>the handmade web</em>.</p>
+                <p>But to start off, a little bit of context</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p><a href="http://art.teleportacia.org/">Olia Lialina</a> is a pioneer of net art born in Russia. Her network-based art includes <em><a href="https://sites.rhizome.org/anthology/lialina.html">My Boyfriend Came Back from the War</a></em> (1996), <em><a href="https://www.youtube.com/watch?v=8SZJ3haDT1k">Agatha Appears</a></em> (1997), <em>First Real Net Art Gallery</em> (1998), and <em>Last Real Net Art Museum </em>(2000). She wrote <em><a href="http://art.teleportacia.org/observation/vernacular/">A Vernacular Web</a></em> in 2005 which talked about the old aesthetics of the World Wide Web I, the web during its amateur state.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>According to Lialina, the amateur web felt boundless and hopeful. Many sites had big "under construction signs". It didn't mean that the site didn't work, it meant that someone was always there maintaining the site. Sites were playful and decorated with sparkly gifs and starry backgrounds. It was customized and expressive with cooperative effort to connect their sites to others.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content" style="padding-bottom: 100px">
+                <p>In 2015, J. R. Carpenter wrote in his essay, <em><a href="https://www.luckysoap.com/statements/handmadeweb.html">The Handmade Web</a></em>, <br><br>
+                    <em>I evoke the term 'handmade web' to refer to web pages coded by hand rather than by software; web pages made and maintained by individuals rather than by businesses or corporations; web pages which are provisional, temporary, or one-of-a-kind; web pages which challenge conventions of reading, writing, design, ownership, privacy, security, or identity.
+                    </em><br><br>
+                    <em>I evoke the term 'handmade web' in order to make a correlation between handmade web pages and handmade print materials, such as zines, pamphlets, and artists books.</em></p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>So with that, I ask you two questions:</p>
+                <p>What is your first internet memory?</p>
+                <p>If you were to remake the internet by hand, how would you envision it?</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p><a href="https://www.laurel.world/">Laurel Schwurlst</a> is an artist whose focus is on the poetics of the internet. She wrote <em><a href="https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/">My website is a shifting house next to a river of knowledge. What could yours be?</a></em>, which compares HTML to building the scaffolding of a house. She goes on to talk about a website as a metaphor – website as a room, as a shelf, as a plant, as a garden, etc.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content" id="vs-code">
+                <p>With that said, we will begin to explore the handmade web and start by coding purely in HTML. For this you will need a code editor. We will be using <a href="https://code.visualstudio.com/download">Visual Studio Code</a>. Once you download that, you should open the editor and navigate to the extensions icon on the very left panel. It should be the last icon. install these extensions:</p>
+                <ul>
+                    <li>HTML Boilerplate</li>
+                    <li>htmltagwrap</li>
+                    <li>Beautify</li>
+                    <li>Live Server</li>
+                    <li>Code Spell Checker</li>
+                </ul>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content" id="command-line-tool">
+                <p>And now we are ready! Let's move on to the next part,The Command Line Tool!</p>
+                <p>Throughout this course, you will get well acquainted with the command line tool. For Mac users, we’ll use <a href="https://iterm2.com/">Iterm</a> or the default Mac Terminal. Go to your search icon (or Cmd + Space) at the tool bar and search for "terminal". For Windows, download <a href="https://gitforwindows.org/">git bash</a>. You can copy and paste a line in Git bash with Ctrl + Shift + C / V.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>Download and unzip the <a href="https://www.dropbox.com/s/b56ovb65l1z2rsa/garden-of-forking-paths.zip?dl=0">Garden of Forking Paths</a></p>
+                <p>By default this will probably land in your Downloads folder. You should see a folder called ‘garden-of-forking-paths’. Move this folder into your ‘home’ folder that we will open using terminal.</p>
+                <p>Locate your ‘home’ folder. This where we will work from and store files in class, not on the Desktop. </p>
+                <p>Enter this command to open finder in your home folder (Macs):    <code>open .</code></p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content" style="padding-bottom: 100px;">
+                <p>Helpful Terms</p>
+                <script src="https://gist.github.com/melaniehoff/158aeee648d006ffc278cc1e610d48b3.js"></script>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>The best folder naming practice is all lowercase filenames and folder name and no spaces. Use dashes or underscores. for example: my_file.txt or my-file.txt.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <script src="https://gist.github.com/melaniehoff/32b14210b7ea6f605f625eabdf8b3968.js"></script>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <div class="slide-content">
+                    <p>try to navigate through the garden-of-forking-paths folder by only using the command line tool.</p>
+                    <p>Then navigate back to your home folder by typing <code>cd ..</code>, and make a new directory by typing <code>mkdir foldername</code>. Name the folder whatever you would like. This will hold your site that you will create this week and any other files you create. Create an html file by typing <code>touch index.html</code>.</p>
+                </div>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>If you want to run VS Code from the terminal by simply typing 'code', VS Code has a command, Shell Command: Install 'code' command in PATH, to add 'code' to your $PATH variable list. In VS Code, press Cmd + Shift + P and type <code>shell command</code> to find the <code>Shell Command: Install 'code' command in PATH</code> command. After executing the command, restart the terminal for the new $PATH value to take effect. You'll be able to simply type 'code .' in any folder to start editing files in that folder.</p>
+                    <p>In terminal you can simply navigate to your folder with <code>cd foldername</code> and open it in VS Code with <code>code foldername</code>.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content" id="html-basics">
+                Okay, now that we are familiar with the command line, lets move on to HTML Basics</a>.
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>The <code>&lt;body&gt;</code> tag defines the document's body.</p>
+                <p>The <code>&lt;body&gt;</code> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.z</p>
+                <pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Title of the document&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+         &lt;h1&gt;This is a heading&lt;/h1&gt;
+         &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;/body&gt;               
+&lt;/html&gt;</code></pre>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>This is called a <code>&lt;p&gt;</code> tag, it is used to define a paragraph</p>
+                <code>
+                    &lt;p&gt;hello&lt;p&gt;
+                </code>
+                <p>Browsers automatically add a single blank line before and after each <code>&lt;p&gt;</code> element.</p>
+                <p>The <code>&lt;br&gt;</code> tag inserts a single line break.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <h1>This is heading 1</h1>
+                <h2>This is heading 2</h2>
+                <h3>This is heading 3</h3>
+                <h4>This is heading 4</h4>
+                <h5>This is heading 5</h5>
+                <h6>This is heading 6</h6>
+                <pre><code>&lt;h1&gt;This is heading 1&lt;/h1&gt;
+ &lt;h2&gt;This is heading 2&lt;/h2&gt;
+ &lt;h3&gt;This is heading 3&lt;/h3&gt;
+ &lt;h4&gt;This is heading 4&lt;/h4&gt;
+ &lt;h5&gt;This is heading 5&lt;/h5&gt;
+ &lt;h6&gt;This is heading 6&lt;/h6&gt;</code></pre>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <a href="#">this is an <code>&lt;a&gt;</code> tag</a>
+                <pre><code>&lt;a href=&quot;#&quot;&gt;this is an &lt;a&gt; tag&lt;/a&gt;</code></pre>
+                <p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
+                <p>The most important attribute of the <code>&lt;a&gt;</code> element is the <code>href</code> attribute, which indicates the link's destination.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>The <code>&lt;div&gt;</code> tag defines a division or a section in an HTML document.</p>
+                <p>The <code>&lt;div&gt;</code> tag is used as a container for HTML elements - which is then styled with CSS or manipulated with JavaScript.</p>
+                <p>The <code>&lt;div&gt</code>; tag is easily styled by using the class or id attribute.</p>
+                <p>Any sort of content can be put inside the <code>&lt;div&gt;</code> tag! </p>
+                <br>
+                <br>
+                <p>The <code>&lt;span&gt;</code> tag is an inline container used to mark up a part of a text, or a part of a document.</p>
+                <p>The <code>&lt;span&gt;</code> tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.</p>
+                <p>The <code>&lt;span&gt;</code> tag is much like the &lt;div&gt; element, but &lt;div&gt; is a block-level element and &lt;span&gt; is an inline element.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>The <code>&lt;strong&gt; </code>tag is used to define text with strong importance. The content inside is typically displayed in <b>bold.</b></p>
+                <p>The <code>&lt;em&gt;</code> tag is used to define emphasized text. The content inside is typically displayed in <em>italic.</em></p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>The <code>&lt;title&gt;</code> tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.</p>
+                <p>The <code>&lt;title&gt;</code> tag is required in HTML documents!</p>
+                <p>The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.</p>
+                <p>The <code>&lt;title&gt;</code> element:</p>
+                <ul>
+                    <li>defines a title in the browser toolbar</li>
+                    <li>provides a title for the page when it is added to favorites</li>
+                    <li>displays a title for the page in search-engine results</li>
+                </ul>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>The <code>&lt;ul&gt; </code>tag defines an unordered (bulleted) list.</p>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+ &lt;/ul&gt;</code></pre>
+                <p>The <code>&lt;ol&gt;</code> tag defines an ordered list. An ordered list can be numerical or alphabetical.</p>
+                <pre><code>&lt;ol&gt;
+    &lt;li&gt;Coffee&lt;/li&gt;
+    &lt;li&gt;Tea&lt;/li&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+ &lt;/ol&gt;</code></pre>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>The <code>&lt;form&gt;</code> tag is used to create an HTML form for user input.</p>
+                <p>The <code>&lt;input&gt;</code> tag specifies an input field where the user can enter data.</p>
+                <p>The <code>&lt;label&gt;</code> tag defines a label for several elements:</p>
+                <pre><code>&lt;form action=&quot;/action_page.php&quot; method=&quot;get&quot;&gt;
+    &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;
+    &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+                <form action="/action_page.php" method="get">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="submit" value="Submit">
+                  </form>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page.</p>
+                <p>Images are not technically inserted into a web page; images are linked to web pages. The <code>&lt;img&gt;</code> tag creates a holding space for the referenced image.</p>
+                <p>The <code>&lt;img&gt;</code> tag has two required attributes:</p>
+                <ul>
+                    <li>src - Specifies the path to the image</li>
+                    <li>alt - Specifies an alternate text for the image, if the image for some reason cannot be displayed</li>
+                </ul>
+                <code>&lt;img src=&quot;images/cat.png&quot;&gt;</code>
+                <br><br><img src="../images/cat.png" width="200px">
+                <p>By default, your image will appear as its original size. To resize the image, include <code>width=&quot;value&quot;</code> inside the <code>&lt;img&gt;</code> tag and set the value to either a percentage like <code>100%</code> or a fixed value like <code>100px</code>.</p>
+                <p>Tip: To link an image to another document, simply nest the <code>&lt;img&gt;</code> tag inside an &lt;a&gt; tag.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                <p>Putting <code>../</code> in a file path, means that you are going backwards, <em>out of a current folder</em> before you enter a new one. You will use this when you are referencing urls/file paths for <code>&lt;a&gt;</code> tags or <code>&lt;img&gt;</code> tags. If you see a 404 error or broken img icon, and you're confused, it might be because it is missing this notation to direct to the correct file in your folder structure.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+               <p>Lets make a simple website using only html!</p>
+               <p>Start by creating a folder and adding an "index.html" file</p>
+               <p>Place hypertext using the examples above to craft a homepage for your website.</p>
+        </div>
+    </div>
+    <div id="slide-container">
+        <div class="slide-item">
+            <div class="slide-content">
+                Awesome! You have finished Part 1:
+                <p>In this module you should have completed</p>
+                <form>
+                    <input type="checkbox">
+                    <label> <a href="#intro">Welcome & Introduction to the Handmade Web</a></label><br>
+                    <input type="checkbox">
+                    <label><a href="#vs-code">Set Up Visual Studio Code</a></label><br>
+                    <input type="checkbox">
+                    <label> <a href="#command-line-tool">Set Up Visual Studio Code</a></label><br>
+                    <input type="checkbox">
+                    <label> <a href="#html-basics">HTML Basics</a></label><br>
+                    <input type="checkbox">
+                    <label> <a href="example/index.html">“Welcome to My Home Page” HTML Example</a></label><br>
+                  </form>
+                  
+        </div>
+    </div>
+</body>
+
+</html>

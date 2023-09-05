@@ -7,34 +7,52 @@
     <title>Part 2</title>
 
     <link href="styles.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav>
-        <a href="../index.html">back</a>
-    </nav>
     <div id="slide-container">
-        <div class="slide-item">
-            <div class="slide-content" id="css-styling-basics">
-                <p id="html-is-like"><span id ="blue">HTML</span> is like building the frame and foundation of a house and <span id = "magenta">CSS</span> is like painting and decorating each room of your home.</p>
-                <p>In this video we will go over: </p>
-                <form>
-                    <input type="checkbox">
-                    <label> <a href="#css-styling-basics">CSS Styling and Positioning Basics</a></label><br>
-                    <input type="checkbox">
-                    <label><a href="#type-on-the-web">Typography on the Web</a></label><br>
-                    <input type="checkbox">
-                    <label> <a href="#flexbox-and-grid">Flexbox and Grid</a></label><br>
-                    <input type="checkbox">
-                    <label> <a href="example/index.html">Net Art Garden Example</a></label><br>
-                  </form>
+        <div class="slide-item cover">
+            <div class="slide-content">
+                <h1>Intro to Coding <br> for Designers</h1>
+                <h1>Part 2</h1>
             </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
+        <div class="slide-item table-of-contents">
             <div class="slide-content">
-                <p>CSS is linked to HTML by using <code>&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
-                <p>In the folder you made in your home folder, add a <code>styles.css</code> file and link it to your <code>index.html</code> file.</p>
+                <h1>In this video,<br>we’ll cover:</h1>
+                <ol>
+                    <li><a href="#css-styling-basics">CSS Styling and Positioning Basics</a></li>
+                    <li><a href="#type-on-the-web">Typography on the Web</a></li>
+                    <li><a href="#positioning">Positioning</a></li>
+                    <li><a href="#flexbox-and-grid">Flexbox and Grid</a></li>
+                    <li><a href="#net-art-garden">Net Art Garden Example</a></label></li>
+                </ol>
+            </div>
+        </div>
+        <div class="slide-item single-col-text" id="intro">
+            <div class="slide-content">
+                <div>
+                    <h1>HTML is like building the frame and foundation of a house and CSS is like painting and decorating each room of your home.</h1>
+                </div>
+            </div>
+        </div>
+        <div class="slide-item bumper" id="css-styling-basics">
+            <div class="slide-content">
+                <div>
+                    <p>Here’s what’s up next:</p>
+                    <h1>CSS Styling and Positioning Basics</h1>
+                </div>
+            </div>
+        </div>
+        <div class="slide-item double-col-text-image">
+            <div class="slide-content">
+                <div class="half-page-text">
+                    <p>CSS is linked to HTML by using <code>&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
+                    <p>In the folder you made in your home folder, add a <code>styles.css</code> file and link it to your <code>index.html</code> file.</p>
+                </div>
+            </div>
+            <div class="half-page-output" style="background-color: #70E5FF;">
                 <p>Your folder structure will now look like:</p>
                 <ul>
                     <li>folder name</li>
@@ -45,10 +63,12 @@
                 </ul>
             </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
+        
+        <div class="slide-item double-col-text-image">
             <div class="slide-content">
-                <p>CSS has a specific syntax and it is made up of a few different components:</p>
+                <h1></h1>
+                <div class="half-page-text">
+                    <p>CSS has a specific syntax and it is made up of a few different components:</p>
                 <pre><code style="font-size: 30px;">selector {
     property: value;
 }</code>        
@@ -58,13 +78,18 @@
     font-size: 72px;
 }</code>
                 </pre>
+                </div>
+            </div>
+            <div class="half-page-output" style="background-color: #E55F35;">
                 <p style="font-size: 72px;">All of the text will now be 72 pixels</p>
             </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
+
+        <div class="slide-item double-col-text-image">
             <div class="slide-content">
-                <p>Lets try some other styling</p>
+                <h1></h1>
+                <div class="half-page-text">
+                    <p>Lets try some other styling</p>
                 <pre><code style="font-size: 30px;">body {
     font-size: 24px;
     background-color: blue;
@@ -72,29 +97,38 @@
 }</code>
                 </pre>
                 <p>The block of code that lists out all of the properties are called a declaration block. You can think of this as a list of rules. </p>
-                <div style="height: 200px; padding: 50px; background-color: blue;">
-                    <p style="font-size: 24px; color: hotpink;">All of your body text will now be 24 px, hotpink and have a background of blue.</p>
                 </div>
             </div>
+            <div class="half-page-output" style="background-color: blue; font-size: 24px; color: hotpink;">
+                <p style="font-size: 24px;">All of your body text will now be 24 px, hotpink and have a background of blue.</p>
+                <p style="font-size: 24px;">Seasonal sparkling pomegranate punch chocolate peanut butter dip mangos grenadillo hearts of palm smoky maple tempeh glaze sleepy morning tea quinoa flatbread lychee miso dressing Italian linguine puttanesca guacamole cumin kale caesar salad udon noodles hummus cherry bomb Mexican fiesta smoked tofu coconut rice leek. Soba noodles hot habanero golden entree lavender lemonade overflowing broccoli tomato and basil kung pao pepper cool spiced peppermint blast Thai sun pepper appetizer creamiest zesty tofu pad thai coriander muffins Thai curry black beans matcha red lentil curry. Edamame soy milk fresh cayenne cilantro lime vinaigrette Thai delightful blueberry scones simmer hemp seeds cool off peanut butter scotch bonnet pepper basil edamame hummus macadamia nut cookies chickpea crust pizza apricot heat almond milk chai latte.<br><br>Crunchy seaweed dark and stormy blood orange smash almond milk lemonade zest with strawberry mango smoothie spiced pumpkin chili arugula salad fruit smash pinch of yum summer fruit salad chilies salted hummus falafel bowl instant pot mediterranean chili cool cucumbers black bean wraps frosted gingerbread bites fig arugula cashew salad. Mediterranean luxury bowl mint tofu burritos blueberries kale creamy cauliflower alfredo fall mint lime taco salsa ghost pepper earl grey latte maple orange tempeh cocoa comforting pumpkin spice latte sweet potato red amazon pepper salty pomegranate chocolate cookie roasted brussel sprouts chai tea Southern Italian crumbled lentils. <br><br> Banana bread avocado basil pesto summertime street style Thai basil tacos Indian spiced Italian pepperoncini shaved almonds bento box creamy cauliflower alfredo sauce shallots walnut pesto tart peppermint asian pear walnut mushroom tart picnic. Ginger carrot spiced juice cinnamon overflowing berries lime mango crisp Sicilian pistachio pesto raspberry fizz citrusy cauliflower sandwiches cremini mushrooms kimchi cranberry spritzer raspberries basmati cherry casserole cookies second course green grapes rich coconut cream almonds banana bread.</p>
+            </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
+
+        <div class="slide-item double-col-text-image">
             <div class="slide-content">
-                <p>You can style specific html elements by noting the element name as a selector.</p>
+                <h1></h1>
+                <div class="half-page-text">
+                    <p>You can style specific html elements by noting the element name as a selector.</p>
                 <pre><code style="font-size: 30px;">a {
     font-size: 36px;
     color: limegreen;
     text-decoration: none;
 }</code>
                 </pre>
-                <div style="height: 200px; padding: 50px; background-color: blue;">
-                    <p style="font-size: 24px; color: hotpink;">All of your body text will now be 24 px, hotpink and have a background of blue. And a <a style="font-size:36px; color: limegreen; text-decoration: none;" href="#">hyperlink </a>will be green with no underline. </p>
                 </div>
             </div>
+            <div class="half-page-output" style="background-color: blue; overflow: hidden; font-size: 24px; color: hotpink;">
+                <p style="font-size: 24px;">All of your body text will now be 24 px, hotpink, green hyperlinks that are 36px, and have a background of blue.</p>
+                <p style="font-size: 24px;">Seasonal sparkling pomegranate punch chocolate peanut butter dip <a style="font-size:36px; color: limegreen; text-decoration: none;" href="#">mangos grenadillo hearts of palm smoky maple tempeh glaze sleepy morning tea quinoa flatbread lychee miso dressing Italian linguine puttanesca guacamole cumin kale caesar salad udon noodles hummus cherry bomb Mexican fiesta smoked tofu coconut rice leek. </a>spiced peppermint blast Thai sun pepper appetizer creamiest zesty tofu pad thai coriander muffins Thai curry black beans matcha red lentil curry. <br><br>Crunchy seaweed dark and stormy blood orange smash almond milk lemonade zest with strawberry <a style="font-size:36px; color: limegreen; text-decoration: none;" href="#">mango smoothie spiced pumpkin chili arugula salad fruit smash pinch of yum summer fruit salad chilies salted hummus falafel bowl instant pot mediterranean chili cool cucumbers black bean wraps frosted gingerbread bites fig arugula cashew salad. </a> potato red amazon pepper salty pomegranate chocolate cookie roasted brussel sprouts chai tea Southern Italian crumbled lentils. <br><br> Banana bread avocado basil pesto summertime street style Thai basil tacos Indian spiced Italian pepperoncini shaved almonds bento box creamy cauliflower alfredo sauce shallots walnut pesto tart peppermint asian <a style="font-size:36px; color: limegreen; text-decoration: none;" href="#">pear walnut mushroom tart picnic. Ginger carrot spiced juice cinnamon overflowing berries  </a>cranberry spritzer raspberries basmati cherry casserole cookies second course green grapes rich coconut cream almonds banana bread.</p>
+            </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
+
+
+        <div class="slide-item double-col-text-image">
             <div class="slide-content">
+                <h1></h1>
+                <div class="half-page-text">
                 <p>Selectors also can have "pseudoclasses" that enact styling on special occasions. For example, on hover. </p>
             
                 <pre><code style="font-size: 30px;">a :hover {
@@ -103,13 +137,17 @@
     text-decoration: none;
 }</code>
                 </pre>
-                <div style="height: 200px; padding: 50px; background-color: blue;">
-                    <p style="font-size: 24px; color: hotpink;">All of your body text will now be 24 px, hotpink and have a background of blue. And a <a>hyperlink </a>will be lime green with no underline and turns aqua when you over on it. </p>
-                </div>
+            </div>
+            </div>
+            <div class="half-page-output" style="background-color: blue; overflow: hidden;">
+                <p style="font-size: 24px; color: hotpink;">All of your body text will now be 24 px, hotpink and have a background of blue. And a <a class="pseudo" href="#">hyperlink </a>will be lime green with no underline and turns aqua when you over on it. 
+                </p>
+                <p style="font-size: 24px; color: hotpink;">Seasonal sparkling pomegranate punch chocolate peanut butter dip <a style="font-size:36px;  text-decoration: none;" href="#">mangos grenadillo hearts of palm smoky maple tempeh glaze sleepy morning tea quiriander curry black beans matcha red lentil curry. <br><br>Crunchy seaweed dark and stormy blood orange smash almond milk lemonade zest with strawberry <a style="font-size:36px;text-decoration: none;" href="#">mango smoothie spiced pumpkin chili arugula salad fruit smash pinch of yum summer fruit salad chid hummus falafel bowl instant pot mediterranean chili cool cucumbers black bean wraps frosted gingerbread bites salad. </a> potato red amazon pepper salty pomegranate chocolate cookie roasted brussel sprouts chai tea Southern Italian crumbled lentils. <br><br> Banana bread avocado basilime street style Thai basil tacos Indian spiced Italian pepperoncini shaved almonds bento box creamy cauliflower alfredo sauce shallots walnut pesto tart peppermint asian <a style="font-size:36px; text-decoration: none;" href="#">pear walnut mushroom tart picnic. Ginger carrot spiced juice cinnamon overflowing berries  </a>cranberry spritzer raspberries basmati cherry casserole cookies second course green grapes rich coconut cream almonds banana bread.</p>
+            </div>
             </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
+        
+        <div class="slide-item double-col-text-image">
             <div class="slide-content">
                 <p>You can do this with any element!</p>
                 <pre><code style="font-size: 30px;">div {
@@ -120,35 +158,57 @@ div:hover {
     background-color: rgb(255, 30, 0);
 }</code>
                 </pre>
-                <div id="hover-box"></div>
-                <p>This is a div that has a height of 100px and changes color on hover.</p>
-                <p>Notice how you only need to notate which rules change on hover. You do not need to repeat code if it is the same for both.</p>
             </div>
+            <div class="half-page-output">
+                    <style>
+                        /* Student - If you are reading source code, do not do css this way. This is is internal css for one time only use. Not as scaleable for larger sites :D */
+                        #hover-box {
+                            height: 100vh;
+                            background-color: magenta;
+                        }
+                        #hover-box:hover{
+                            background-color: red;
+    }
+                    </style>
+                    <div id="hover-box"><p>This is a div that has a height of 100px and changes color on hover.</p>
+                        <p>Notice how you only need to notate which rules change on hover. You do not need to repeat code if it is the same for both.</p></div>
+                </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
+        <div class="slide-item double-col-text-image">
             <div class="slide-content">
                 <p>You can also make divs that have images that change on hover! You do this with the background-image property.</p>
-                <pre><code style="font-size: 30px;">img {
+                <pre><code style="font-size: 30px;">div {
     background-image: url(images/cat.png);
     height: 200px;
     width: 200px;
     background-size: contain;
     background-repeat: no-repeat;
                 }
-img:hover {
+div:hover {
     background-image: url(images/bearhug.png);
 }</code>
                 </pre>
-                <div id="background-image"></div>
             </div>
+            <div class="half-page-output " id="background-image">
+                <style>
+                    #background-image{
+                        background-image: url(../images/cat.png);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                    }
+
+                    #background-image:hover{
+                        background-image: url(../images/bearhug.png);
+                    }
+                </style>
+                </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
+
+        <div class="slide-item single-col-text">
             <div class="slide-content">
                 <p>In order to specify elements or group together elements, there is an additional way to identify one or class elements together using the <code>id=" "</code> or <code>class=" "</code> properties inside of your html tags.</p>
                 <p>So if you have something like <code>&lt;div id=&quot;frog&quot;&gt;&lt;div&gt;</code> or <code>&lt;div class =&quot;lizard&quot;&gt;&lt;/div&gt;</code> in your html, you would notate it in CSS like:</p>
-                <pre><code style="font-size: 30px;">#frog{
+                <pre style="margin: 0;"><code style="font-size: 30px;">#frog{
     property: value;
 }</code></pre>
                 <p>or</p>
@@ -158,11 +218,10 @@ img:hover {
             <p>Notice that id's use <code>#</code> before their name and classes use <code>.</code> before their name.</p>
             </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
+        <div class="slide-item double-col-text-image">
             <div class="slide-content">
                 <p>So lets take a look at some html code:</p>
-                <pre><code>&lt;body&gt;
+                <pre><code style="font-size: 20px;">&lt;body&gt;
     &lt;div class = &quot;container&quot;&gt;
         &lt;div id = &quot;red&quot;&gt;
             &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -180,43 +239,47 @@ img:hover {
             &lt;/div&gt;
         &lt;/div&gt;
 &lt;body&gt;</code></pre>
-                    <p>You can style CSS like this to make text centered on the page with one paragraph red and one paragraph pink:</p>
-                    <pre><code>.container{
-    width: 50%
-    margin: auto;
-    font-size:24px;
+            </div>
+            <div class="half-page-output">
+                    
+                </div>
+        </div>
+
+        <div class="slide-item double-col-text-image">
+            <div class="slide-content">
+                <p>You can style CSS like this to make text centered on the page with one paragraph red and one paragraph pink:</p>
+                <pre><code>.container{
+width: 50%
+margin: auto;
+font-size:30px;
 }
 #red{
-    color: red
+color: red
 }
 #pink{
-    color: hotpink;
+color: pink;
 }</code></pre>
             </div>
-        </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content">
-                <p>Your page will look like this: </p>
-                <div class="container">
-                    <div id="red">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
-                    <div id="pink">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
+            <div class="half-page-output" style="background-color:darkolivegreen;">
+                <div id="red">
+                    <p style="font-size: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-                <p>In the <code>.container</code> class, this is a very easy and common way to center a main container div on a page.</p>
+                <div id="pink">
+                    <p style="font-size: 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>         
+        </div>
+    </div>
+    <div class="slide-item bumper" id="type-on-the-web">
+        <div class="slide-content">
+            <div>
+                <p>All done! Here’s what’s up next:</p>
+                <h1>Typography on the Web</h1>
             </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content" id="type-on-the-web">
-                <p>There are two ways to import fonts into your page. One is to use an api like <a href="https://fonts.google.com/">google fonts</a>. Which is simpler but needs internet to connect. And you are bound to the repository of that database of fonts.</p>
-                <p>When you click on a font you like, select the font style. <br><br> It will say something like "Select Regular 400". This is saying that you are selecting a particular font style and weight from the font family.<br><br> Navigate to the very top right of the page. When you hover over the icon, it says "View Selected Families". <br><br>Scroll below and you will see code. One box is HTML and the other is CSS. Copy the HTML in the <code>&lt;head&gt;</code> tag. <br><br>Then copy the CSS in the correct block of CSS. If it is the main font for the site, stick it in the <code>&lt;body&gt;</code> tag. </p>
-            </div>
-        </div>
-        <div class="slide-item">
+    </div>
+    <div class="slide-item single-col-text">
+        <div class="slide-content">
             <!-- Notes -->
             <div class="slide-content">
                 <p>Downloading fonts and using them, we use the <code>&lt;@font-face&gt;</code> selector.</p>
@@ -233,10 +296,19 @@ body{
             <p>You can access more font resources by clicking <a href="https://docs.google.com/document/d/1EqDMJDOnguBQHb5iS-oxAEqd2XHFWfGzPYFRnNebKRc/edit?usp=share_link">here</a>.</p>
             </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content">
-                <p>Positioning will become an important component of CSS for if you want to make layouts for anything other than a one column page with divs stacked on top of each other. Right now, the default display property is <code>display: block</code> which means stacked on top of each other.Most elements are set to this by default. And some elements are <code>display: inline;</code> by default, which means side by side.</p>
+        </div>
+    </div>
+    <div class="slide-item bumper" id="positioning">
+        <div class="slide-content">
+            <div>
+                <p>All done! Here’s what’s up next:</p>
+                <h1>Positioning</h1>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text">
+        <div class="slide-content">
+            <p style="margin: 0px;">Positioning will become an important component of CSS for if you want to make layouts for anything other than a one column page with divs stacked on top of each other. Right now, the default display property is <code>display: block</code> which means stacked on top of each other.Most elements are set to this by default. And some elements are <code>display: inline;</code> by default, which means side by side.</p>
                 <div style="padding:10px 0px;">
                     <p>display: block</p>
                     <div style="height: 100px; background-color: aquamarine;"></div>
@@ -248,12 +320,12 @@ body{
                     <span style="font-size: 72px; height: 100px; background-color: aquamarine;">-----</span>
                     <span style="font-size: 72px; 400px; height: 100px; background-color: red;">-----</span>
                 </div>
-            </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content">
-                <p>But you could position things that differ from their "normal" position. by using the <code>position</code> property.</p>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <p>But you could position things that differ from their "normal" position by using the <code>position</code> property.</p>
+            <div>
                 <p><code>position: absolute;</code> is positioned relative to the nearest positioned ancestor.</p>
                 <p><code>position: relative;</code> is positioned relative to its normal position.</p>
                 <p><code>position: fixed;</code> is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.</p>
@@ -261,49 +333,68 @@ body{
 
                 <pre><code style="font-size: 30px;">#swan{
     position: absolute;
-    top: -200px;
-    right: 1050px;
+    top: -800px;
+    left: 1350px;
 }</code></pre>
             <div id="swan">
                 <img src="../images/swan.png" width="200px"> 
             </div>
-            </div>
-        </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content" id="flexbox-and-grid">
-                That is the basics of CSS. Lets practice styling using these new CSS rules! Next we will explore layout by learning two new <code>display</code> properties, <code>flex</code> and <code>grid</code>.
-            </div>
-        </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content">
-                <p><code>display: flexbox</code> and <code>display: grid</code> are different display properties used to create layouts on a page</p>
-                <p>Flexbox is good for placing elements side by side, and grid is for good for making elements with special rows and columns.</p>
-            </div>
-        </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content">
-                <p>If you just place divs inside a container, they will block on top of eachother. Applying the property of <code>display: flex;</code> will disrupt the normal flow and make the divs appear side by side by default.</p>
-                normal:
-                <div class="normal-container">
-                    <div class="normal-item"></div>
-                    <div class="normal-item"></div>
-                    <div class="normal-item"></div>
-                </div>
-                flex:
-                <div class="flex-container">
-                    <div id="flex-item"></div>
-                    <div id="flex-item"></div>
-                    <div id="flex-item"></div>
+                <div id="swans">
+                    <div id="swan1">
+                        <img src="../images/swan.png" width="200px">
+                    </div>
+                    <div id="swan2">
+                        <img src="../images/swan.png" width="200px">
+                    </div>
+                    <div id="swan3">
+                        <img src="../images/swan.png" width="200px">
+                    </div>
+                    <div id="swan4">
+                        <img src="../images/swan.png" width="200px">
+                    </div>
                 </div>
             </div>
+               
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content">
-                <p>In HTML this looks like:</p>
+    </div>
+    <div class="slide-item bumper" id="flexbox-and-grid">
+        <div class="slide-content">
+            <div>
+                <p>All done! Here’s what’s up next:</p>
+                <h1>Flexbox and Grid</h1>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <p>Lets practice styling using these new CSS rules! Next we will explore layout by learning two new <code>display</code> properties, <code>flex</code> and <code>grid</code>.</p>
+            <p><code>display: flexbox</code> and <code>display: grid</code> are different display properties used to create layouts on a page.</p>
+            <p>Flexbox is good for placing elements side by side, and grid is for good for making elements with special rows and columns.</p>
+        </div>
+    </div>
+
+    <div class="slide-item double-col-text-image">
+        <div class="slide-content">
+            <p>If you just place divs inside a container, they will block on top of eachother. Applying the property of <code>display: flex;</code> will disrupt the normal flow and make the divs appear side by side by default.</p>
+        </div>
+        <div class="half-page-output">
+            <p style="margin: 50px 0px;">normal:</p>
+            <div class="normal-container">
+                <div class="normal-item"></div>
+                <div class="normal-item"></div>
+                <div class="normal-item"></div>
+            </div>
+            <p style="margin: 50px 0px;">flex:</p>
+            <div class="flex-container">
+                <div id="flex-item"></div>
+                <div id="flex-item"></div>
+                <div id="flex-item"></div>
+            </div>    
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <p>In HTML this looks like:</p>
                 <div>
 
                 </div>
@@ -316,12 +407,11 @@ body{
                 <pre><code>.container {
     display: flex;
 }</code></pre>
-            </div>
         </div>
-        <div class="slide-item" style="height: 1400px">
-            <!-- Notes -->
-            <div class="slide-content"style="font-size: .75em;">
-                <p>The <code>justify-content:</code> property aligns content side by side. You can use: <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, or <code>space-around</code></p>
+    </div>
+    <div class="slide-item single-col-text" style="height: 1400px">
+        <div class="slide-content">
+            <p>The <code>justify-content:</code> property aligns content side by side. You can use: <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, or <code>space-around</code></p>
                 <div>
                     <p>flex-start:</p>
                     <div style="display: flex; justify-content: flex-start; background-color: aquamarine; width: 100%; height: 100px;">
@@ -349,21 +439,19 @@ body{
                         <div style="width: 100px; height: 100px; background-color: red;"></div>
                     </div>
                 </div>
-            </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content"style="font-size: .75em;">
-                <p>If you want to center an element inside of an other element, you can do this with <code>display: flex</code>, <code>justify-content: center;</code> and <code>align-items: center;</code>. <code>align-items</code> is the same concept as <code>justify-content</code> except it is referring to the up and down direction. </p>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <p>If you want to center an element inside of an other element, you can do this with <code>display: flex</code>, <code>justify-content: center;</code> and <code>align-items: center;</code>. <code>align-items</code> is the same concept as <code>justify-content</code> except it is referring to the up and down direction. </p>
                 <div style="border: 1px solid black; height: 400px; width: 400px; display: flex; justify-content: center; align-items: center;">
                     <div style="background-color: red; width: 200px; height: 200px;"></div>
                 </div>
-            </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content" style="font-size: .75em;">
-                <p>Grid is a 2 dimensional layout system that can handle both column and rows</p>
+    </div>
+    <div class="slide-item single-col-text" style="height: 1700px" >
+        <div class="slide-content">
+            <p>Grid is a 2 dimensional layout system that can handle both column and rows</p>
                 <p>Use<code>&lt;div class= &ldquo;grid-container&rdquo;&gt;</code></code> and <code>.grid-container</code> to set the <code>display: grid</code> property</p>
                 <p>HTML would look like this:</p>
                 <pre><code>&lt;div class= &ldquo;grid-container&rdquo;&gt;
@@ -375,8 +463,8 @@ body{
                     <pre><code>.grid container{
     display: grid;
 }</code></pre>
-            <p><code>display-template-columns</code> defines the width of the columns of the grid</p>
-            <p><code>display-template-rows</code> defines the height of the rows of the grid</p>
+            <p><code>grid-template-columns</code> defines the width of the columns of the grid</p>
+            <p><code>grid-template-rows</code> defines the height of the rows of the grid</p>
             <pre><code>.grid container{
     display: grid;
     grid-template-columns: 100px 200px 1fr;
@@ -390,39 +478,55 @@ body{
                 <div id="grid-item-5" style="background-color: cornflowerblue;"></div>
                 <div id="grid-item-6" style="background-color: rebeccapurple;"></div>
             </div>
-            </div>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content">
-                <p>Always remember that you apply the display properties on the parent folder. This might be a reason why your layouts look wonky.</p>
-                <p>If you want to give your rows and columns equal width and height, you can use <code>repeat(number of rows/columns, 1fr);</code></p>
-                <p>You can make certain elements span across the grid by using <code>grid-row: start / end</code> or <code>grid-row: start / end</code> by inpuyting integers to note the number of row or column. Putting <code>span</code> for end denotes that it spans a certain number of column</p>
-            </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <p>Always remember that you apply the display properties on the parent folder. This might be a reason why your layouts look wonky.</p>
+            <p>If you want to give your rows and columns equal width and height, you can use <code>repeat(number of rows/columns, 1fr);</code></p>
+            <p>You can make certain elements span across the grid by using <code>grid-row: start / end</code> or <code>grid-row: start / end</code> by inpuyting integers to note the number of row or column. Putting <code>span</code> for end denotes that it spans a certain number of column</p>
         </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content">
-                <p>Great! Now we can talk about the next creative prompt, <a href="net-art-garden.html"><em>Net Art Garden</em></a>.</p>
-            </div>
-        </div>
-        <div class="slide-item">
-            <!-- Notes -->
-            <div class="slide-content">
-                Awesome! You have finished Part 2:
-                <p>In this module you should have completed</p>
-                <form>
-                    <input type="checkbox">
-                    <label> <a href="#css-styling-basics">CSS Styling and Positioning Basics</a></label><br>
-                    <input type="checkbox">
-                    <label><a href="#type-on-the-web">Typography on the Web</a></label><br>
-                    <input type="checkbox">
-                    <label> <a href="#flexbox-and-grid">Flexbox and Grid</a></label><br>
-                    <input type="checkbox">
-                    <label> <a href="example/index.html">Net Art Garden Example</a></label><br>
-                  </form>
+    </div>
+    <div class="slide-item bumper" id="net-art-garden">
+        <div class="slide-content">
+            <div>
+                <p>All done! Here’s what’s up next:</p>
+                <h1>Net Art Garden Example</h1>
             </div>
         </div>
     </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Craft your own garden of earthly internet delights. You will use the modules:</h1>
+                <ul>
+                    <li>CSS basics</li>
+                    <li>Typography</li>
+                    <li>Positioning</li>
+                    <li>Flex and Grid</li>
+                </ul>
+            </div>
+            <p>You can see an example of a finished <em>net art garden</em> site, <a href="example/index.html">here</a>. You can follow along in the video and reference example code by downloading this <a href="example/" download>project folder</a>.<br><br>CHALLENGE: Create three original drawings and turn them into .png files. Put them into an images folder. Use these as your <em>"plants" </em>for your garden.</p>
+        </div>
+    </div>
+
+<!-- SUMMARY -->
+        <div class="slide-item summary">
+            <div class="slide-content">
+                <div class="message">
+                    <p>All done!</p>
+                    <p style="font-size: 100px; font-family: 'ITC Garamond';">In this module,<br>you should have completed:</p>
+                </div>
+                <div class="completed">
+                   
+                    <li>CSS Styling and Positioning Basics</a></li>
+                    <li>Typography on the Web</a></li>
+                    <li>Positioning</a></li>
+                    <li>Flexbox and Grid</a></li>
+                    <li>Net Art Garden Example</a></label></li>
+                </div>
+            </div>
+        </div>
+     </div>
 </body>
 </html>
