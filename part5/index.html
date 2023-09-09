@@ -1,247 +1,366 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Part 5</title>
-
+    <script src="lib/p5.js"></script>
     <link href="styles.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <nav>
-        <a href="../index.html">back</a>
-    </nav>
-    <div id="slide-container"> <div class="slide-item">
-        <div class="slide-content">
-            <p>In this video we will go over:</p>
-            <form>
-                <input type="checkbox">
-                <label> <a href="#">Basic Javascript for Interactivity and Intro to p5.js</a></label><br>
-                <input type="checkbox">
-                <label><a href="example/one/index.html">Folder Structure and Setting up a project on Gitub</a></label><br>
-                <input type="checkbox">
-                <label> <a href="example/two/index.html">Drag Interactions</a></label><br>
-                <input type="checkbox">
-                <label> <a href="example/three/index.html">Keyboard and Mouse Interactions</a></label><br>
-              </form>
-        </div>
-    </div>
-        <div class="slide-item">
-            <div class="slide-content" id="javascript-basics">
-            <p>What is javascript?</p>
-            <p>a lightweight programming language ("scripting language") that allows for interativity, using data, performing calculations, and changing HTML elements on the page.</p>
-        </div>
-    </div>
-    <div class="slide-item">
-        <div class="slide-content">
-            <p>The DOM is a programming interface for web documents. </p>
-            <p>It represents the page so that programs can change the document structure, style, and content. </p> 
-            <p>The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
-        </div>
-    </div>
-    <div class="slide-item">
-        <div class="slide-content">
-        <p>p5.js is a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else! p5.js is free and open-source because we believe software, and the tools to learn it, should be accessible to everyone.</p>
-        </div>
-    </div>
-    <div class="slide-item">
-        <div class="slide-content">
-        <p>Lets take a look at the basics: <a href="https://editor.p5js.org/">https://editor.p5js.org/</a></p>
-        </div>
-    </div>
-    <div class="slide-item">
-        <div class="slide-content">
-        <pre><code>//this runs at the start and only runs once
-setup(){
 
-}
+    <div class="slide-item cover">
+        <div class="slide-content">
+            <h1>Intro to Coding <br> for Designers</h1>
+            <h1>Part 5</h1>
+        </div>
+    </div>
+    <div class="slide-item table-of-contents">
+        <div class="slide-content">
+            <h1>In this video,<br>we’ll cover:</h1>
+            <ol>
+                <li><a href="#basic-javascript">Basic Javascript</a></li>
+                <li><a href="#intro-to-p5-js">Intro to p5.js</a></li>
+                <li><a href="#click">Click and Appear Interaction</a></li>
+                <li><a href="#drag">Drag Interactions</a></li>
+                <li><a href="#keyboard-and-mouse">Keyboard and Mouse Interactions</a></label></li>
+
+            </ol>
+        </div>
+    </div>
+    <div class="slide-item bumper" id="css-styling-basics">
+        <div class="slide-content">
+            <div>
+                <p>Here’s what’s up next:</p>
+                <h1>Basic Javascript for Interactivity and Intro to p5.js</h1>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1 style="font-size: 130px;">What is javascript?</h1>
+                <p style="font-size: 70px; font-family: 'ABC Diatype-Light';">Javascript is a lightweight programming language ("scripting language") that allows for interativity, using data, performing calculations, and changing HTML elements on the page.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
             
-//this loops every frame
-draw(){
-     
-}</code></pre>
+            <div>
+                <p style="font-size: 70px; font-family: 'ABC Diatype-Light';">The DOM is a programming interface for web documents.<br> It represents the page so that programs can change the document structure, style, and content. <br> The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+            </div>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item bumper" id="css-styling-basics">
         <div class="slide-content">
-            <pre><code>//this runs at start and only runs once
+            <div>
+                <p>Here’s what’s up next:</p>
+                <h1>Intro to p5.js</h1>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+                <div>
+                    <p style="font-size: 70px">p5.js is a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else! <span class="p5">p5.js</span> is free and open-source because we believe software, and the tools to learn it, should be accessible to everyone.</p>
+                    <p style="font-size: 70px">Lets take a look at the basics: <a href="https://editor.p5js.org/">https://editor.p5js.org/</a></p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="slide-item double-col-text-image">
+        <div class="slide-content">
+            <div>
+                <p style="font-size: 70px;">Download these <a href="p5-examples/" download="">example files</a> to get started!</p>
+                <pre><code>//this runs at the start and 
+only runs once
 
-//usually you will include the canvas size 
-and assign values to varriables or populate
-arrays of values
+function setup(){
                 
-setup(){
+}
 
+                
+//this loops every frame 
+
+function draw(){
+                
 }</code></pre>
+            </div>
+    
+        </div>
+        <div class="half-page-output">
+            <iframe scrolling= "no" src="p5-examples/example1.html" style="height: 100vh"></iframe>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item double-col-text-image">
         <div class="slide-content">
-        <a href="https://p5js.org/reference/#/p5/createCanvas">createCanvas(length, width);</a>
-        <pre><code>//lets make a canvas that has dimensions of 1000 x 1000
+            <div class="p5-link"><a href="https://p5js.org/reference/#/p5/createCanvas">createCanvas(length, width);</a>
+        <pre><code>//lets make a canvas that has
+dimensions of the window of the browser.
 
 setup(){
 
-    createCanvas(800,800) 
+    let cnv = createCanvas(windowWidth, 
+    windowHeight);
+    cnv.parent('p5-example');
 }</code></pre>
+</div>
+        </div>
+        <div class="half-page-output">
+            <iframe scrolling= "no" src="p5-examples/example2.html" style="height: 100vh"></iframe>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item double-col-text-image">
         <div class="slide-content">
-            <a href="https://p5js.org/reference/#/p5/background">background(r,g,b);</a>
-            <pre><code>//lets make a background
+            <div class="p5-link">
+                <a href="https://p5js.org/reference/#/p5/background">background(r,g,b);</a>
+                <pre><code>//lets make a background
 that is your favorite shade of 
-pink using r, g, b notation
-
-setup(){
-
-    createCanvas(800,800)
-    background(255,0,255);
+pink using r, g, b notation, 
+hex code notation, 
+or h, s, b notation
+                
+setup(){           
+    let cnv = createCanvas(windowWidth, 
+    windowHeight);
+    cnv.parent('p5-example');
+    background(0,0,255);
 }</code></pre>
+            </div>
+        </div>
+        <div class="half-page-output">
+            <iframe scrolling= "no" src="p5-examples/example3.html" style="height: 100vh"></iframe>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item double-col-text-image" >
         <div class="slide-content">
-        <a href="https://p5js.org/reference/#/p5/background">background(#ffffff)</a>
-        <pre><code>//lets make a background that is your favorite shade 
-of blue in six-digit hexidecimal notation
+            <div class="p5-link">
+                <a href="https://p5js.org/reference/#/p5/draw">draw()</a>
+                <pre><code>setup(){           
+let cnv = createCanvas(windowWidth, 
+windowHeight);
+cnv.parent('p5-example');
+background(0,0,255);
+}
 
-setup(){
-
-    createCanvas(800,800)
-    background(255,0,255); 
-}</code></pre>
-        </div>
-    </div>
-    <div class="slide-item">
-        <div class="slide-content">
-        <pre><code>//you will want to draw most of everything in the draw 
-function because of the fact that it loops constantly, 
-allowing for animation and changing over time.
 
 draw(){
-
+    background(random(0,255), 
+    random(0,255), random(0,255));
 }</code></pre>
+                        </div>
+            </div>
+        <div class="half-page-output">
+            <iframe scrolling= "no" src="p5-examples/example4.html" style="height: 100vh"></iframe>
         </div>
     </div>
-    <div class="slide-item">
-        <div class="slide-content">
-        <a href="https://p5js.org/reference/#/p5/ellipse">ellipse(x, y, w, [h])</a>
-        <pre><code>//lets draw a circle, using the parameters above, 
-input numerical values to draw a circle at the 
-top right corner of the canvas
 
-draw(){
-            
-ellipse(800,100, 100, 100); 
+
+    <div class="slide-item double-col-text-image" >
+        <div class="slide-content">
+            <div class="p5-link">
+                <a href="https://p5js.org/reference/#/p5/ellipse">ellipse(x, y, w, [h])</a>
+        <pre><code style="font-size: 20px;">//lets draw a circle, 
+fill it with a random color
+and make it change every frame.
+
+
+
+
+//ON START UP
+
+function setup(){
+    let cnv = createCanvas(windowWidth, windowHeight);
+    cnv.parent('p5-example');
+    background(0,0,255);
+    frameRate(1)
+    noStroke();
+    ellipse(width/2, height/2, 400, 400);
+   
+   }
+
+//LOOPS EVERY FRAME 
+
+ function draw(){
+
+    background(random(0,255), random(0,255), random(0,255));
+    fill(random(0,255), 
+    random(0,255), random(0,255));
+    ellipse(width/2, height/2, 400, 400);
+   
 }</code></pre>
+                        </div>
+            </div>
+        <div class="half-page-output">
+            <iframe scrolling= "no" src="p5-examples/example5.html" style="height: 100vh"></iframe>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item double-col-text-image" >
         <div class="slide-content">
-        <a href="https://p5js.org/reference/#/p5/rect">rect(x, y, w, [h])</a>
-        <pre><code>//lets draw a rectangle, using the parameters 
-above, input numerical values to draw a rectangle 
-at the bottom right corner of the canvas
+            <div class="p5-link">
+                <a href="https://p5js.org/reference/#/p5/rect">rect(x, y, w, [h])</a>
+        <pre><code style="font-size: 20px;">//lets draw a rectangle, 
+fill it with a random color
+and make it change every frame.
 
-draw(){
 
-    rect(800,800, 100, 100); 
+
+
+//ON START UP
+
+function setup(){
+    let cnv = createCanvas(windowWidth, windowHeight);
+    cnv.parent('p5-example');
+    background(0,0,255);
+    frameRate(1)
+    noStroke();
+    rect(width/2, height/2, 400, 400);
+   
+   }
+
+//LOOPS EVERY FRAME 
+
+ function draw(){
+
+    background(random(0,255), random(0,255), random(0,255));
+    fill(random(0,255), 
+    random(0,255), random(0,255));
+    rect(width/2, height/2, 400, 400);
+   
 }</code></pre>
+                        </div>
+            </div>
+        <div class="half-page-output">
+            <iframe scrolling= "no" src="p5-examples/example6.html" style="height: 100vh"></iframe>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item double-col-text-image" >
         <div class="slide-content">
-        <a href="https://p5js.org/reference/#/p5/line">line(x1, y1, x2, y2)</a>
-        <pre><code>//lets draw a line, using the parameters above, input 
-numerical values to draw a diagonal line at the bottom 
-left corner of the canvas
+            <div class="p5-link">
+                <a href="https://p5js.org/reference/#/p5/triangle">triangle(x, y, w, [h])</a>
+        <pre><code style="font-size: 20px;">//lets draw a triangle, 
+fill it with a random color
+and make it change every frame.
 
-draw(){
 
-    line(100, 600, 400, 900); 
+
+
+//ON START UP
+
+function setup(){
+    let cnv = createCanvas(windowWidth, windowHeight);
+    cnv.parent('p5-example');
+    background(0,0,255);
+    frameRate(1)
+    rectMode(CENTER);
+    noStroke();
+    triangle(width/2, 300, width/2 + 200, 600, width/2 - 200, 600);
+   
+   }
+
+//LOOPS EVERY FRAME 
+
+ function draw(){
+
+    background(random(0,255), random(0,255), random(0,255));
+    fill(random(0,255), random(0,255), random(0,255));
+    triangle(width/2, 300, width/2 + 200, 600, width/2 - 200, 600);
+   
 }</code></pre>
+                        </div>
+            </div>
+        <div class="half-page-output">
+            <iframe scrolling= "no" src="p5-examples/example7.html" style="height: 100vh"></iframe>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item bumper" id="css-styling-basics">
         <div class="slide-content">
-        <a href="https://p5js.org/reference/#/p5/triangle">triangle(x1, y1, x2, y2, x3, y3)</a>
-        <pre><code>//lets draw a triangle, using the parameters above, 
-input numerical values to draw a triangle at the top 
-left corner of the canvas
-
-draw(){
-
-    triangle(130, 175, 158, 120, 186, 175); 
-}</code></pre>
+            <div>
+                <p>Here’s what’s up next:</p>
+                <h1>Click And Appear Interaction</h1>
+            </div>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item single-col-text" >
         <div class="slide-content">
-        <a href="https://p5js.org/reference/#/p5/quad">quad(x1, y1, x2, y2, x3, y3, x4, y4)</a>
-        <pre><code>//lets draw a quad, using the parameters above, 
-input numerical values to draw a quad at the top 
-center of the canvas
-
-draw(){
-
-    quad(438, 131, 586, 220, 469, 363, 330, 276); 
-}</code></pre>
+            <div class="demo click">
+                <div id="clicked">
+                    <p onclick="show()">click on me</p>
+                    <div id="appear">
+                        <img src="../images/cat.png" width="400px">
+                    </div>
+                </div>
+                <div class="examples one">
+                    <p>Download <a href="example/one/" download>these files</a> and watch the tutorial to see how to make an image <em>pop up after you click</em> an element, like text.</p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="slide-item">
+    <div class="slide-item bumper" id="css-styling-basics">
         <div class="slide-content">
-        <a href="https://p5js.org/reference/#/p5/fill">fill(v1, v2, v3, [alpha]);</a>
-        <pre><code>//as long as you write this above the line that 
-draws a shape, the shape will fill with that color.
-Fill each shape with your chosen colors. 
-In order to switch color, write a new color 
-above the next shape. 
-If you want them to all be one color, 
-just write it above. Think of it as 
-checking a setting off before you draw a shape
-
-draw(){
-    fill(0, 255, 0);
-    ellipse(800,100, 100, 100);
-}</code></pre>
+            <div>
+                <p>Here’s what’s up next:</p>
+                <h1>Drag Interactions</h1>
+            </div>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item single-col-text" >
         <div class="slide-content">
-        <p>In javascript, we have these things called variables. We declare them with a name and set a value to them.</p>
-        <ol>Variables can be
-            <li>Numbers</li>
-            <li>Strings or words</li>
-            <li>Boolean or True/False</li>
-        </ol>
-        <p>Declaring a variable looks something like <br> 
-            <code>let x = 10;</code><br>
-            <code>let name = "jane"</code><br>
-            <code>let happy = true</code></p>
+            <div class="demo drag">
+                <!-- as long as you have this javascript code linked and add a class of "dragme" to your element, this should work -->
+                <div>
+                    <p id="text" class="three.zip">drag this text!</p>
+                    <div>
+                        <img src="../../../images/bearhug.png" width="400px" class="dragme">
+                    </div>
+                </div>
+                <div class="examples two">
+                    <p>Download <a href="two.zip" download>these files</a> and watch the tutorial to see how to make your images <em>draggable.</em></p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item bumper" id="css-styling-basicss">
         <div class="slide-content">
-            We are going to look at some javascript together <a href="example/index.html">here.</a> Lets make an image show up when we click and drag it.
+            <div>
+                <p>Here’s what’s up next:</p>
+                <h1>Keyboard and Mouse Interactions</h1>
+            </div>
         </div>
     </div>
-    <div class="slide-item">
+    <div class="slide-item single-col-text" >
         <div class="slide-content">
-            Awesome! You have finished Part 5:
-            <p>In this module you should have completed</p>
-            <form>
-                <input type="checkbox">
-                <label> <a href="#">Basic Javascript for Interactivity and Intro to p5.js</a></label><br>
-                <input type="checkbox">
-                <label><a href="example/one/index.html">Folder Structure and Setting up a project on Gitub</a></label><br>
-                <input type="checkbox">
-                <label> <a href="example/two/index.html">Drag Interactions</a></label><br>
-                <input type="checkbox">
-                <label> <a href="example/three/index.html">Keyboard and Mouse Interactions</a></label><br>
-              </form>
+            <div class="examples three" style="padding-top: 400px;">
+                <p>Download <a href="three.zip" download>these files</a> and watch the tutorial to see how to make a <a href="example/three/"><em>custom cursor</em></a>  with mouse interactions!</p>
+                <img id ="dove-cursor" src="images/dove-cursor.gif" width="700px">
+            </div>
+            </div>
         </div>
     </div>
+    <div class="slide-item summary">
+        <div class="slide-content">
+            <div class="message">
+                <p>All done!</p>
+                <p style="font-size: 100px; font-family: 'ITC Garamond';">In this module,<br>you should have completed:</p>
+            </div>
+            <div class="completed">
+                <ul>
+                    <li>Basic Javascript</li>
+                    <li>Intro to p5.js</li>
+                    <li>Click and Appear Interaction</li>
+                    <li>Drag Interactions</li>
+                    <li>Keyboard and Mouse Interactions</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
+<script src="example/one/script.js"></script>
+<script src="example/two/script.js"></script>
+<script src="example/three/script.js"></script>
 </html>

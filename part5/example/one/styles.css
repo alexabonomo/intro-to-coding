@@ -1,8 +1,24 @@
+@font-face {
+    font-family: 'ITC Garamond';
+    src: url(../fonts/font.woff);
+    src: url(../fonts/font.woff2);
+}
+
+@font-face {
+    font-family: 'ITC Garamond Italic';
+    src: url(../../../fonts/font-italic.woff);
+    src: url(../../../fonts/font-italic.woff2);
+}
+
+
 #appear{
     display: none;
 }
+p {
+    font-size: 100px;
+    font-family: 'ITC Garamond Italic'
+}
 
-.dragme{
-    position:relative;
-    cursor: move;
+p:hover{
+    text-decoration: underline;
 }

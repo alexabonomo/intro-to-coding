@@ -372,3 +372,39 @@ pre{
 td{
     color: black;
 }
+.box-model {
+    width: 800px;
+}
+
+.title{
+    margin: 0px;
+}
+
+div.margin {
+    background-color: pink;
+    width: 900px;
+    height: 850px;
+    padding: 20px;
+  }
+  
+  div.border {
+    height: 500px;
+    margin: 0px 80px;
+    padding: 20px;
+  }
+  
+  div.padding {
+    border:solid black 20px;
+    background-color: red;
+    height: 500px;
+    width: 600px;
+    padding: 20px;
+  }
+  
+  div.content {
+    background-color: crimson;
+    height: 300px;
+    width: 400px;
+    margin: 30px 75px;
+    padding: 20px;
+  }

@@ -7,32 +7,82 @@
     <title>Part 4</title>
 
     <link href="styles.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav>
-        <a href="../index.html">back</a>
-    </nav>
     <div id="slide-container">
-        <div class="slide-item">
+        <div class="slide-item cover">
             <div class="slide-content">
-                <p>In this video we will go over:</p>
-                <form>
-                    <input type="checkbox">
-                    <label> <a href="#self-publish">Self Publishing on the Web</a></label><br>
-                    <input type="checkbox">
-                    <label><a href="#github">Folder Structure and Setting up a project on Gitub</a></label><br>
-                    <input type="checkbox">
-                    <label> <a href="#media-queries">Setting up your site to be responsive</a></label><br>
-                    <input type="checkbox">
-                    <label> <a href="example/begin/index.html">Hyperlink Storytelling Example</a></label><br>
-                  </form>
+                <h1>Intro to Coding <br> for Designers</h1>
+                <h1>Part 4</h1>
             </div>
         </div>
-        <div class="slide-item" id="self-publish">
-            <div class="slide-content" style="font-size: .75em;">
-                <p>As a new media artist it is important to know how to self publish your work online. In order to do this, learning how to use git commands to publish to github is a very valuable skill.</p>
+        <div class="slide-item table-of-contents">
+            <div class="slide-content">
+                <h1>In this video,<br>we’ll cover:</h1>
+                <ol>
+                    <li><a href="#self-publish">Self Publishing on the Web</a></li>
+                    <li><a href="#github">Folder Structure and Setting up a Project on Gitub</a></li>
+                    <li><a href="#media-queries">Setting up Your Site to be Responsive</a></li>
+                    <li><a href="hyperlink-storytelling">Hyperlink Storytelling Example</a></label></li>
+                </ol>
+            </div>
+        </div>
 
+
+        <div class="slide-item bumper" id="css-styling-basics">
+            <div class="slide-content" id="self-publish">
+                <div>
+                    <p>All done! Here’s what’s up next:</p>
+                    <h1>Self Publishing on the Web</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-item single-col-text" >
+            <div class="slide-content">
+                <h1><em>10 Reasons to Self Publish on the Web</em></h1>
+                <ol style="margin: 50px;">
+                    <li class = "reason-1">Because it is fun.</li>
+                    <li class = "reason-2">Because it is 100% your voice.</li>
+                    <li class = "reason-3">Because it teaches you how to archive your work.</li>
+                    <li class = "reason-4">Because it is more sustainable for the environment.</li>
+                    <li class = "reason-5">Because you will always be in ownership of the code as long as you have it stored on your personal computer</li>
+                    <li class = "reason-6">Because you will become a better writer and copy editor.</li>
+                    <li class = "reason-7">Because you will take care of your own presence on the internet better.</li>
+                    <li class = "reason-8">Because your data is less likely to become obsolete or unmaintained.</li>
+                    <li class = "reason-9">Because you can change the layout at will.</li>
+                    <li class = "reason-10">Because it will make you look cool and smart.</li>
+                    <img class="img-1" src="images/1.jpeg"></img>
+                    <img class="img-2" src="images/2.jpeg"></img>
+                    <img class="img-3" src="images/3.jpeg"></img>
+                    <img class="img-4" src="images/4.jpeg"></img>
+                    <img class="img-5" src="images/5.jpeg"></img>
+                    <img class="img-6" src="images/6.jpeg"></img>
+                    <img class="img-7" src="images/7.jpeg"></img>
+                    <img class="img-8" src="images/8.jpeg"></img>
+                    <img class="img-9" src="images/9.jpeg"></img>
+                    <img class="img-10" src="images/10.jpeg"></img>
+                </ol>
+            </div>
+        </div>
+
+        <div class="slide-item bumper" id="css-styling-basics">
+            <div class="slide-content" id="github">
+                <div>
+                    <p>All done! Here’s what’s up next:</p>
+                    <h1>Folder Structure and Setting up a Project on Gitub</h1>
+                </div>
+            </div>
+        </div>
+        <div class="slide-item single-col-text" >
+            <div class="slide-content">
+                <h1>As a new media artist it is important to know how to self publish your work online. In order to do this, learning how to use git commands to publish to github is a very valuable skill.</h1>
+            </div>
+        </div>
+        <div class="slide-item single-col-text" >
+            <div class="slide-content">
                 <p>On Mac:</p>
                 <p>Most versions of MacOS will already have <code>Git</code> installed and you can activate it in the terminal with <code>git version</code>. However, if you don't have Git installed for whatever reason, you can install the latest version of Git using one of several popular methods.</p>
                 <ol>
@@ -46,29 +96,44 @@
                 </ol>
             </div>
         </div>
-        <div class="slide-item">
-            <div class="slide-content" style="font-size: .75em;" id="github">
-                <p>Github is a versioning tool where you can save and update your code. Every time you save your code, it is called a commit. A commit means a saved version of your code at a particular point. You can always restore you repository to a specific commit since each one has its own id and timestamp. You can do this a few different ways, but I am gonna show you how via the terminal.</p>
-                <p>Go to github and click on the top left corner icon > Your repositories</p>
-                <p>A repositories is essentially a folder and once you make a repository on GitHub, you are able to connect it to your local directory using a command called <code>git clone</code>.</p>
-                <p>Once you make your repository, there area a few settings.</p>
-                <ul>
-                    <li>Keep it publish. you will need to in order to publish the site via Github Pages.</li>
-                    <li>You may add a README file, its just a text file where you an write about your repository to folks.</li>
-                    <li>Keep everything else the same. You can choose a license if you want. If you want to, MIT License is common, but its not really a big deal if you keep it none for small personal art sites.</li>
-                </ul>
+        <div class="slide-item single-col-text" >
+            <div class="slide-content">
+                <h1><em>Github</em>: a versioning tool where you can save and update your code.
+                <br>
+                <br>
+                <em>Commit</em>: a saved version of your code at a particular point.</h1>
             </div>
         </div>
-        <div class="slide-item">
+        <div class="slide-item single-col-text" >
             <div class="slide-content">
-              <p>First we are going to set up our project on github by creating a new repository.</p>
-              <p>Select "New"</p>
-              <p>Name your repository</p>
-              <p>Leave all the other settings and select "Create Repository"</p>
+                <div style="background-color: black; color:white; border-radius: 20px; padding: 50px;">
+                    <p>Go to github and click on the top left corner icon > Your repositories</p>
+                    <p>Repository = folder </p>
+                    <p>Use <code style="color: black;">git clone URL</code> in the terminal.</p>
+                </div>
+                <div style="background-color: #2CAD60; border-radius: 20px; padding: 50px;">
+                    <p>Once you make your repository, there area a few settings.</p>
+                    <ul>
+                    
+                        <li>Keep it public. You will need to in order to publish the site via Github Pages.</li>
+                        <li>You may add a README file, its just a text file where you an write about your repository to folks.</li>
+                        <li>Keep everything else the same. You can choose a license if you want. If you want to, MIT License is common, but its not really a big deal if you keep it none for small personal art sites.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="slide-item">
+        <div class="slide-item double-col-text-image">
             <div class="slide-content">
+                <div>
+                    <p>First we are going to set up our project on github by creating a new repository.</p>
+                    <ul>
+                        <li>Select "New"</li>
+                        <li>Name your repository</li>
+                        <li>Leave all the other settings and select "Create Repository"</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="half-page-output" style="background-color: pink;">
                 <p>Now that you have made a repository, click on it and click on the green button that says "Code".</p>
                 <p>Simply just copy the URL and open your terminal.</p>
                 <p>Type <code>git clone url</code></p>
@@ -76,8 +141,8 @@
                 <p><code>cd foldername</code> to navigate to the folder locally to start creating files.</p>
             </div>
         </div>
-        <div class="slide-item">
-            <div class="slide-content" style="font-size: .75em;">
+        <div class="slide-item single-col-text" >
+            <div class="slide-content" style="background-color: rgb(0, 159, 251); padding: 50px; width: 75vw; border-radius: 20px;">
                 <p>When you are ready, you can drop your files inside your site folder into this folder that is connected to GitHub.</p>
                 
                 <p>Once you place your files inside the folder, make sure you are inside the correct folder. You can look at the file path above where you type commands, or type <code>ls</code> to view all files to see that it looks like your folder. Then type <code>git status</code>.</p>
@@ -85,47 +150,75 @@
                 <p>To see this change, type <code>git status</code> again. You should see all the files turn green. Which means that the files are now "staged" and ready to be commit.</p>
             </div>
         </div>
-        <div class="slide-item">
-            <div class="slide-content">
-                <p>Now you are ready to commit your files. Which means you are stating the changes that you made to your files. You will have a message denoting the changes. You can essentially write anything as a message. Type <code>git commit -m "write your message here"</code></p>
-                <p>You can type <code>git status again to see the message that your commit was made.</code></p>
-            </div>
-        </div>
-        <div class="slide-item">
+        <div class="slide-item single-col-text" >
             <div class="slide-content">
                 <p>Now you can take your commit and push it to github. Making it available on the internet! Type <code>git push -u origin main</code> or just <code>git push</code>.</p>
-                <p>You should see a bunch of messages cascade in your terminal and you will know that everything worked if you see a message with 100% in it. Or you can go to your GitHub repository webpage and see the files added.</p>
+                <h1>You should see a bunch of messages cascade in your terminal and you will know that everything worked if you see a message with 100% in it. Or you can go to your GitHub repository webpage and see the files added.</h1>
             </div>
         </div>
-        <div class="slide-item">
+        <div class="slide-item bumper" id="css-styling-basics">
             <div class="slide-content" id="media-queries">
-              <p>Once you start to make your websites, you want to be able to make the layouts look good on both mobile and desktop. For this, we use media queries.</p>
-              <p>Media queries is a piece of code that specifies what CSS styles are at a certain screen width. Usually we think of mobile devices as screens less than 600px. </p>
-
-              <p>In our CSS we can use:</p>
-              <pre><code>@media only screen and (max-width: 600px) {
+                <div>
+                    <p>All done! Here’s what’s up next:</p>
+                    <h1>Setting up Your Site to be Responsive</h1>
+                </div>
+            </div>
+        </div>
+        <div class="slide-item single-col-text" >
+            <div class="slide-content">
+                <div>
+                    <p>Once you start to make your websites, you want to be able to make the layouts look good on both mobile and desktop. For this, we use media queries.</p>
+                    <p>Media queries is a piece of code that specifies what CSS styles are at a certain screen width. Usually we think of mobile devices as screens less than 600px. </p>
+                </div>
+            
+                <div>
+                <p>In our CSS we can use:</p>
+                <pre><code>@media only screen and (max-width: 600px) {
 body {
         background-color: lightblue;
      }
 }</code></pre>
+                </div>
             </div>
         </div>
-        <div class="slide-item">
+        <div class="slide-item bumper" id="css-styling-basics">
+            <div class="slide-content" id="hyperlink-storytelling">
+                <div>
+                    <p>All done! Here’s what’s up next:</p>
+                    <h1>Hyperlink Storytelling Example</h1>
+                </div>
+            </div>
+        </div>
+        <div class="slide-item single-col-text" >
             <div class="slide-content">
-                Awesome! You have finished Part 4:
-                <p>In this module you should have completed</p>
-                <form>
-                    <input type="checkbox">
-                    <label> <a href="#self-publish">Self Publishing on the Web</a></label><br>
-                    <input type="checkbox">
-                    <label><a href="#github">Folder Structure and Setting up a project on Gitub</a></label><br>
-                    <input type="checkbox">
-                    <label> <a href="#media-queries">Setting up your site to be responsive</a></label><br>
-                    <input type="checkbox">
-                    <label> <a href="example/begin/index.html">Hyperlink Storytelling Example</a></label><br>
-                  </form>
+                <h1>One thing leads to the next...</h1>
+                <div>
+                    <p>You can see an example of a finished <em>hyperlink storytelling</em> site, <a href="example/index.html">here</a>. Take your poetry to a whole new level of metaphorical. You can follow along in the video and reference example code by downloading this <a href="example/" download>project folder</a>.</p>
+                    <p>CHALLENGE: Create a story that is told entirely through clicking on links with two different endings. <em>Hint: You can make links that are text and images. </em></p>
+                </div>
             </div>
         </div>
+        <div class="slide-item summary">
+            <div class="slide-content">
+                <div class="message">
+                    <p>All done!</p>
+                    <p style="font-size: 100px; font-family: 'ITC Garamond';">In this module,<br>you should have completed:</p>
+                </div>
+                <div class="completed">
+                    <ul>
+                        <li>Self Publishing on the Web</li>
+                        <li>Folder Structure and Setting up a Project on Gitub</li>
+                        <li>Setting up Your Site to be Responsive</li>
+                        <li>Hyperlink Storytelling Example</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </body>
+
+
 </html>

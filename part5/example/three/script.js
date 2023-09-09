@@ -15,8 +15,11 @@ function setup() {
 function draw() {
     background(0);
     
-    // image(img,mouseX, mouseY, 100, 100)
-    image(gif,mouseX, mouseY, 100, 100)
+    //image(img,mouseX, mouseY, 100, 100)
+    window.onload = function() {
+        image(img, mouseX, mouseY, 100, 100);
+    }
+ 
 }
 
 function windowResized(){
