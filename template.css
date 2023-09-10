@@ -79,7 +79,7 @@ pre{
 .cover{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    background-color: #B866EB;
+    background-color: rgb(118, 176, 116);
 }
 
 .cover > .slide-item{

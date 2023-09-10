@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'ITC Garamond';
+    src: url(../../../../../fonts/font.woff);
+    src: url(../../../../../fonts/font.woff2);
+}
+
+@font-face {
+    font-family: 'ABC Diatype-Light';
+    src: url(../../../../../fonts/ABCDiatype-Light.woff);
+    src: url(../../../../../fonts/ABCDiatype-Light.woff2);
+}
+body{
+    font-family: 'ABC Diatype-Light';
+    font-size: 1.5rem;
+}
+
+.container{
+    padding: 50px 0px;
+    width: 800px;
+    margin: auto;
+}
+
+a{
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
