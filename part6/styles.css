@@ -257,12 +257,10 @@ pre{
 }
 
 .half-page-output a:hover{
-    color: aqua;
 }
 
 .half-page-output a{
-    color: lime;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .summary > .slide-content{
@@ -293,4 +291,9 @@ pre{
 .summary li{
     font-family: 'ABC Diatype-Light';
     font-size: 55px;
+}
+
+.definitions {
+    display: flex;
+    flex-direction: row;
 }

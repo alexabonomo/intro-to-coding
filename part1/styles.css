@@ -263,3 +263,12 @@ code{
     font-family: 'ABC Diatype-Light';
     font-size: 55px;
 }
+
+.laurel{
+    display: flex;
+    flex-direction: row;
+}
+
+.laurel-1{
+    left: 1000px;
+}
