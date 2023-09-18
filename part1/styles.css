@@ -61,6 +61,9 @@ code{
 .slide-item{
     height: 100%;
     margin-bottom: 500px;
+    margin: 100px 20px;
+    border: black .5px solid;
+    border-radius: 40px;
 }
 
 .slide-content{
@@ -145,7 +148,6 @@ code{
     background-color: black;
     color: white;
     border-radius: 40px;
-    border: white solid 10px;
 }
 
 .bumper > .slide-item{
@@ -271,4 +273,30 @@ code{
 
 .laurel-1{
     left: 1000px;
+}
+
+.sky {
+    background-image: url(images/sky.jpg);
+    border-radius: 40px;
+    opacity: .9;
+}
+
+
+.sky a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: .5px white solid;
+
+}
+
+.sky a:hover{
+    background-color: white;
+    color: black;
+    transition: .25s;
+}
+
+iframe{
+    border-radius: 0px 40px 40px 0px;
 }

@@ -46,14 +46,13 @@
                     <p><a href="http://art.teleportacia.org/">Olia Lialina</a> is a pioneer of net art born in Russia. Her network-based art includes <em><a href="https://sites.rhizome.org/anthology/lialina.html">My Boyfriend Came Back from the War</a></em> (1996), <em><a href="https://www.youtube.com/watch?v=8SZJ3haDT1k">Agatha Appears</a></em> (1997), <em>First Real Net Art Gallery</em> (1998), and <em>Last Real Net Art Museum </em>(2000). She wrote <em><a href="http://art.teleportacia.org/observation/vernacular/">A Vernacular Web</a></em> in 2005 which talked about the old aesthetics of the World Wide Web I, the web during its amateur state.</p>
                 </div>
             </div>
-                <div class="half-page-image" style="background-image: url(images/olia.jpeg);">
-                    
+                <div class="half-page-image">
+                    <iframe onload="if (window.frames['myframe'] && counter++ === 0){ frames['myframe'].location.href='http://test.com/hello?uname='+getUserName();}" src="https://sites.rhizome.org/anthology/lialina.html" width="100%" height="100%"></iframe>               
                 </div>
             </div>
         </div>
         <div class="slide-item double-col-text-image">
             <div class="slide-content">
-                <h1> </h1>
                 <div class="half-page-text">
                         <p>According to Lialina, the amateur web felt boundless and hopeful. Many sites had big "under construction signs". It didn't mean that the site didn't work, it meant that someone was always there maintaining the site. Sites were playful and decorated with sparkly gifs and starry backgrounds. It was customized and expressive with cooperative effort to connect their sites to others.</p>
                 </div>
@@ -75,24 +74,27 @@
         </div>
         <div class="slide-item single-col-text" id="intro">
             <div class="slide-content">
-                <h1>Laurel Schwurlst</h1>
+                <h1>Laurel Schwulstt</h1>
                 <div class="laurel">
                     <img id="laurel-1" src="images/laurel-1.png" width="400px">
                     <img id="laurel-3" src="images/laurel-3.jpg" width="400px">
                     <img id="laurel-2" src="images/laurel-2.png" width="400px">
                 </div>
                 <div>
-                    <p><a href="https://www.laurel.world/">Laurel Schwurlst</a> is an artist whose focus is on the poetics of the internet. She wrote <em><a href="https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/">My website is a shifting house next to a river of knowledge. What could yours be?</a></em>, which compares HTML to building the scaffolding of a house. She goes on to talk about a website as a metaphor – website as a room, as a shelf, as a plant, as a garden, etc.</p>
+                    <p><a href="https://www.laurel.world/">Laurel Schwulst</a> is an artist whose focus is on the poetics of the internet. She wrote <em><a href="https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/">My website is a shifting house next to a river of knowledge. What could yours be?</a></em>, which compares HTML to building the scaffolding of a house. She goes on to talk about a website as a metaphor – website as a room, as a shelf, as a plant, as a garden, etc.</p>
                 </div>
             </div>
         </div>
-        <div class="slide-item table-of-contents" id="intro">
-            <div class="slide-content">
-                <h1>So with that, I ask you two questions:</h1>
-                <ol>
-                    <li><a href="https://www.figma.com/file/rCmGaao6ObddlHKkvNkmB9/Part-1?type=whiteboard&node-id=0%3A1&t=nuQz5pWMkfGJjaUO-1"> What is your first internet memory?</a></li>
-                    <li><a href="https://www.figma.com/file/rCmGaao6ObddlHKkvNkmB9/Part-1?type=whiteboard&node-id=0%3A1&t=nuQz5pWMkfGJjaUO-1">If you were to remake the internet by hand, how would you envision it?</a></li>
-                </ol>
+        <div class="slide-item table-of-contents sky" id="intro">
+            <div class="slide-content" style="color: white;">
+                <div>
+                    <h1>So with that, I ask you two questions:</h1>
+                    <p style="margin: 0px 50px;">The links lead you to a figjam page.</p>
+                    <ol>
+                        <li><a href="https://www.figma.com/file/rCmGaao6ObddlHKkvNkmB9/Part-1?type=whiteboard&node-id=0%3A1&t=nuQz5pWMkfGJjaUO-1"> What is your first internet memory?</a></li>
+                        <li><a href="https://www.figma.com/file/rCmGaao6ObddlHKkvNkmB9/Part-1?type=whiteboard&node-id=0%3A1&t=nuQz5pWMkfGJjaUO-1">If you were to remake the internet by hand, how would you envision it?</a></li>
+                    </ol>
+                </div>
             </div>
         </div>
         <div class="slide-item bumper" id="vs-code">
@@ -105,17 +107,15 @@
         </div>
         <div class="slide-item single-col-text" id="intro">
             <div class="slide-content">
-                <h1>We will begin to explore the handmade web and start by coding purely in HTML. For this you will need a code editor. We will be using <a href="https://code.visualstudio.com/download">Visual Studio Code</a>.</h1>
+                <h1>To begin handcoding HTML, we will be using an editor called <a href="https://code.visualstudio.com/download">Visual Studio Code</a>.</h1>
+                <p>Once you download that, you should open the editor and navigate to the extensions icon on the very left panel. It should be the last icon. Install these extensions:</p>
                 <div>
-                        <p>Once you download that, you should open the editor and navigate to the extensions icon on the very left panel. It should be the last icon. Install these extensions:</p>
-                        <br>
-                        <br>
                         <ul>
-                            <li>HTML Boilerplate</li>
-                            <li>htmltagwrap</li>
-                            <li>Beautify</li>
-                            <li>Live Server</li>
-                            <li>Code Spell Checker</li>
+                            <li>HTML Boilerplate — A template for html</li>
+                            <li>htmltagwrap — Highlight code and wrap elements around them quickly</li>
+                            <li>Beautify – Indents code for legibility </li>
+                            <li>Live Server – Every time you save, browser where you view page updates</li>
+                            <li>Code Spell Checker – Good for copyediting.</li>
                         </ul>
                     </ul>
                 </div>
@@ -396,9 +396,12 @@
                 </div>
             </div>
         </div>
+        <h1 style="text-align: center;">Heavy Flash Warning</h1>
+        <iframe width="100%" height="1080px"style="padding: 200px 0px" src="https://www.youtube.com/embed/er-OWkFeeV8?si=hQZqbhowSMiHNdsb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <div class="slide-item single-col-text">
             <div class="slide-content">
                 <div>
+                    <a href="http://archive.rhizome.org/welcome-to-my-homey-page/">Read the essay "WELCOME TO MY HOMEY PAGE: SEVEN YEARS OF PAPERRAD.ORG" on archive.rhizome.org.</a>
                     <p>Lets make a simple website using only html!</p>
                     <p>Start by creating a folder and adding an "index.html" file. Follow along in the video and place hypertext using the examples above to craft a homepage for your website. You can see an example of a finished <em>html only</em> site, <a href="example/homepage/index.html">here</a>. You can follow along and reference example code by downloading this <a href="example/index.html" download>file</a>. </p>
                 </div>
