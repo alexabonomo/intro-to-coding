@@ -48,7 +48,7 @@
         <div class="slide-item double-col-text-image">
             <div class="slide-content">
                 <div class="half-page-text">
-                    <p>CSS is linked to HTML by using <code>&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
+                    <p>CSS is linked to HTML by using <br><code>&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
                     <p>In the folder you made in your home folder, add a <code>styles.css</code> file and link it to your <code>index.html</code> file.</p>
                 </div>
             </div>
@@ -66,7 +66,6 @@
         
         <div class="slide-item double-col-text-image">
             <div class="slide-content">
-                <h1></h1>
                 <div class="half-page-text">
                     <p>CSS has a specific syntax and it is made up of a few different components:</p>
                 <pre><code style="font-size: 30px;">selector {
@@ -87,7 +86,6 @@
 
         <div class="slide-item double-col-text-image">
             <div class="slide-content">
-                <h1></h1>
                 <div class="half-page-text">
                     <p>Lets try some other styling</p>
                 <pre><code style="font-size: 30px;">body {
@@ -107,7 +105,6 @@
 
         <div class="slide-item double-col-text-image">
             <div class="slide-content">
-                <h1></h1>
                 <div class="half-page-text">
                     <p>You can style specific html elements by noting the element name as a selector.</p>
                 <pre><code style="font-size: 30px;">a {
@@ -127,7 +124,6 @@
 
         <div class="slide-item double-col-text-image">
             <div class="slide-content">
-                <h1></h1>
                 <div class="half-page-text">
                 <p>Selectors also can have "pseudoclasses" that enact styling on special occasions. For example, on hover. </p>
             
@@ -149,6 +145,7 @@
         
         <div class="slide-item double-col-text-image">
             <div class="slide-content">
+                <div>
                 <p>You can do this with any element!</p>
                 <pre><code style="font-size: 30px;">div {
     background-color: aquamarine;
@@ -159,12 +156,14 @@ div:hover {
 }</code>
                 </pre>
             </div>
+        </div>
             <div class="half-page-output">
                     <style>
                         /* Student - If you are reading source code, do not do css this way. This is is internal css for one time only use. Not as scaleable for larger sites :D */
                         #hover-box {
                             height: 100vh;
                             background-color: magenta;
+                            border-radius: 20px;
                         }
                         #hover-box:hover{
                             background-color: red;
@@ -176,25 +175,30 @@ div:hover {
         </div>
         <div class="slide-item double-col-text-image">
             <div class="slide-content">
+                <div>
                 <p>You can also make divs that have images that change on hover! You do this with the background-image property.</p>
+               
                 <pre><code style="font-size: 30px;">div {
     background-image: url(images/cat.png);
     height: 200px;
     width: 200px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
                 }
 div:hover {
-    background-image: url(images/bearhug.png);
+    background-image: 
+    url(images/bearhug.png);
 }</code>
                 </pre>
+            </div>
             </div>
             <div class="half-page-output " id="background-image">
                 <style>
                     #background-image{
                         background-image: url(../images/cat.png);
-                        background-size: contain;
+                        background-size:cover;
                         background-repeat: no-repeat;
+
                     }
 
                     #background-image:hover{
@@ -218,8 +222,9 @@ div:hover {
             <p>Notice that id's use <code>#</code> before their name and classes use <code>.</code> before their name.</p>
             </div>
         </div>
-        <div class="slide-item double-col-text-image">
+        <div class="slide-item single-col-text">
             <div class="slide-content">
+                <div>
                 <p>So lets take a look at some html code:</p>
                 <pre><code style="font-size: 20px;">&lt;body&gt;
     &lt;div class = &quot;container&quot;&gt;
@@ -240,13 +245,12 @@ div:hover {
         &lt;/div&gt;
 &lt;body&gt;</code></pre>
             </div>
-            <div class="half-page-output">
-                    
-                </div>
+        </div>
         </div>
 
         <div class="slide-item double-col-text-image">
             <div class="slide-content">
+                <div>
                 <p>You can style CSS like this to make text centered on the page with one paragraph red and one paragraph pink:</p>
                 <pre><code>.container{
 width: 50%
@@ -258,7 +262,7 @@ color: red
 }
 #pink{
 color: pink;
-}</code></pre>
+}</code></pre></div>
             </div>
             <div class="half-page-output" style="background-color:darkolivegreen;">
                 <div id="red">
@@ -476,8 +480,9 @@ body{
                 </div>
         </div>
     </div>
-    <div class="slide-item single-col-text" style="height: 1700px" >
+    <div class="slide-item single-col-text" >
         <div class="slide-content">
+            <div>
             <p>Grid is a 2 dimensional layout system that can handle both column and rows</p>
                 <p>Use<code>&lt;div class= &ldquo;grid-container&rdquo;&gt;</code></code> and <code>.grid-container</code> to set the <code>display: grid</code> property</p>
                 <p>HTML would look like this:</p>
@@ -486,10 +491,15 @@ body{
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;grid-item&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                    <p>CSS would look like this</p>
+<p>CSS would look like this</p>
                     <pre><code>.grid container{
     display: grid;
 }</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
             <p><code>grid-template-columns</code> defines the width of the columns of the grid</p>
             <p><code>grid-template-rows</code> defines the height of the rows of the grid</p>
             <pre><code>.grid container{
@@ -555,6 +565,9 @@ body{
                     </ul>
                 </div>
             </div>
+        </div>
+        <div class="back">
+            <a href="../index.html">back</a>
         </div>
      </div>
 </body>
