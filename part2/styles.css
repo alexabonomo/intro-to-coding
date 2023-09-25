@@ -257,7 +257,7 @@ pre{
 }
 
 .half-page-output a:hover{
-    color: aqua;
+    color:azure;
 }
 
 .half-page-output a{
@@ -367,7 +367,7 @@ pre{
 .grid-container{
     display: grid;
     grid-template-columns: 100px 200px 1fr;
-    grid-template-rows: 100px 100px 1fr;
+    grid-template-rows: 100px 100px;
 }
 td{
     color: black;

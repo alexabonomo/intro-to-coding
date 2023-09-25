@@ -127,9 +127,9 @@
                 <div class="half-page-text">
                 <p>Selectors also can have "pseudoclasses" that enact styling on special occasions. For example, on hover. </p>
             
-                <pre><code style="font-size: 30px;">a :hover {
+                <pre><code style="font-size: 30px;">a:hover {
     font-size: 36px;
-    color: aqua;
+    color: azure;
     text-decoration: none;
 }</code>
                 </pre>
@@ -180,11 +180,9 @@ div:hover {
                
                 <pre><code style="font-size: 30px;">div {
     background-image: url(images/cat.png);
-    height: 200px;
-    width: 200px;
     background-size: cover;
     background-repeat: no-repeat;
-                }
+}
 div:hover {
     background-image: 
     url(images/bearhug.png);
@@ -339,7 +337,7 @@ body{
     </div>
     <div class="slide-item single-col-text">
         <div class="slide-content">
-            <p style="margin: 0px;">Positioning will become an important component of CSS for if you want to make layouts for anything other than a one column page with divs stacked on top of each other. Right now, the default display property is <code>display: block</code> which means stacked on top of each other.Most elements are set to this by default. And some elements are <code>display: inline;</code> by default, which means side by side.</p>
+            <p style="margin: 0px;">Positioning will become an important component of CSS for if you want to make layouts for anything other than a one column page with divs stacked on top of each other. Right now, the default display property is <code>display: block</code> which means stacked on top of each other. Most elements are set to this by default. And some elements are <code>display: inline;</code> by default, which means side by side.</p>
                 <div style="padding:10px 0px;">
                     <p>display: block</p>
                     <div style="height: 100px; background-color: aquamarine;"></div>
@@ -409,7 +407,7 @@ body{
             <p>If you just place divs inside a container, they will block on top of eachother. Applying the property of <code>display: flex;</code> will disrupt the normal flow and make the divs appear side by side by default.</p>
         </div>
         <div class="half-page-output">
-            <p style="margin: 50px 0px;">normal:</p>
+            <p style="margin: 50px 0px;">default:</p>
             <div class="normal-container">
                 <div class="normal-item"></div>
                 <div class="normal-item"></div>
@@ -430,9 +428,9 @@ body{
 
                 </div>
                 <pre><code>&lt;div class= &ldquo;container&rdquo;&gt;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;flex item&lt;/div&gt;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;flex item&lt;/div&gt;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;flex item&lt;/div&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;flex-item&quot;&gt;&lt;/div&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;flex-item&quot;&gt;&lt;/div&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;flex-item&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <p>And in CSS this looks like</p>
                 <pre><code>.container {
@@ -505,7 +503,7 @@ body{
             <pre><code>.grid container{
     display: grid;
     grid-template-columns: 100px 200px 1fr;
-    grid-template-rows: 100px 100px 1fr;
+    grid-template-rows: 100px 100px;
 }</code></pre>
             <div class="grid-container" style="font-size: .75em;">
                 <div id="grid-item-1" style="background-color: aqua;"></div>
@@ -521,14 +519,19 @@ body{
         <div class="slide-content">
             <p>Always remember that you apply the display properties on the parent folder. This might be a reason why your layouts look wonky.</p>
             <p>If you want to give your rows and columns equal width and height, you can use <code>repeat(number of rows/columns, 1fr);</code></p>
-            <p>You can make certain elements span across the grid by using <code>grid-row: start / end</code> or <code>grid-row: start / end</code> by inpuyting integers to note the number of row or column. Putting <code>span</code> for end denotes that it spans a certain number of column</p>
+            <p>You can make certain elements span across the grid by using <code>grid-column: start / end</code> or <code>grid-row: start / end</code> by inpuyting integers to note the number of row or column. Putting <code>span</code> for end denotes that it spans a certain number of column</p>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <iframe src="https://docs.google.com/document/d/1oUcBZ-cGfRWcYCFahOE_DxoNyaQwyXoBRKS5Ui-yE0U/edit" height="900px"></iframe>
         </div>
     </div>
     <div class="slide-item bumper" id="net-art-garden">
         <div class="slide-content">
             <div>
                 <p>All done! Here’s what’s up next:</p>
-                <h1>Net Art Garden Example</h1>
+                <h1>Net Art Garden</h1>
             </div>
         </div>
     </div>
@@ -543,7 +546,7 @@ body{
                     <li>Flex and Grid</li>
                 </ul>
             </div>
-            <p>You can see an example of a finished <em>net art garden</em> site, <a href="example/index.html">here</a>. You can follow along in the video and reference example code by downloading this <a href="https://github.com/alexabonomo/intro-to-coding/tree/main/part2/example">project folder</a>.<br><br>CHALLENGE: Create three original drawings and turn them into .png files. Put them into an images folder. Use these as your <em>"plants" </em>for your garden.</p>
+            <p>You can see an example of a finished <em>net art garden</em> site, <a href="example/index.html" target="_blank">here</a>. You can follow along in the video and reference example code by downloading this <a href="https://github.com/alexabonomo/intro-to-coding/tree/main/part2/example" target="_blank">project folder</a>.<br><br>CHALLENGE: Create three original drawings and turn them into .png files. Put them into an images folder. Use these as your <em>"plants" </em>for your garden. ost your work in the <a href="https://discord.gg/3TGSNnyDYD" target="_blank">Index Community Discord</a> in the <em>#look-what-i-made</em> channel.</p>
         </div>
     </div>
 
