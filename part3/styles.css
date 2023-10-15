@@ -356,3 +356,20 @@ pre{
   #five:hover p {
     display: none;
   }
+
+  .back {
+    font-family: 'ABC Diatype-Light';
+    text-decoration: none;
+    width: 100vw;
+    text-align: center;
+    margin: 600px 0px 200px 0px;
+}
+
+.back a{
+    text-decoration: none;
+    font-size: 70px;
+}
+
+.back a:hover {
+    text-decoration: underline;
+}
