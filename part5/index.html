@@ -22,8 +22,7 @@
         <div class="slide-content">
             <h1>In this video,<br>we’ll cover:</h1>
             <ol>
-                <li><a href="#basic-javascript">Basic Javascript</a></li>
-                <li><a href="#intro-to-p5-js">Intro to p5.js</a></li>
+                <li><a href="#intro-to-p5-js">Intro to Javascript</a></li>
                 <li><a href="#click">Click and Appear Interaction</a></li>
                 <li><a href="#drag">Drag Interactions</a></li>
                 <li><a href="#keyboard-and-mouse">Keyboard and Mouse Interactions</a></label></li>
@@ -35,7 +34,7 @@
         <div class="slide-content">
             <div>
                 <p>Here’s what’s up next:</p>
-                <h1>Basic Javascript for Interactivity and Intro to p5.js</h1>
+                <h1>Intro to Javascript</h1>
             </div>
         </div>
     </div>
@@ -43,31 +42,32 @@
         <div class="slide-content">
             <div>
                 <h1 style="font-size: 130px;">What is javascript?</h1>
-                <p style="font-size: 70px; font-family: 'ABC Diatype-Light';">Javascript is a lightweight programming language ("scripting language") that allows for interativity, using data, performing calculations, and changing HTML elements on the page.</p>
+                <ul>
+                    <li>a lightweight programming language ("scripting language")</li>
+                    <li>insert dynamic text into HTML (ex: user name)</li>
+                    <li>react to events (ex: page load user click)</li>
+                    <li>get information about a user's computer (ex: browser type)</li>
+                    <li>perform calculations on user's computer (ex: form validation)</li>
+                </ul>
             </div>
         </div>
     </div>
     <div class="slide-item single-col-text" >
         <div class="slide-content">
-            
             <div>
-                <p style="font-size: 70px; font-family: 'ABC Diatype-Light';">The DOM is a programming interface for web documents.<br> It represents the page so that programs can change the document structure, style, and content. <br> The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
-            </div>
-        </div>
-    </div>
-    <div class="slide-item bumper" id="css-styling-basics">
-        <div class="slide-content">
-            <div>
-                <p>Here’s what’s up next:</p>
-                <h1>Intro to p5.js</h1>
+                <h1>Document Object Model (DOM)</h1>
+                <p>The DOM is a programming interface for web documents.</p>
+                <p>It represents the page so that programs can change the document structure, style, and content. </p>
+                <p>The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+                <img src="images/dom.png" alt="" width="400px">
             </div>
         </div>
     </div>
     <div class="slide-item single-col-text" >
         <div class="slide-content">
                 <div>
-                    <p style="font-size: 70px">p5.js is a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else! <span class="p5">p5.js</span> is free and open-source because we believe software, and the tools to learn it, should be accessible to everyone.</p>
-                    <p style="font-size: 70px">Lets take a look at the basics: <a href="https://editor.p5js.org/">https://editor.p5js.org/</a></p>
+                    <p style="font-size: 70px">p5.js is a JavaScript library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!</p>
+                    <p style="font-size: 70px">Lets take a look at the basics: <a href="https://editor.p5js.org/" target="_blank">https://editor.p5js.org/</a></p>
                 </div>
             </div>
             
@@ -76,7 +76,7 @@
     <div class="slide-item double-col-text-image">
         <div class="slide-content">
             <div>
-                <p style="font-size: 70px;">Download these <a href="https://github.com/alexabonomo/intro-to-coding/tree/main/part5/p5-examples" download="">example files</a> to get started!</p>
+                <p style="font-size: 70px;">Download these <a href="https://github.com/alexabonomo/intro-to-coding/tree/main/part5/p5-examples" target="_blank">example files</a> to get started!</p>
                 <pre><code>//this runs at the start and 
 only runs once
 
@@ -242,7 +242,7 @@ function setup(){
     <div class="slide-item double-col-text-image" >
         <div class="slide-content">
             <div class="p5-link">
-                <a href="https://p5js.org/reference/#/p5/triangle" target="_blank">triangle(x, y, w, [h])</a>
+                <a href="https://p5js.org/reference/#/p5/triangle" target="_blank">triangle(x1, y1, x2, y2, x3, y3)</a>
         <pre><code style="font-size: 20px;">//lets draw a triangle, 
 fill it with a random color
 and make it change every frame.
@@ -276,6 +276,950 @@ function setup(){
             </div>
         <div class="half-page-output">
             <iframe scrolling= "no" src="p5-examples/example7.html" style="height: 100vh"></iframe>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Values, Types, and Operators</h1>
+                <h2>Thinking Like a Machine</h2>
+                <p><em>“Below the surface of the machine, the program moves. Without effort, it expands and contracts. In great harmony, electrons scatter and regroup. The forms on the monitor are but ripples on the water. The essence stays invisibly below.”
+                   <br> – Master Yuan-Ma, The Book of Programming</em></p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Values</h1>
+                <p>In Javascript, a value represents data. To create a value, you must merely invoke its name. There are several <b>data types</b> that could be considered a value in javascript.</p>
+                <h1>Numbers</h1>
+                <p>Values of the number type are, unsurprisingly, numeric values. In a JavaScript program, they are written as follows: <code>13</code></p>
+                <p>Fractional numbers are written by using a dot. <code>9.81</code></p>
+                <p>For very big or very small numbers, you may also use scientific notation by adding an e (for exponent), followed by the exponent of the number. <code>2.998e8</code> <br> That is 2.998 × 108 = 299,800,000.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Arithmetic</h1>
+                <p>The main thing to do with numbers is arithmetic. Arithmetic operations such as addition or multiplication take two number values and produce a new number from them. Here is what they look like in JavaScript: <code>100 + 4 * 11</code></p>
+                <p>But does the example mean “add 4 and 100, and multiply the result by 11,” or is the multiplication done before the adding? As you might have guessed, the multiplication happens first. But as in mathematics, you can change this by wrapping the addition in parentheses. <code>(100 + 4) * 11</code></p>
+                <p>For subtraction, there is the - operator, and division can be done with the / operator. <code>(100 - 4) / 11</code></p>
+                <p>There is one more arithmetic operator, which you might not immediately recognize. The % symbol is used to represent the remainder operation. X % Y is the remainder of dividing X by Y. For example, 314 % 100 produces 14, and 144 % 12 gives 0. The remainder operator’s precedence is the same as that of multiplication and division. You’ll also often see this operator referred to as modulo.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Strings</h1>
+                <p>The next basic data type is the string. Strings are used to represent text. They are written by enclosing their content in quotes. <br><br>
+                <code>`Down on the sea` <br>
+                    "Lie on the ocean" <br>
+                    'Float on the ocean'</code><br><br>
+                You can use single quotes, double quotes, or backticks to mark strings, as long as the quotes at the start and the end of the string match.</p>
+                <p>Almost anything can be put between quotes, and JavaScript will make a string value out of it. But a few characters are more difficult. You can imagine how putting quotes between quotes might be hard. Newlines (the characters you get when you press enter) can be included without escaping only when the string is quoted with backticks (`).</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>Strings cannot be divided, multiplied, or subtracted, but the + operator can be used on them. It does not add, but it concatenates—it glues two strings together. The following line will produce the string "concatenate": <code>"con" + "cat" + "e" + "nate"</code></p>
+                <p>Strings written with single or double quotes behave very much the same—the only difference is in which type of quote you need to escape inside of them. Backtick-quoted strings, usually called template literals, can do a few more tricks. Apart from being able to span lines, they can also embed other values. <code>`half of 100 is ${100 / 2}`</code></p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Boolean values</h1>
+                <p>It is often useful to have a value that distinguishes between only two possibilities, like “yes” and “no” or “on” and “off”. For this purpose, JavaScript has a Boolean type, which has just two values, true and false, which are written as those words. <code>console.log(3 > 2) <br>
+                    // → true <br>
+                    console.log(3 < 2) <br>
+                    // → false</code></p>
+                <p>The > and < signs are the traditional symbols for “is greater than” and “is less than”, respectively. They are binary operators. Applying them results in a Boolean value that indicates whether they hold true in this case.
+                    Strings can be compared in the same way. <code>console.log("Aardvark" < "Zoroaster")</code></p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>The way strings are ordered is roughly alphabetic but not really what you’d expect to see in a dictionary: uppercase letters are always “less” than lowercase ones, so "Z" < "a", and nonalphabetic characters (!, -, and so on) are also included in the ordering. When comparing strings, JavaScript goes over the characters from left to right, comparing the Unicode codes one by one.</p>
+                <p>Other similar operators are >= (greater than or equal to), <= (less than or equal to), == (equal to), and != (not equal to). </p>
+                <code>console.log("Itchy" != "Scratchy") <br>
+                    // → true <br>
+                    console.log("Apple" == "Orange") <br>
+                    // → false</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div> 
+                <h1>NaN</h1>
+                <p>There is only one value in JavaScript that is not equal to itself, and that is NaN (“not a number”). <code>console.log(NaN == NaN) <br>
+                    // → false</code></p>
+                    <p><code>NaN </code> is supposed to denote the result of a nonsensical computation, and as such, it isn’t equal to the result of any other nonsensical computations.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Logical Operators</h1>
+                <p>There are also some operations that can be applied to Boolean values themselves. JavaScript supports three logical operators: and, or, and not. These can be used to “reason” about Booleans.</p>
+                <p>The && operator represents logical and. It is a binary operator, and its result is true only if both the values given to it are true.
+                </p>
+                <code>console.log(true && false) <br>
+                    // → false <br>
+                    console.log(true && true) <br>
+                    // → true</code>
+                <p>The || operator denotes logical or. It produces true if either of the values given to it is true.</p>
+                <code>console.log(false || true) <br>
+                    // → true <br>
+                    console.log(false || false) <br>
+                    // → false</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Expressions and Statements</h1>
+                <p>A fragment of code that produces a value is called an <b>expression</b>.  Every value that is written literally (such as 22 or "psychoanalysis") is an expression.</p>
+                <p>To catch and hold values, JavaScript provides a thing called a binding, or variable:</p>
+                <code>let caught = 5 * 5;</code>
+                <p>The special word (keyword) <b>let</b> indicates that this sentence is going to define a binding. It is followed by the name of the binding and, if we want to immediately give it a <b>value</b>, by an = operator and an expression.</p>
+                <code>let caught = 5 * 5;</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>The = operator can be used at any time on existing bindings to disconnect them from their current value and have them point to a new one.</p>
+                <code>let mood = "light"; <br>
+                    console.log(mood); <br>
+                    // → light <br>
+                    mood = "dark"; <br>
+                    console.log(mood); <br>
+                    // → dark</code>
+                <p>The words <code>var</code> and <code>const</code> can also be used to create bindings, in a way similar to let.</p>
+                <code>let mood = "light"; <br>
+                    console.log(mood); <br>
+                    // → light <br>
+                    mood = "dark"; <br>
+                    console.log(mood); <br>
+                    // → dark</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Binding Names</h1>
+                <p>Binding names can be any word. Digits can be part of binding names—catch22 is a valid name, for example—but the name must not start with a digit. A binding name may include dollar signs ($) or underscores (_) but no other punctuation or special characters.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Functions</h1>
+                <p>A lot of the values provided in the default environment have the type function. A function is a piece of program wrapped in a value. Such values can be applied in order to run the wrapped program. For example, in a browser environment, the binding prompt holds a function that shows a little dialog box asking for user input. It is used like this:</p>
+                <code>prompt("Enter passcode");</code>
+                <p>Executing a function is called <b>invoking</b>, <b>calling</b>, or <b>applying</b> it. You can call a function by putting parentheses after an expression that produces a function value.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1><code>console.log</code> function</h1>
+                <p>console.log outputs values</p>
+                <code>let x = 30; <br>
+                    console.log("the value of x is", x); <br>
+                    // → the value of x is 30</code>
+            </div>
+            <h1>Return values</h1>
+            <p>When a function produces a value, it is said to return that value. Anything that produces a value is an expression in JavaScript</p>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Conditional Statements</h1>
+                <p>boolean statements = true or false <br>
+                    it is common to use boolean statments with control statements to determine the flow of a program</p>
+                    <code>if(something is true){ <br>
+                        //run this code <br>
+                      } <br> <br>
+                      
+                      else { <br>
+                        //do this <br>
+                      }
+                      </code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>just like with variables, there are some booleans that are:</h1>
+                <ul>
+                    <li>Built in to p5.js (e.g. mouseIsPressed or keyIsPressed)</li>
+                    <li>Self-defined </li>
+                    <li>Let’s work with some of the built-in booleans first!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h2>mouseIsPressed </h2>
+                <p>== true if the mouse is pressed (clicked or held!)</p>
+                <p>== false if the mouse isn’t pressed</p>
+
+                <h2>keyIsPressed</h2>
+                <p>== true if ANY key is pressed on the keyboard</p>
+                <p>== false if no keys are pressed on the keyboard</p>
+
+                <h2>keyIsDown</h2>
+                <p>== true if ANY key is currently down</p>
+                <p>== false if no keys are pressed on the keyboard</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Let's build a controller using conditionals!</h1>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Loops</h1>
+                <p>You can create variables for any sort of value you want and plug it in to an expression. But, what happens when you start to notice that you are repeating code over and over?</p>
+                <p>For example, a row of circles:</p>
+            <pre><code style="font-size: 16px;">let ypos = 200;
+let xpos = 80;
+let xstep = 60;
+
+function setup() {
+  createCanvas(400, 400);
+  noLoop();
+}
+  
+function draw() {
+  background(255);
+  fill(50);
+  noStroke();
+
+  ellipse(xpos, ypos, 40, 40);
+  ellipse(xpos + xstep, ypos, 40, 40);
+  ellipse(xpos + (xstep * 2), ypos, 40, 40);
+  ellipse(xpos + (xstep * 3), ypos, 40, 40);
+  ellipse(xpos + (xstep * 4), ypos, 40, 40);
+                </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>variables and repetition</h1>
+                <p>this is an awful amount of effort for just 5 circles... what if you wanted to draw 1000?!</p>
+                <p>There are several different loop structures in Javascript, but the one we’re going to learn first is called the for loop. The for loop is a very flexible structure that can be used in different ways, but to start out with we’re only going to use one particular syntax, and it looks like this:</p>
+                <pre><code>for (let i = 0; i < times; i++) {
+... put the thing you want to repeat here ...
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>This is all very abstract and weird, so here’s an example that puts it into context.</p>
+                <pre><code>let ypos = 200;
+let xpos = 80;
+let xstep = 60;
+function setup() {
+    createCanvas(400, 400);
+    noLoop();
+}
+function draw() {
+    background(255);
+    fill(50);
+    noStroke();
+    for (let i = 0; i < 5; i++) {
+    ellipse(xpos + (xstep * i), ypos, 40, 40);
+    }
+                    }</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>Here’s another version of the code that draws nine circles, instead of five (I’ve adjusted the values for xstep and the circle diameters accordingly):</p>
+                <pre><code>let ypos = 200;
+let xpos = 80;
+let xstep = 30;
+function setup() {
+    createCanvas(400, 400);
+    noLoop();
+}
+function draw() {
+    background(255);
+    fill(50);
+    noStroke();
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos + (xstep * i), ypos, 20, 20);
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>Play around with this example and see what else you can do. </p>
+                <pre><code>let ypos = 200;
+let xpos = 80;
+let xstep = 30;
+let hstep = 15;
+let fillstep = 20;
+
+function setup() {
+    createCanvas(400, 400);
+    noLoop();
+}
+
+function draw() {
+    background(255);
+    fill(50);
+    noStroke();
+
+    for (let i = 0; i < 12; i++) {
+    fill(200, 255-(fillstep*i), 200);
+    ellipse(xpos+(xstep*i), ypos, 20, 20+(hstep*i));
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>This sketch adds in some variation on the size of the ellipses, and adds a call to fill() to change the background color of each shape, and loops up until 12 instead of just 9:</p>
+                <pre><code>function draw() {
+background(255);
+fill(50);
+noStroke();
+
+for (let i = 0; i < 12; i++) {
+    fill(200, 255-(fillstep*i), 200);
+    ellipse(xpos+(xstep*i), ypos, 20, 20+(hstep*i));
+}
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Digging deeper into for</h1>
+                <p>At its core, a for loop is just a way of counting. An easy way to illustrate this is with <code>console.log()</code>. Put the following code between the <b>{</b> and <b>}</b> following <code>function setup()</code> in a new sketch and run the sketch:</p>
+                <pre><code>for (let i = 0; i < 10; i++) {
+console.log(i);
+}</code></pre>
+                <p>The console output should display this:</p>
+                <p><pre style="font-size: 16px;">0
+1
+2
+3
+4
+5
+6
+7
+8
+9</pre></p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>As you can see, this code simply displays the numbers from zero to nine (i.e., ten iterations, starting with 0).
+                    The for loop can also be used to do slightly more sophisticated counting, using the following code snippet</p>
+                    <pre><code>for (let i = start; i < end; i += step) {
+... your statements here ...
+}</code></pre>
+                <p>then, perform the following replacements:</p>
+                <ul>
+                    <li><b>start:</b> replace with the value you want the loop to start counting at</li>
+                    <li><b>end:</b> replace with the value you want the loop to stop at</li>
+                    <li><b>step:</b> replace with how much you want to increment the number between each step</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>For example, this loop counts from 100 up to (but not including) 300 in steps of 40:</p>
+                <pre><code>for (let i = 100; i < 300; i += 40) {
+console.log(i);
+}</code></pre>
+                <p>And this one displays all even numbers from 10 up to (but not including) 50:</p>
+                <pre><code>for (let i = 10; i < 50; i += 2) {
+console.log(i);
+} </code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>You can use this format of the for loop to write repetitions without separate values to keep track of the step. For example:</p>
+                <pre><code>let origx = 200;
+let origy = 100;
+let destx = 200;
+let desty = 300;
+function setup() {
+    createCanvas(400, 400);
+    noLoop();
+}
+function draw() {
+    background(255);
+    fill(255);
+    strokeWeight(3);
+    for (let i = 25; i < 400; i += 25) {
+    stroke(50);
+    line(i, 200, origx, origy);
+    stroke(240);
+    line(i, 200, destx, desty);
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Nested loops</h1>
+                <p>What if we wanted to draw a grid of circles, instead of just a line of circles? One way, of course, would be to simply copy and paste:</p>
+                <pre><code>let ypos = 140;
+let ystep = 30;
+let xpos = 80;
+let xstep = 30;
+function setup() {
+createCanvas(400, 400);
+    noLoop();
+}
+function draw() {
+    background(255);
+    fill(50);
+    noStroke();
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*0), 20, 20);
+    }
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*1), 20, 20);
+    }
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*2), 20, 20);
+    }
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*3), 20, 20);
+    }
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*4), 20, 20);
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>What if we wanted to draw a grid of circles, instead of just a line of circles? One way, of course, would be to simply copy and paste:</p>
+                <pre><code>let ypos = 140;
+let ystep = 30;
+let xpos = 80;
+let xstep = 30;
+function setup() {
+createCanvas(400, 400);
+    noLoop();
+}
+function draw() {
+    background(255);
+    fill(50);
+    noStroke();
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*0), 20, 20);
+    }
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*1), 20, 20);
+    }
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*2), 20, 20);
+    }
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*3), 20, 20);
+    }
+    for (let i = 0; i < 9; i++) {
+    ellipse(xpos+(xstep*i), ypos+(ystep*4), 20, 20);
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>and since we are repeating code again,</p>
+                <pre><code>let ypos = 140;
+let ystep = 30;
+let xpos = 80;
+let xstep = 30;
+function setup() {
+    createCanvas(400, 400);
+    noLoop();
+}
+function draw() {
+    background(255);
+    fill(50);
+    noStroke();
+    for (let j = 0; j < 5; j++) {
+    for (let i = 0; i < 9; i++) {
+        ellipse(xpos+(xstep*i), ypos+(ystep*j), 20, 20);
+    }
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Arrays and Objects</h1>
+                <p>The goal of this tutorial is to create a sketch with the following behavior: whenever the user clicks on the sketch, a rectangle is created. Each rectangle then moves downward until it disappears from the bottom of the screen.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Rectangles everywhere</h1>
+                <p>You can just tell Processing not to overwrite the background after each frame:</p>
+                <pre><code>function setup() {
+createCanvas(400, 400);
+background(50);
+rectMode(CENTER);
+noStroke();
+fill(255);
+}
+
+function draw() {
+// nothing to do! drawing happens in mousePressed
+}
+
+function mousePressed() {
+rect(mouseX, mouseY, 50, 25);
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>With a bit of ingenuity, we can even make this rectangle start moving at the coordinates where the user clicked:</p>
+                <pre><code>let hasClicked = false;
+let xpos = 0;
+let ypos = 0;
+function setup() {
+    createCanvas(400, 400);
+}
+function draw() {
+    background(50);
+    noStroke();
+    rectMode(CENTER);
+    fill(255);
+    if (hasClicked) {
+    rect(xpos, ypos, 50, 25);
+    ypos += 1;
+    }
+}
+function mousePressed() {
+    hasClicked = true;
+    xpos = mouseX;
+    ypos = mouseY;
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>Our goal is to make multiple moving rectangles appear on the screen in response to user input by factoring out repetition.</p>
+                <p>In the past, we’ve used a for loop to factor out repetition, and on first glance it seems like we could use a for loop for this task. Something like:</p>
+                <pre><code>// note: this isn't actual javascript code!
+for (let i = 0; i < 3; i++) {
+    rect(100, rectY_<i>, 50, 25);
+    rectY_<i> += 1
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Arrays</h1>
+                <p>An <b>array</b> is a kind of value that stores a list of other values. You can access the values in an array by their position in the list. You can also add items to the array, or remove items, or modify items that are already in there. If a single value is like a box for storing something (like a number), then an array is like a shelf to put boxes on. Programming metaphors. for example:</p>
+                <pre><code>let rectY = [0, 15, 30];
+function setup() {
+    createCanvas(400, 400);
+}
+function draw() {
+    background(50);
+    noStroke();
+    rectMode(CENTER);
+    fill(255);
+    for (let i = 0; i < rectY.length; i++) {
+    rect((i+1)*100, rectY[i], 50, 25);
+    rectY[i] += 1;
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>There’s a lot of new stuff in here, so let’s pick it apart one piece at a time. First, there’s the declaration of the array:</p>
+                <code>let rectY = [0, 15, 30];</code>
+                <p> In the first line of the for loop, we use this to set the upper-bound of the loop:</p>
+                <code>for (let i = 0; i < rectY.length; i++) {</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>Inside the loop, this expression:</p>
+                <code>rectY[i]</code>
+                <p>evaluates to the value stored at that index of the array. (By index I mean the number indicating which “slot” of the array to get an item from.) So, inside the loop, this statement:</p>
+                <code>rect((i+1)*100, rectY[i], 50, 25);</code>
+                <p>… draws a rectangle, using the value stored at the particular index of the list (0, 1, or 2). This value can be modified as well, which is what happens here:</p>
+                <code>rectY[i] += 1;</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>Some more details about the syntax of arrays. Again, to create an array, use square brackets with comma-separated values inside:</p>
+                <code>let stuff = [5, 10, 15, 20];</code>
+                <p>An array can have as many values as you want it to have. It can even be empty to start out with:</p>
+                <code>let nothingHereMoveAlong = [];</code>
+                <p>An array has a number of elements. To see how many elements there are in a given array, use its .length attribute:</p>
+                <code>console.log(stuff.length); <br>
+                    // displays 4 <br>
+                    console.log(nothingHereMoveAlong.length);  <br>
+                    // displays 0</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>To get a particular item from an array, put square brackets directly after the variable that holds the array value. Inside the square brackets, supply a number:</p>
+                <code>console.log(stuff[2]); <br>
+                    // displays 15 ...why not 10?! see next</code>
+                <p>If you supply a number that is beyond the bounds of the array (i.e., larger than the length of the array), the expression evaluates to a special Javascript value, undefined:</p>
+                <code>console.log(stuff[152]); <br>
+                    // displays "undefined"</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>The console.log() function can take an array as a parameter, in which case it simply displays the contents of the array. This is helpful for debugging purposes:</p>
+                <code>console.log(stuff); <br>
+                    // diplays [5,10,15,20]</code>
+                <p>You can overwrite the value at a particular index in an array by putting the name of the variable containing the array, along with a square bracket index, on the left-hand side of the assignment operator (=):</p>
+                <code>stuff[2] = 999; console.log(stuff); <br>
+                    // now displays [5,10,999,20]</code>
+                
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>The zero index</h1>
+                <p>Zero-based means that what to outward appearances is the first element of an array is referred to as index 0 by Javascript. This means that to get the first element of an array called stuff, you need to write the expression stuff[0]. To get the last element of an array with four elements, you would write stuff[3] (not stuff[4]).</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Adding items to an array</h1>
+                <p>Array values have a method called .push() which adds an item to the list. </p>
+                <pre><code>let rectY = []; // start with empty list
+function setup() {
+    createCanvas(400, 400);
+}
+function draw() {
+    background(50);
+    noStroke();
+    rectMode(CENTER);
+    fill(255);
+    for (let i = 0; i < rectY.length; i++) {
+    rect(200, rectY[i], 50, 25);
+    rectY[i] += 1;
+    }
+}
+function mousePressed() {
+    rectY.push(0);
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Keeping track of multiple properties</h1>
+                <p>Let’s expand our goal to include the following: when you click the screen, the rectangle appears at the coordinates of the mouse click and then moves downward from there.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Keeping track of multiple properties</h1>
+                <pre><code>let rectX = []; // start with empty list
+let rectY = []; // start with empty list
+function setup() {
+    createCanvas(400, 400);
+}
+function draw() {
+    background(50);
+    noStroke();
+    rectMode(CENTER);
+    fill(255);
+    for (let i = 0; i < rectY.length; i++) {
+    rect(rectX[i], rectY[i], 50, 25);
+    rectY[i] += 1;
+    }
+}
+function mousePressed() {
+    rectX.push(mouseX);
+    rectY.push(mouseY);
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>A better solution relies on the fact that arrays themselves are values, and so we can store an array inside another array. To demonstrate, type the following into an empty sketch and example the debug output:</p>
+                <pre><code>let stuff = [];
+stuff.push([24, 25]);
+stuff.push([26, 27]);
+console.log(stuff); // displays [[24,25],[26,27]]</code></pre>
+                <p>After you run this code, the variable stuff is an array which has two elements, both of which are themselves arrays. If you get the value at index zero, you get an array:</p>
+                <code>console.log(stuff[0]); // displays [24,25]</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>To get one of the two values from that array, you need to take the expression that evaluates to the outer array and use the square bracket syntax on that expression to get the inner value out, like so:</p>
+                <code>console.log(stuff[0][1]); // displays 25</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>We can use this idiom to create a version of our falling rectangle sketch that has just one array to store information about all rectangles. Each element of that array is itself an array.</p>
+                <pre><code>let rectXY = []; // start with empty list
+function setup() {
+    createCanvas(400, 400);
+}
+function draw() {
+    background(50);
+    noStroke();
+    rectMode(CENTER);
+    fill(255);
+    for (let i = 0; i < rectXY.length; i++) {
+    rect(rectXY[i][0], rectXY[i][1], 50, 25);
+    rectXY[i][1] += 1;
+    }
+}
+function mousePressed() {
+    rectXY.push([mouseX, mouseY]);
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>The beauty of this is that we can easily add a third attribute to each rectangle simply by adding a third element to the array that we add to the rectXY array on each click. In the following example, a random value is stored in index 2 on each click, and then this number is used to give each rectangle a random color in draw() </p>
+                <pre><code>let rectXY = []; // start with empty list
+function setup() {
+    createCanvas(400, 400);
+}
+function draw() {
+    background(50);
+    noStroke();
+    rectMode(CENTER);
+    fill(255);
+    for (let i = 0; i < rectXY.length; i++) {
+    fill(rectXY[i][2]);
+    rect(rectXY[i][0], rectXY[i][1], 50, 25);
+    rectXY[i][1] += 1;
+    }
+}
+function mousePressed() {
+    rectXY.push([mouseX, mouseY, random(255)]);
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Objects</h1>
+                <p>The basic syntax for creating an object value looks like this:</p>
+                <code>let asteroid = {radius: 100, mass: 460, population: 17};</code>
+                <p>This statement creates an object value and assigns it to a variable called asteroid. This object has three “keys”: radius, mass, and population. (You can pick the names of the keys; I’m just making a fanciful space-exploration-themed object here.) To access a value stored for a particular key, use one of the following syntaxes:</p>
+                <pre><code>console.log(asteroid["radius"]);
+// or:
+console.log(asteroid.radius)</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>You can add a new key/value pair to an object after it has already been created by using the syntax above on the left-hand side of the assignment operator, and the value you want to store on the right:</p>
+                <code>asteroid.albedo = 7; // or: asteroid["albedo"] = 7;</code>
+                <p>you can also write out an actual array of objects using array and object literals like so:</p>
+                <pre><code>let kitties = [
+{age: 14, weight: 12.2},
+{age: 3, weight: 8.9},
+{age: 8, weight: 11.0}
+];</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>Now kitties is an array of objects. To get an individual object from this array, you would write an expression like this:</p>
+                <code>console.log(kitties[0]); // displays {"age":14,"weight":12.2}</code>
+                <p>Now kitties is an array of objects. To get an individual object from this array, you would write an expression like this:</p>
+                <code>console.log(kitties[0]["age"]);
+// or
+console.log(kitties[0].age);</code>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <p>Here’s an example of looping over a list of objects. This loop prints the sum of the weights of all kitties in the list:</p>
+                <pre><code>let weightSum = 0;
+for (let i = 0; i < kitties.length; i++) {
+    weightSum += kitties[i].weight;
+}
+// displays 32.1
+console.log(weightSum);</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Rectangles as objects</h1>
+                <p>Here’s an example of looping over a list of objects. This loop prints the sum of the weights of all kitties in the list:</p>
+                <pre><code>let rectObjs = []; // start with empty list
+function setup() {
+    createCanvas(400, 400);
+}
+function draw() {
+    background(50);
+    noStroke();
+    rectMode(CENTER);
+    fill(255);
+for (let i = 0; i < rectObjs.length; i++) {
+    fill(rectObjs[i].fillColor);
+    rect(rectObjs[i].xpos,
+    rectObjs[i].ypos, 50, 25);
+    rectObjs[i].ypos += 1;
+}
+}
+function mousePressed() {
+    rectObjs.push({xpos: mouseX, ypos: mouseY,
+    fillColor: random(255)});
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+                <h1>Removing items from an array</h1>
+                <pre><code>let rectObjs = []; // start with empty list
+function setup() {
+    createCanvas(400, 400);
+}
+function draw() {
+    background(50);
+    noStroke();
+    rectMode(CENTER);
+    fill(255);
+    for (let i = 0; i < rectObjs.length; i++) {
+    fill(rectObjs[i].fillColor);
+    rect(rectObjs[i].xpos,
+    rectObjs[i].ypos, 50, 25);
+    rectObjs[i].ypos += 1;
+    }
+    for (let i = rectObjs.length - 1; i >= 0; i--) {
+    if (rectObjs[i].ypos > height) {
+        rectObjs.splice(i, 1);
+    }
+    }
+}
+function mousePressed() {
+    rectObjs.push({xpos: mouseX, ypos: mouseY,
+    fillColor: random(255)});
+    console.log(rectObjs); // look at debug area!
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div>
+            </div>
         </div>
     </div>
     <div class="slide-item bumper" id="css-styling-basics">
@@ -320,7 +1264,7 @@ function setup(){
                     </div>
                 </div>
                 <div class="examples two">
-                    <p>Download <a href="https://github.com/alexabonomo/intro-to-coding/tree/main/part5/example/two">these files</a> and watch the tutorial to see how to make your images <em>draggable.</em></p>
+                    <p>Download <a href="https://github.com/alexabonomo/intro-to-coding/tree/main/part5/example/two" target="_blank">these files</a> and watch the tutorial to see how to make your images <em>draggable.</em></p>
                 </div>
             </div>
         </div>
@@ -336,9 +1280,17 @@ function setup(){
     <div class="slide-item single-col-text" >
         <div class="slide-content">
             <div class="examples three" style="padding-top: 400px;">
-                <p>Download <a href="https://github.com/alexabonomo/intro-to-coding/tree/main/part5/example/three">these files</a> and watch the tutorial to see how to make a <a href="example/three/"><em>custom cursor</em></a> with mouse interactions!</p>
-                <p>CHALLENGE: Recreate these interactions with your own images, styles, fonts and text. Post your progress in the <a href="https://discord.gg/3TGSNnyDYD">Index Community Discord</a> in the <em>#look-what-i-made</em> channel.</p>
+                <p>Download <a href="https://github.com/alexabonomo/intro-to-coding/tree/main/part5/example/three" target="_blank">these files</a> and watch the tutorial to see how to make a <a href="example/three/"><em>custom cursor</em></a> with mouse interactions!</p>
                 <img id ="dove-cursor" src="images/dove-cursor.gif" width="700px">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-item single-col-text" >
+        <div class="slide-content">
+            <div class="examples three" style="padding-top: 400px;">
+
+                <p>CHALLENGE: Recreate these interactions with your own images, styles, fonts and text. Post your progress in the <a href="https://discord.gg/3TGSNnyDYD">Index Community Discord</a> in the <em>#look-what-i-made</em> channel.</p>
             </div>
             </div>
         </div>
@@ -351,14 +1303,16 @@ function setup(){
             </div>
             <div class="completed">
                 <ul>
-                    <li>Basic Javascript</li>
-                    <li>Intro to p5.js</li>
+                    <li>Intro to Javascript</li>
                     <li>Click and Appear Interaction</li>
                     <li>Drag Interactions</li>
                     <li>Keyboard and Mouse Interactions</li>
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="back">
+        <a href="../index.html">back</a>
     </div>
 </body>
 <script src="example/one/script.js"></script>
