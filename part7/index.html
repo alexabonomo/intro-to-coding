@@ -1,0 +1,1766 @@
+<!-- BOILERPLATE -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 7</title>
+
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- COVER -->
+<div class="slide-item cover">
+    <div class="slide-content">
+        <h1>Intro to Coding <br> for Designers</h1>
+        <h1>Part 7</h1>
+    </div>
+</div>
+<!-- TABLE OF CONTENTS -->
+<div class="slide-item table-of-contents">
+    <div class="slide-content">
+        <h1>In this video,<br>we’ll cover:</h1>
+        <ol>
+            <li><a href="#what-is-a-CMS">What is a CMS?</a></li>
+            <li><a href="#code-environment">Setting Up the Code Environment</a></li>
+            <li><a href="#cms-basics">CMS Basics</a></li>
+            <li><a href="#creating-content">Creating Content</a></li>
+        </ol>
+    </div>
+</div>
+<!-- BUMPERS -->
+<div class="slide-item bumper" id="#what-is-a-CMS">
+    <div class="slide-content">
+        <div>
+            <p>Here’s what’s up next:</p>
+            <h1>What is a CMS?</h1>
+        </div>
+    </div>
+</div>
+
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <h1>What is a CMS?</h1>
+        <img src="images/cms-01.png" alt="">
+        <p>A content management system (CMS) is software that helps users create, manage, and modify content on a website without the need for technical knowledge. In other words, a CMS lets you build a website without needing to write code from scratch (or even know how to code at all).</p>
+    </div>
+</div>
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Why use a CMS?</h1>
+            <ul>
+                <li>So you don't have to code every time you update your site</li>
+                <li>When you are collaborating with others who don't know how to code</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="slide-item bumper" id="#code-environment">
+    <div class="slide-content">
+        <div>
+            <p>All done! Here’s what’s up next:</p>
+            <h1>Setting Up the Code Environment</h1>
+        </div>
+    </div>
+</div>
+
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>Download the <a href="https://getkirby.com/docs/guide/quickstart">starter kit</a> from this link. Place it in your desktop</p>
+            <p><a href="https://brew.sh/">install homebrew</a></p>
+            <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+
+            <p>the write: <code>brew install php</code></p>
+            <p>dag and drop the project folder into your terminal window. Then write: <code>php -S localhost:8000 kirby/router.php</code></p>
+
+        </div>
+    </div>
+</div>
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>you can access access admin interface by: <code>http://localhost:8000/panel</code></p>
+            <p>on a public server, you cannot install the Panel on a public server by default. To allow this, you can enable the<code>panel.install</code> option</p>
+            <p>you will need to purchase a license for a public server, but can use it freely on a local server</p>
+        </div>
+    </div>
+</div>
+
+<div class="slide-item bumper" id="#cms-basics">
+    <div class="slide-content">
+        <div>
+            <p>All done! Here’s what’s up next:</p>
+            <h1>CMS Basics</h1>
+        </div>
+    </div>
+</div>
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <h1>Folder Structure</h1>
+        <code>/content</code>
+        <p>The content of your website.</p>
+        <code>/site</code>
+        <p>Think of this folder as your project folder. It contains your templates, configuration, plugins and setup files (blueprints) for the Panel.</p>
+        <code>/kirby</code>
+        <p>The Kirby app. Great for studying the source code, but in general you should leave this folder untouched (apart from updating it when a new version is released).</p>
+        <code>/media</code>
+        <p>This folder is managed by Kirby and holds public images and thumbnails as well as plugin and Panel assets. Let Kirby do its work and leave this folder as it is. The media folder and the files in it are auto-generated.</p>
+    </div>
+</div>
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <img src="images/cms-02.png" alt="">
+    </div>
+</div>
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>you can create a separate folder called <code>/assets</code> to store media in</p>
+            <p>your content lives in your <code>/content</code>  folder. kirby doesn’t need a database. every subfolder represents a page</p>
+            <p>The content for each page is stored in a text file together with additional resources like images, videos, or other documents. The <code> site.txt </code> in the content folder contains general site-wide information.</p>
+        </div>
+    </div>
+</div>
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>text files</h1>
+            <pre><code>Title: Page Title
+            ----
+            Text: Some Text
+            ----
+            Date: 2023-12-06</code></pre>
+            <h1>templates to render your content</h1>
+            <img src="images/cms-03.png" alt="" width="800px">
+        </div>
+    </div>
+</div>
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>blueprints</h1>
+            <p>you will use blueprints to configure layouts, create forms, set permissions, etc</p>
+            <p>the way things work:</p>
+            <img src="images/cms-04.png" alt="" width="800px">
+        </div>
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>the <code>media</code> folder</h1>
+            <p>as soon as the url of the mile is called in the browser, the file is copied to the media folder</p>
+            <p>in addition to files and thumbnails, it also stores assets in the folder. it should stay untouched. and when you update Kirby, it is reccomended that the media folder be deleted.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="slide-item bumper" id="#creating-content">
+        <div class="slide-content">
+            <div>
+                <p>Here’s what’s up next:</p>
+                <h1>Creating Content</h1>
+            </div>
+        </div>
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Kirby is a flat-file CMS or a file-based content management system (CMS) that stores files and data in text files and folders rather than a database.</h1>
+            <p>If you create a folder called <code>blog</code> as direct child of the <code>content </code>folder, it will be accessible via <code>https://yourdomain.com/blog etc.</code></p>
+        </div>
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>3 ways to upload content </h1>
+            <ol>
+                <li>You can use the Panel to edit content and upload files.</li>
+                <li>You can create files and folders manually in the file system and edit content files with the text editor of your choice.</li>
+                <li>You can create and modify content programmatically using Kirby's API, for example, create pages from <code>.csv </code>files or from form content on the front-end.</li>
+            </ol>
+            <img src="images/cms-05.png" alt="" width="800px">
+        </div>
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>create a projects folder to create your first kirby page</p>
+            <p>go to <code>http://localhost:8000/projects</code></p>
+            <p>change <code>project/default.txt</code> to <code>projects.txt</code></p>
+            <p>look at <code>project/default.txt</code> , and write</p>
+            <pre><code>Title: projects
+
+----
+
+Text: these are my projects
+
+----</code></pre>
+        </div>
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <p>go to <code>http://localhost:8000/projects</code></p>
+        <img src="images/cms-06.png" alt="">
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <p>creating your first template</p>
+        <p>site > templates > default.php</p>
+        <img src="images/cms-07.png" alt="" width="800px">
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <p>type docs > enter to create html boilerplate and encapsulate the <code>h1</code> element inside of the <code>body</code> element.</p>
+        <pre><code>&lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <p>replace the title of the page title from the <code>.txt</code> file in the <code>content</code> folder</p>
+        <img src="images/cms-08.png" alt="">
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <img src="images/cms-09.png" alt="">
+        <p>the <code>$site</code> object which you can use to get the site url inside of <code>site.txt</code></p>
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Adding CSS</h1>
+            <p>add a folder to the main folder called <code>assets</code> > <code>css</code> > and then <code>styles.css</code></p>
+            <p>css helper method, not only links your css but also makes sure that the url for css is always correct</p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <p>add <code><?= css('assets/css/styles.css') ?> </code> to the head tag in <code>default.php</code></p>
+        <img src="images/cms-10.png" alt="">
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>add a logo by adding this in the <body> tag</p>
+                <code>&lt;a class=&quot;logo&quot; href=&quot;&lt;?= $site-&gt;url() ?&gt;&quot;&gt;&lt;?= $site-&gt;title() ?&gt;&lt;/a&gt;
+                </code>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <h1>Adding a Nav Element</h1>
+        <p>usually you would start by making it like this</p>
+        <img src="images/cms-11.png" alt="">
+        <p>but we want it to be dynamic and changeable from the cms</p>
+    </div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>so we add to list what we add  via the css and filter to only include listed items so that error page doesnt show</p>
+            <pre><code>&lt;ul&gt;
+&lt;?php foreach ($site-&gt;children()-&gt;listed() as $item): ?&gt;
+        &lt;li&gt;&lt;a href=&quot;&lt;?= $item-&gt;url()?&gt;&quot;&gt;&lt;?= $item-&gt;title() ?&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;?php endforeach ?&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>wrap your <code>&lt;h1&gt;</code>  and page text in a <code>&lt;main&gt;</code> tag and add a footer with socials</p>
+            <pre><code>&lt;main class=&quot;main&quot;&gt;
+            &lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;&lt;?= $page-&gt;text() ?&gt;
+            &lt;/main&gt;
+            
+            &lt;footer class=&quot;footer&quot;&gt;
+                &lt;a href=&quot;https://instagram.com/&lt;?= $site-&gt;twitter() ?&gt;&quot;&gt;instagram&lt;/a&gt;
+            &lt;/footer&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <p>final code for your first template:</p>
+        <pre><code>&lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;&lt;?= $site-&gt;title() ?&gt;&lt;/title&gt;
+
+    &lt;?= css('assets/css/styles.css') ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header class=&quot;header&quot;&gt;
+        &lt;a class=&quot;logo&quot; href=&quot;&lt;?= $site-&gt;url() ?&gt;&quot;&gt;&lt;?= $site-&gt;title() ?&gt;&lt;/a&gt;
+
+        &lt;nav class=&quot;menu&quot;&gt;
+            &lt;ul&gt;
+                &lt;?php foreach ($site-&gt;children()-&gt;listed()   as $item): ?&gt;
+                &lt;li&gt;&lt;a href=&quot;&lt;?= $item-&gt;url()?&gt;&quot;&gt;&lt;?= $item-&gt;title() ?&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;?php endforeach ?&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main class=&quot;main&quot;&gt;
+        &lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;
+        &lt;?= $page-&gt;text() ?&gt;
+    &lt;/main&gt;
+
+    &lt;footer class=&quot;footer&quot;&gt;
+        &lt;a href=&quot;https://instagram.com/&lt;?= $site-&gt;twitter() ?&gt;&quot;&gt;instagram&lt;/a&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+       <div>
+           <h1>Creating a Blueprint</h1>
+           <p>you have to set up a pages section in your page or site blueprint, with the status set to <code>draft</code> or <code>all</code>.</p>
+           <p>blueprints can be found in <code>site</code> > <code>blueprints</code> > <code>pages</code></p>
+           <img src="images/cms-12.png" alt="" width="800px">
+       </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <h1>snippets</h1>
+        <p>how do we create additional templates?</p>
+        <p>projects folder and rename <code>default.txt</code> to <code>projects.txt</code></p>
+        <pre><code>
+title: Projects Page
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      fields:
+        type: fields
+        fields:
+          text:
+            type: textarea
+            size: huge
+  sidebar:
+    width: 1/3
+    sections:
+      pages:
+        type: pages
+        template: project
+      files:
+        type: files
+        </code></pre>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <p>for every project, make sure to include this file to make sure that your page loads the corresponding template</p>
+        <p>as sites become more complex, adding new blocks of code to templates can become repetitive and risks error when editing code.</p>
+        <p>lets edit the <code>defaut.php</code> file to be less redundant</p>
+        <p>copy the <code>&lt;head&gt;</code> and <code>&lt;header&gt;</code>in the html of the <code>default.php</code> file and copy it into a new file in the snippets folder in a file named <code>header.php</code></p>
+        <pre><code>&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;&lt;?= $site-&gt;title() ?&gt;&lt;/title&gt;
+
+    &lt;?= css('assets/css/styles.css') ?&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header class=&quot;header&quot;&gt;
+        &lt;a class=&quot;logo&quot; href=&quot;&lt;?= $site-&gt;url() ?&gt;&quot;&gt;&lt;?= $site-&gt;title() ?&gt;&lt;/a&gt;
+
+        &lt;nav class=&quot;menu&quot;&gt;
+            &lt;ul&gt;
+                &lt;?php foreach ($site-&gt;children()-&gt;listed()   as $item): ?&gt;
+                &lt;li&gt;&lt;a href=&quot;&lt;?= $item-&gt;url()?&gt;&quot;&gt;&lt;?= $item-&gt;title() ?&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;?php endforeach ?&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;</code></pre>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <p>kirby has a method called snippet where you can include the code from the header at the top of the <code>default.php</code> file</p>
+        <code>&lt;?php snippet('header') ?&gt;</code>
+        <p>Add this to the top of the file and you now have a shorter way to include repetitive code in templates for parts of code that is used very often. This is also great so that you wont have to go back into other templates and change updates all the time. This is where errors and continuity in your site can become broken</p>
+        <p>do the same thing for the footer</p>
+        <code>&lt;?php snippet('footer') ?&gt;</code>
+        <p>and the menu and place in header.php</p>
+        <code>&lt;?php snippet('menu') ?&gt;</code>
+    </div>
+</div>
+
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>How to add a grid of projects</h1>
+            <p>in <code>projects.php</code> copy and paste the code from the nav section into the main section</p>
+            <pre><code>&lt;?php foreach ($site-&gt;children()-&gt;listed()   as $item): ?&gt;
+                &lt;li&gt;&lt;a href=&quot;&lt;?= $item-&gt;url()?&gt;&quot;&gt;&lt;?= $item-&gt;title() ?&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;?php endforeach ?&gt;</code></pre>
+            </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>replace $item with <code>$project</code></p>
+            <pre><code>&lt;main class=&quot;main&quot;&gt;
+            &lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;
+            &lt;ul&gt;
+                &lt;?php foreach ($site-&gt;children()-&gt;listed()   as $project): ?&gt;
+                &lt;li&gt;
+            &lt;a href=&quot;&lt;?= $project-&gt;url()?&gt;&quot;&gt;&lt;?= $project-&gt;title() ?&gt;&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;?php endforeach ?&gt;
+            &lt;ul&gt;
+            &lt;/main&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>edit the <code>&lt;a&gt;</code> tag as such to add a <code>&lt;figure&gt;</code> element, a <code>&lt;caption&gt;</code> , and an <code>&lt;img&gt;</code></p>
+            <pre><code>&lt;a href=&quot;&lt;?= $project-&gt;url()?&gt;&quot;&gt;
+            &lt;figure&gt;
+                &lt;img src=&quot;&quot;&gt;
+                &lt;figcaption&gt;&lt;?= $project-&gt;title() ?&gt;&lt;/figcaption&gt;
+            &lt;/figure&gt;
+            &lt;/a&gt;</code></pre>
+            <p>add this in the figure element</p>
+        <code>&lt;?php $project-&gt;files() ?&gt;</code>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>create a new div with the class of <code>project-layout </code> with an other div with a class of <code>project-info</code> and an other div with a class of <code>project-gallery</code></p>
+            <pre><code>&lt;?php snippet('header') ?&gt;
+
+&lt;main class=&quot;main&quot;&gt;
+    &lt;article&gt;
+        &lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;
+
+        &lt;div class=&quot;project-layout&quot;&gt;
+            &lt;div class=&quot;project-info&quot;&gt;
+                                &lt;?= $page-&gt;text() ?&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;project-gallery&quot;&gt;
+                            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;?php snippet('footer') ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>inside <code>project-gallery</code></p>
+            <pre><code>
+            &lt;ul&gt;
+            &lt;?php foreach ($page-&gt;images() as $image): ?&gt; 
+        &lt;li&gt;
+            &lt;a href=&quot;&lt;?= $image-&gt;url() ?&gt;&quot;&gt;
+                &lt;?= $image ?&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+            &lt;?php endforeach ?&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+            </code></pre>
+        <p>resize the image to make sure it doesnt get bigger than x amount of pixels in eight and width dimensionas</p>
+        <pre><code>&lt;?= $image-&gt;resize(1200, 1200) ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>inside project-info you can add input for data</p>
+            <pre><code>&lt;dl&gt;
+&lt;dt&gt;Title&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;
+
+&lt;dt&gt;Date&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                <p>to this:</p>
+                <pre><code>&lt;dl&gt;
+    &lt;dt&gt;Title&lt;/dt&gt;
+    &lt;dd&gt;&lt;?= $page-&gt;date() ?&gt;&lt;/dd&gt;
+
+    &lt;dt&gt;Date&lt;/dt&gt;
+    &lt;dd&gt;&lt;?= $page-&gt;client() ?&gt;&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>add this to make the link not show up if empty</p>
+            <pre><code>&lt;?php if ($page-&gt;text()-&gt;isNotEmpty()): ?&gt;
+&lt;div class=&quot;project-info&quot;&gt;
+    &lt;div class=&quot;project-text&quot;&gt;
+        &lt;?= $page-&gt;text() ?&gt;
+    &lt;/div&gt;
+    &lt;?php endif ?&gt;
+
+    &lt;dl&gt;
+        &lt;?php if ($page-&gt;text()-&gt;isNotEmpty()): ?&gt;
+        &lt;dt&gt;Title&lt;/dt&gt;
+        &lt;dd&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/dd&gt;
+        &lt;?php endif ?&gt;
+        
+        &lt;?php if ($page-&gt;text()-&gt;isNotEmpty()): ?&gt;
+        &lt;dt&gt;Date&lt;/dt&gt;
+        &lt;dd&gt;&lt;?= $page-&gt;date() ?&gt;&lt;/dd&gt;
+        &lt;?php endif ?&gt;
+        
+        &lt;?php if ($page-&gt;text()-&gt;isNotEmpty()): ?&gt;
+        &lt;dt&gt;Link&lt;/dt&gt;
+        &lt;dd&gt;&lt;?= $page-&gt;link() ?&gt;&lt;/dd&gt;
+        &lt;?php endif ?&gt;
+    &lt;/dl&gt;</code></pre>
+        </div>
+    </div>
+</div>
+
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>add hyperlink for link</p>
+            <code>&lt;dd&gt;&lt;a href=&quot;&lt;?= $page-&gt;link() ?&gt; &quot;&gt;&lt;?= $page-&gt;link() ?&gt;&lt;/a&gt;&lt;/dd&gt;</code>
+            <p>make the css show up for project page and put this in <code>header.php</code></p>
+            <code>&lt;?= css('@auto') ?&gt;</code>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <p>the css</p>
+        <pre><code>.project-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 6rem;
+}
+
+.project-info{
+    line-height: 1.5rem;
+    min-width: 400px;
+}
+
+.project-text {
+    margin-bottom: 1.5rem;
+}
+
+.project-info dt {
+    font-weight: bold;
+}
+
+.project-info dd{
+    margin: 0;
+}
+
+.project-gallery ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    grid-gap: 1.5rem;
+    margin: 0;
+}
+
+.project-gallery li:first-child{
+    grid-column-start: 1;
+    grid-column-end: -1;
+
+}
+    
+.project-gallery img {
+    width: 100%;
+}</code></pre>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Blueprints</h1>
+            <p>Customize blueprints for the project page</p>
+            <p>go to<code> projects.yml</code> and replace it with </p>
+            <pre><code>title: Projects
+
+sections:
+    projects:
+    type: pages</code></pre>
+                <p>use this to add a cards layout</p>
+                <code>layout: cards</code>
+                <p>and this</p>
+                <pre><code>image:
+    ratio: 4/5
+    cover: true</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>you can move around your projects and it will change the order in the file folders with a sorting number</p>
+            <p>now lets edit the individual project page</p>
+            <pre><code>title: Project
+sections:
+  info:
+    type: fields
+  gallery:
+    type: files
+    layout: cards
+    image:
+      ratio: 1/1</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>add fields to create a form</p>
+            <pre><code>title: Project
+
+sections:
+  info:
+    type: fields
+    fields:
+      year:
+        type: number
+      link:
+        type: url
+      text:
+        type: textarea
+
+  gallery:
+    type: files
+    layout: cards
+    image:
+      ratio: 1/1</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>now you can change the data that is input into the panel and it will change the text file</p>
+            <p>to make the page have two columns</p>
+            <pre><code>title: Project
+
+columns:
+    - width: 1/2
+    sections:
+        info:
+        type: fields
+        fields:
+            year:
+            type: number
+            link:  
+            type: url
+                    text:
+            type: textarea
+    
+    - width: 1/2 
+    sections:
+        gallery:
+        type: files
+        layout: cards
+        image:
+            ratio: 1/1</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>you can make the content into a grid to make the forms  a bit easier to fill out with the width property</p>
+            <pre><code>title: Project
+
+columns:
+    - width: 1/2
+    sections:
+        info:
+        type: fields
+        fields:
+            year:
+            type: number
+            width: 1/2
+            link:  
+            type: url
+            width: 1/2
+            description:
+            type: textarea
+    
+    - width: 1/2 
+    sections:
+        gallery:
+        type: files
+        layout: cards
+        image:
+            ratio: 1/1</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>give helpful information for a user to fill out form</p>
+            <pre><code>title: Project
+
+columns:
+  - width: 1/2
+    sections:
+      info:
+        type: fields
+        fields:
+          year:
+            type: number
+            width: 1/2
+            help: year that the project was created
+          link:  
+            type: url
+            width: 1/2
+            help: link to the project
+          description:
+            type: textarea
+            help: description about the project
+   
+  - width: 1/2 
+    sections:
+      gallery:
+        type: files
+        layout: cards
+        image:
+          ratio: 1/1</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>can explain more about the fields by placing text before input</p>
+            <code>before: Finished</code>
+            <p>or</p>
+            <code>after: </code>
+            <p>make a field required</p>
+            <code>required: true</code>
+            <p>make a max length of characters</p>
+            <code>maxlength:</code>
+            <p>min for a numerical value</p>
+            <code>min: </code>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>add categories for your projects</p>
+            <pre><code>category:
+type: select
+options:
+    - writing
+    - net art
+    - research</code></pre>
+                <p>and tags</p>
+                <pre><code>tags:
+    type: tags
+    width: 1/2</code></pre>
+                    <p>more field types at<a href="https://getkirby.com/docs/guide/blueprints/fields">https://getkirby.com/docs/guide/blueprints/fields</a></p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>custom field plugin if you want to connect with a databases with <a href="https://getkirby.com/plugins/sylvainjule/locator">maps (locator)</a> </p>
+            <p>download plugin, make a folder named plugin in site folder, and then place locator plugin into the folder</p>
+            <pre><code>locator:
+    type: locator</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>final <code>project.yml</code></p>
+            <pre><code>Title: Project
+
+columns:
+  - width: 1/2
+    sections:
+      info:
+        type: fields
+        fields:
+          year:
+            type: number
+            width: 1/2
+            help: year that the project was created
+          link:  
+            type: url
+            width: 1/2
+            help: link to the project
+          category:
+            type: select
+            options:
+              - writing
+              - net art
+              - research
+            width: 1/2
+          tags:
+            type: tags
+            width: 1/2
+          locator:
+            type: locator
+          description:
+            type: textarea
+            help: description about the project
+   
+  - width: 1/2 
+    sections:
+      gallery:
+        type: files
+        layout: cards
+        image:
+          ratio: 1/1
+            </code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Asset Management</h1>
+            <p>images are stored individually in your page folders instead of global asset folder</p>
+            <p>can delete images and reupload, show how they appear in the folder and look at the txt file</p>
+            <p>make a folder in the <code>blueprints</code> folder called <code>files</code> and make a <code>default.yml</code> file</p>
+            <p>the link between the image file is connected and cannot be contained like the other project templates and blueprints (<code>project.php</code>, <code>project.yml</code>, <code>project.txt</code> )</p>
+            <p>make a new template in files called <code>gallery-image.yml</code> and place </p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>in each image .txt file</p>
+            <code>Template: gallery-image</code>
+            <p>in <code>gallery-image.yml</code></p>
+            <pre><code>title: Gallery Image
+
+fields:
+  alt:
+    type: text
+    width: 1/2
+  caption:
+    type: text
+    width: 1/2
+  credit:
+    type: text
+    width: 1/2
+  license:
+    type: text
+    width: 1/2</code></pre>
+    <p>in individual image <code>.txt</code> files, the template should show up in the image page</p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>in projects add  <code>template: gallery-image</code>  in <code>blueprints</code> > <code>pages</code> > <code>project.yml</code></p>
+            <code>title: Project
+
+columns:
+  - width: 1/2
+    sections:
+      info:
+        type: fields
+        fields:
+          year:
+            type: number
+            width: 1/2
+            help: year that the project was created
+          link:  
+            type: url
+            width: 1/2
+            help: link to the project
+          category:
+            type: select
+            options:
+              - writing
+              - net art
+              - research
+            width: 1/2
+          tags:
+            type: tags
+            width: 1/2
+          locator:
+            type: locator
+          description:
+            type: textarea
+            help: description about the project
+   
+  - width: 1/2 
+    sections:
+      gallery:
+        type: files
+        layout: cards
+        template: gallery-image
+        image:
+          ratio: 1/1</code>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>lets take a look at how our images are created </p>
+            <pre><code>&lt;div class=&quot;project-gallery&quot;&gt;
+    &lt;ul&gt;
+    &lt;?php foreach ($page-&gt;images() as $image): ?&gt; 
+        &lt;li&gt;
+            &lt;a href=&quot;&lt;?= $image-&gt;url() ?&gt;&quot;&gt;
+                &lt;?= $image-&gt;resize(1200, 1200) ?&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;?php endforeach ?&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>edit to this to include alt text</p>
+            <pre><code>&lt;li&gt;
+    &lt;a href=&quot;&lt;?= $image-&gt;url() ?&gt;&quot;&gt;
+    &lt;img
+        src= &quot;&lt;?= $image-&gt;resize(1200, 1200) -&gt;url()?&gt;&quot;
+        alt=&quot;&lt;?= $image-&gt;alt() ?&gt;&quot; 
+    &gt;       
+    &lt;/a&gt;
+&lt;/li&gt;</code></pre>
+                <pre><code>----
+
+Template: gallery-image</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>add figure and figcaption tags </p>
+            <pre><code>&lt;li&gt;
+  &lt;figure&gt;
+      &lt;a href=&quot;&lt;?= $image-&gt;url() ?&gt;&quot;&gt;
+      &lt;img
+          src= &quot;&lt;?= $image-&gt;resize(1200, 1200) -&gt;url()?&gt;&quot;
+          alt=&quot;&lt;?= $image-&gt;alt() ?&gt;&quot; 
+      &gt;       
+      &lt;/a&gt;
+      &lt;figcaption&gt;&lt;?= $image-&gt;caption() ?&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;/li&gt;</code></pre>
+                <p>css</p>
+                <pre><code>figure {
+    margin: 0;
+}</code></pre>
+            <p>possible additions to the blueprint</p>
+            <pre><code>size: tiny 
+info: "{{ file.alt}}" 
+# info: "{{ file.dimensions}}" 
+# help: 
+min: 1
+max: 10</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>in <code>image-gallery.yml</code> add <code>accept: image/png, image/jpeg</code></p>
+            <pre><code>title: Gallery Image
+
+accept: image/png, image/jpeg
+
+fields:
+  alt:
+    type: text
+    width: 1/2
+  caption:
+    type: text
+    width: 1/2
+  credit:
+    type: text
+    width: 1/2
+  license:
+    type: text
+    width: 1/2</code></pre>
+                <p>or take it further with </p>
+                <pre><code>accept:
+  mime: image/*
+  orientation: landscape
+  maxwidth: 1200
+  minwidth: 1200</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Pagination</h1>
+            <p>in <code>projects.php</code> add <code>->paginate(3</code>)</p>
+            <code>&lt;?php foreach ($page-&gt;children()-&gt;listed()-&gt;paginate(3) as $project): ?&gt;</code>
+            <p>then you can see that your page has up to 3 projects on each page</p>
+            <p>you can use <code>http://localhost:8000/projects/page:2</code> to look at the next page</p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>add arrows</h1>
+            <p>add this to the line above <code>$projects =</code></p>
+            <code>&lt;?php foreach ($projects = $page-&gt;children()-&gt;listed()-&gt;paginate(3) as $project): ?&gt;</code>
+            <p>and add a nav with arrows</p>
+            <pre><code>&lt;nav&gt;
+  &lt;a href=&quot;&lt;?= $projects-&gt;pagination()-&gt;prevPageUrl() ?&gt;&quot;&gt;&amp;larr;&lt;/a&gt;
+  &lt;a href=&quot;&lt;?= $projects-&gt;pagination()-&gt;nextPageUrl() ?&gt;&quot;&gt;&amp;rarr;&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+                <p>this will make it so you can flip through pages</p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>clean up code by making new <code>$projects</code> and <code>$pagination</code> variables</p>
+            <pre><code>&lt;?php
+
+$projects = $page-&gt;children()-&gt;listed()-&gt;paginate(3)
+$pagination = $projects-&gt;pagination()
+
+?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>and your code should now look like this</p>
+            <pre><code>&lt;?php snippet('header') ?&gt;
+
+&lt;?php
+
+$projects = $page-&gt;children()-&gt;listed()-&gt;paginate(3)
+$pagination = $projects-&gt;pagination()
+
+?&gt;
+
+    &lt;main class=&quot;main&quot;&gt;
+        &lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;
+        &lt;ul class=&quot;projects&quot;&gt;
+            &lt;?php foreach ($projects as $project): ?&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;&lt;?= $project-&gt;url()?&gt;&quot;&gt;
+                    &lt;figure&gt;
+                        &lt;?= $project-&gt;image()-&gt;crop(400) ?&gt;
+                        &lt;figcaption&gt;&lt;?= $project-&gt;title() ?&gt;&lt;/figcaption&gt;
+                    &lt;/figure&gt;
+                &lt;/a&gt; 
+            &lt;/li&gt;
+            &lt;?php endforeach ?&gt;
+        &lt;/ul&gt;
+        &lt;nav&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;prevPageUrl() ?&gt;&quot;&gt;&amp;larr;&lt;/a&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;nextPageUrl() ?&gt;&quot;&gt;&amp;rarr;&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/main&gt;
+
+ &lt;?php snippet('footer') ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>we want to switch off the arrow on the first and last page so we add if clauses</p>
+            <pre><code>&lt;nav&gt;
+    &lt;?php if ($pagination-&gt;hasPrevPage()): ?&gt;
+    &lt;a href=&quot;&lt;?= $pagination-&gt;prevPageUrl() ?&gt;&quot;&gt;&amp;larr;&lt;/a&gt;
+    &lt;?php endif ?&gt;
+    &lt;?php if ($pagination-&gt;hasNextPage()): ?&gt;
+    &lt;a href=&quot;&lt;?= $pagination-&gt;nextPageUrl() ?&gt;&quot;&gt;&amp;rarr;&lt;/a&gt;
+    &lt;?php endif ?&gt;
+&lt;/nav&gt;</code></pre>
+                <p>in css</p>
+                <pre><code>.pagination {
+    display: flex;
+    justify-content: space-between;
+}</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>to fix the arrows when there is only one</p>
+            <pre><code>&lt;?php if ($pagination-&gt;hasPrevPage()): ?&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;prevPageUrl() ?&gt;&quot;&gt;&amp;larr;&lt;/a&gt;
+            &lt;?php endif ?&gt;
+            &lt;?php if ($pagination-&gt;hasNextPage()): ?&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;nextPageUrl() ?&gt;&quot;&gt;&amp;rarr;&lt;/a&gt;
+            &lt;?php endif ?&gt;</code></pre>
+            <p>add else clause to add an inactive link for the ends</p>
+            <pre><code>&lt;?php if ($pagination-&gt;hasPrevPage()): ?&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;prevPageUrl() ?&gt;&quot;&gt;&amp;larr;&lt;/a&gt;
+            &lt;?php else: ?&gt;
+            &lt;span&gt;&amp;larr;&lt;/span&gt;
+            &lt;?php endif ?&gt;
+            &lt;?php if ($pagination-&gt;hasNextPage()): ?&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;nextPageUrl() ?&gt;&quot;&gt;&amp;rarr;&lt;/a&gt;
+            &lt;?php else: ?&gt;
+            &lt;span&gt;&amp;rarr;&lt;/span&gt;
+            &lt;?php endif ?&gt;</code></pre>
+            <p>and gray out the inactive link</p>
+            <pre><code>.pagination span {
+    color: #999;
+}</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>to hide arrows if a page doesnt need arrows, wrap <nav> element with </p>
+            <pre><code>&lt;?php if ($pagination-&gt;hasPages()): ?&gt;
+
+&lt;?php endif ?&gt;</code></pre>
+                <p>so</p>
+                <pre><code>&lt;?php if ($pagination-&gt;hasPages()): ?&gt;
+        &lt;nav class=&quot;pagination&quot;&gt;
+            &lt;?php if ($pagination-&gt;hasPrevPage()): ?&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;prevPageUrl() ?&gt;&quot;&gt;&amp;larr;&lt;/a&gt;
+            &lt;?php else: ?&gt;
+            &lt;span&gt;&amp;larr;&lt;/span&gt;
+            &lt;?php endif ?&gt;
+            &lt;?php if ($pagination-&gt;hasNextPage()): ?&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;nextPageUrl() ?&gt;&quot;&gt;&amp;rarr;&lt;/a&gt;
+            &lt;?php else: ?&gt;
+            &lt;span&gt;&amp;rarr;&lt;/span&gt;
+            &lt;?php endif ?&gt;
+        &lt;/nav&gt;
+&lt;?php endif ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>how to add current page number</p>
+            <p>add to the middle of the arrows</p>
+            <code>&lt;span&gt;Page &lt;?= $pagination-&gt;page() ?&gt; of &lt;?= $pagination-&gt;pages() ?&gt;&lt;/span&gt;</code>
+            <p>so</p>
+            <pre><code>&lt;?php if ($pagination-&gt;hasPages()): ?&gt;
+        &lt;nav class=&quot;pagination&quot;&gt;
+            &lt;?php if ($pagination-&gt;hasPrevPage()): ?&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;prevPageUrl() ?&gt;&quot;&gt;&amp;larr;&lt;/a&gt;
+            &lt;?php else: ?&gt;
+            &lt;span&gt;&amp;larr;&lt;/span&gt;
+            &lt;?php endif ?&gt;
+
+            &lt;span&gt;Page &lt;?= $pagination-&gt;page() ?&gt; of &lt;?= $pagination-&gt;pages() ?&gt;&lt;/span&gt;
+
+            
+            &lt;?php if ($pagination-&gt;hasNextPage()): ?&gt;
+            &lt;a href=&quot;&lt;?= $pagination-&gt;nextPageUrl() ?&gt;&quot;&gt;&amp;rarr;&lt;/a&gt;
+            &lt;?php else: ?&gt;
+            &lt;span&gt;&amp;rarr;&lt;/span&gt;
+            &lt;?php endif ?&gt;
+        &lt;/nav&gt;
+        &lt;?php endif ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Create a filter menu</h1>
+            <p>in <code>projects.php</code> add <code>&lt;small&gt;&lt;?= $project-&gt;category() ?&gt;&lt;/small&gt;</code> </p>
+            <pre><code>&lt;figure&gt;
+    &lt;?= $project-&gt;image()-&gt;crop(400) ?&gt;
+    &lt;figcaption&gt;
+        &lt;?= $project-&gt;title() ?&gt;&lt;br&gt;
+        &lt;small&gt;&lt;?= $project-&gt;category() ?&gt;&lt;/small&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                <p>to create a filter of projects by category, see this <code>filterBy()</code> where the first argument is the field and and the value as a the second argument</p>
+                <pre><code>$projects = $page
+    -&gt;children()
+    -&gt;listed()
+    -&gt;filterBy('category', 'research')
+    -&gt;paginate(2);</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>to create a url that makes the filter</p>
+            <pre><code>$filterBy = get('filter');
+
+$projects = $page
+    -&gt;children()
+    -&gt;listed()
+    -&gt;filterBy('category', $filterBy)
+    -&gt;paginate(2);</code></pre>
+                <p>then you can see the link to either filter at <a href="http://localhost:8000/projects/?filter=research">http://localhost:8000/projects/?filter=research</a></p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>to show all with no filter add <code>→when </code></p>
+            <pre><code>$filterBy = get('filter');
+
+$projects = $page
+    -&gt;children()
+    -&gt;listed()
+    -&gt;when($filterBy, function($filterBy) {
+        return $this-&gt;filterBy('category', $filterBy);
+    })
+    -&gt;paginate(10);</code></pre>
+        <p>add <code>&lt;nav&gt;</code> section</p>
+        <pre><code>&lt;nav&gt;
+    &lt;a href=&quot;&lt;?= $page-&gt;url() ?&gt;?filter=writing&quot;&gt;writing&lt;/a&gt;
+    &lt;a href=&quot;&lt;?= $page-&gt;url() ?&gt;?filter=net art&quot;&gt;net art&lt;/a&gt;
+    &lt;a href=&quot;&lt;?= $page-&gt;url() ?&gt;?filter=research&quot;&gt;research&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>add <code>class="filter”</code> and add this css</p>
+            <pre><code>.filter{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.filter a {
+    padding: .5rem 1rem;
+    background: #000;
+    color: #fff;
+    margin-right: .5rem;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.filter a[aria-content]{
+    background: blue;
+}</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>in order to make this dynamic and not hardcoded lets add this</p>
+            <pre><code>&lt;?php
+
+$filterBy = get('filter');
+$unfiltered = $page-&gt;children-&gt;listed()
+$projects = $unfiltered
+    -&gt;when($filterBy, function($filterBy) {
+        return $this-&gt;filterBy('category', $filterBy);
+    })
+    -&gt;paginate(10);
+
+
+$pagination = $projects-&gt;pagination();
+$filters = $page-&gt;pluck('category');
+
+?&gt;
+
+    &lt;main class=&quot;main&quot;&gt;
+        &lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;
+
+        &lt;nav class=&quot;filter&quot;&gt;
+            &lt;a href=&quot;&lt;?= $page-&gt;url() ?&gt;&quot;&gt;all&lt;/a&gt;
+            &lt;?php foreach ($filters as $filter): ?&gt;
+            &lt;a href=&quot;&lt;?= $page-&gt;url() ?&gt;?filter=&lt;?= $filter ?&gt;&quot;&gt;&lt;?= $filter ?&gt;&lt;/a&gt;
+            &lt;?php endforeach ?&gt;
+        &lt;/nav&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>then add the 'code' variable</p>
+            <pre><code>$filterBy = get('filter');
+$unfiltered = $page->children()->listed();
+$projects = $unfiltered
+    ->when($filterBy, function($filterBy) {
+        return $this->filterBy('category', $filterBy);
+    })
+    ->paginate(10);
+
+
+$pagination = $projects->pagination();
+
+$filters = $unfiltered->pluck('category');</code></pre>
+    <p>to make a unique</p>
+    <code>$filters = $unfiltered-&gt;pluck('category', null, true);</code>
+    <p>two more arguments, second argument isn’t useful so we put null and the third argument is should it be unique or not which is true</p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>controllers</h1>
+            <p>create a folder called controllers in the site folder and make a <code>projects.php</code> file</p>
+            <pre><code>&lt;?php
+
+return function () {
+
+    return [
+        'message' =&gt; 'Hello World'
+    ];
+};</code></pre>
+            <p>replace title in the template <code>projects.php</code> file</p>
+            <code>&lt;h1&gt;&lt;?= $message ?&gt;&lt;/h1&gt;</code>
+            <p>then, change it back because we are going to clean up our template with controllers by taking out the top section after header and placing this code in the new projects.php controller file</p>
+            <pre><code>&lt;?php
+
+return function ($page) {
+
+    $filterBy = get('filter');
+    $unfiltered = $page-&gt;children()-&gt;listed();
+    $projects = $unfiltered
+    -&gt;when($filterBy, function($filterBy) {
+        return $this-&gt;filterBy('category', $filterBy);
+    })
+    -&gt;paginate(10);
+
+
+    $pagination = $projects-&gt;pagination();
+    $filters = $unfiltered-&gt;pluck('category', null , true);
+
+        return [
+            'filterBy' =&gt; $filterBy,
+            'unfiltered' =&gt; $unfiltered,
+            'projects' =&gt; $projects,
+            'pagination' =&gt; $pagination,
+            'filters' =&gt; $filters
+        ];
+    };</code></pre>
+        </div>
+    </div>
+</div>
+
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>make the pagination block a new snippet and place this code from the projects.php in templates to a pagination.php in snippets</p>
+            <pre><code>&lt;?php if ($pagination-&gt;hasPages()): ?&gt;
+&lt;nav class=&quot;pagination&quot;&gt;
+    &lt;?php if ($pagination-&gt;hasPrevPage()): ?&gt;
+    &lt;a href=&quot;&lt;?= $pagination-&gt;prevPageUrl() ?&gt;&quot;&gt;&amp;larr;&lt;/a&gt;
+    &lt;?php else: ?&gt;
+    &lt;span&gt;&amp;larr;&lt;/span&gt;
+    &lt;?php endif ?&gt;
+
+    &lt;span&gt;Page &lt;?= $pagination-&gt;page() ?&gt; of &lt;?= $pagination-&gt;pages() ?&gt;&lt;/span&gt;
+
+
+    &lt;?php if ($pagination-&gt;hasNextPage()): ?&gt;
+    &lt;a href=&quot;&lt;?= $pagination-&gt;nextPageUrl() ?&gt;&quot;&gt;&amp;rarr;&lt;/a&gt;
+    &lt;?php else: ?&gt;
+    &lt;span&gt;&amp;rarr;&lt;/span&gt;
+    &lt;?php endif ?&gt;
+&lt;/nav&gt;
+&lt;?php endif ?&gt;</code></pre>
+                <p>then add this to projects.php</p>
+                <code>&lt;?php snippet('pagination') ?&gt;</code>
+                <p>the snippet will automatically know about the pagination variable because we have made it available using controllers</p>
+        </div>
+    </div>
+</div>
+
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Collections</h1>
+            <p>Make a snippet file named projects.php and copy this from the template in</p>
+            <pre><code>&lt;ul class=&quot;projects&quot;&gt;
+    &lt;?php foreach ($projects as $project): ?&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;&lt;?= $project-&gt;url()?&gt;&quot;&gt;
+            &lt;figure&gt;
+                &lt;?= $project-&gt;image()-&gt;crop(400) ?&gt;
+                &lt;figcaption&gt;
+                    &lt;?= $project-&gt;title() ?&gt;&lt;br&gt;
+                    &lt;small&gt;&lt;?= $project-&gt;category() ?&gt;&lt;/small&gt;
+                &lt;/figcaption&gt;
+            &lt;/figure&gt;
+        &lt;/a&gt; 
+    &lt;/li&gt;
+    &lt;?php endforeach ?&gt;
+&lt;/ul&gt;</code></pre>
+                <p>You will get an error because we defined $projects in a controller that is passing it through into the projects template but not the home template</p>
+                <p>So we can create a home.php controller but we can also inject it manually with an array directly in the snippet </p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>in <code>home.php</code></p>
+            <pre><code>&lt;?php snippet('header') ?&gt;
+
+&lt;main class=&quot;main&quot;&gt;
+    &lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;
+    &lt;?= $page-&gt;text() ?&gt;
+    &lt;?php snippet('projects', [
+        'projects' =&gt; page('projects')-&gt;children()
+        -&gt;listed()
+        -&gt;shuffle()
+        -&gt;limit(3)
+    ]) ?&gt;
+
+&lt;/main&gt;
+
+&lt;?php snippet('footer') ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>create a collections folder in site folder and make a <code>projects.php</code> file and write</p>
+            <pre><code>&lt;?php 
+
+return function() {
+   return page('projects')
+        -&gt;children()
+        -&gt;listed();
+};</code></pre>
+            <p>and take out </p>
+            <pre><code>page('projects')
+        ->children()
+        ->listed();</code></pre>
+                <p>from home.php</p>
+                <p>and add this to projects.php controller</p>
+                <code>$unfiltered = collection('projects');</code>
+                <p>now you can always use this when you are referring to your collection of projects where you need to filter by a certain property</p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Snippets with Slots</h1>
+            <p>you can create ways to pass information into variables with slots </p>
+            <p>in your <code>default.php</code>, lets make a pop up window. add this</p>
+            <pre><code>&lt;div class=&quot;alert&quot;&gt;
+    &lt;?= $slot ?&gt;
+
+    &lt;button type=&quot;button&quot;&gt;close&lt;/button&gt;
+    
+&lt;/div&gt;</code></pre>
+                <p>and in your snippets folder, make a snippet called <code>alert.php</code> with this code</p>
+                <p>to define your own variable we can use the <code>$slots</code> variable </p>
+                <code>&lt;button type=&quot;button&quot;&gt;&lt;?= $slots-&gt;button() ?&gt;&lt;/button&gt;</code>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>and we can edit in <code>default.php</code> here</p>
+            <pre><code>&lt;?php snippet('alert', slots: true) ?&gt;
+
+    &lt;?php slot('default') ?&gt;
+    &lt;h2&gt;hi there, welcome to my homepage&lt;/h2&gt;
+    &lt;?php endslot() ?&gt;
+
+    &lt;?php slot('button') ?&gt;
+    close
+    &lt;?php endslot() ?&gt; 
+
+&lt;?php endsnippet() ?&gt;</code></pre>
+
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>lets redefine our homepage using slots in snippets</p>
+            <p>usually we would start our documents like this</p>
+            <pre><code>&lt;?php snippet('header') ?&gt;
+
+
+&lt;?php snippet('footer') ?&gt;</code></pre>
+                <p>but instead lets use snippets</p>
+                <pre><code>&lt;?php snippet ('layout', slots: true) ?&gt;
+
+
+
+&lt;?php endsnippet() ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>make a new <code>layouts.php</code> file in snippets</p>
+            <pre><code>&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;title&gt;&lt;?= $site-&gt;title() ?&gt;&lt;/title&gt;
+
+        &lt;?= css('assets/css/styles.css') ?&gt;
+        &lt;?= $slots-&gt;head() ?&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+        &lt;header class=&quot;header&quot;&gt;
+            &lt;a class=&quot;logo&quot; href=&quot;&lt;?= $site-&gt;url() ?&gt;&quot;&gt;&lt;?= $site-&gt;title() ?&gt;&lt;/a&gt;
+
+            &lt;?php snippet('menu') ?&gt;
+        &lt;/header&gt;
+
+        &lt;main class=&quot;main&quot;&gt;
+            &lt;?= $slot ?&gt;
+        &lt;/main&gt;
+
+        &lt;footer class=&quot;footer&quot;&gt;
+            &lt;?php if ( $footer = $slots-&gt;footer()): ?&gt;
+                &lt;?= $footer ?&gt;
+            &lt;?php else: ?&gt;
+                &amp;copy; &lt;?= date('Y') ?&gt;
+            &lt;?php endif ?&gt;
+        &lt;/footer&gt;
+
+
+
+    &lt;/body&gt; 
+&lt;/html&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>in default, your content now goes into the main section where it says <code>$slot</code></p>
+            <pre><code>&lt;?php snippet ('layout', slots: true) ?&gt;
+
+welcome to my homepage!
+
+&lt;?php endsnippet() ?&gt;</code></pre>
+                <p>now we can use our slots</p>
+                <pre><code>&lt;?php snippet ('layout', slots: true) ?&gt;
+
+&lt;?php slot('head') ?&gt;
+&lt;!-- this is now in the head --&gt;
+&lt;?php endslot() ?&gt;
+
+&lt;?php slot() ?&gt;
+welcome to my homepage!
+&lt;?php endslot() ?&gt;
+
+&lt;?php endsnippet() ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>now we can see what happens when we style</p>
+            <pre><code>&lt;?php slot('head') ?&gt;
+&lt;style&gt;
+    body {
+        color: red;
+    }
+
+    a{
+        color: red;
+    }
+&lt;/style&gt;
+&lt;?php endslot() ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>lets use this concept when we make an about page</p>
+            <p>go into your panel and add an about page, publish it, and change the default.txt to about.txt</p>
+            <p>make an <code>about.php </code>file in the <code>templates</code> folder</p>
+            <pre><code>&lt;?php snippet ('layout', slots: true) ?&gt;
+
+    &lt;?php snippet('about', slots: true) ?&gt;
+
+
+
+    &lt;?php endsnippet() ?&gt;
+&lt;?php endsnippet() ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>then add slots</p>
+            <pre><code>&lt;?php snippet ('layout', slots: true) ?&gt;
+
+    &lt;?php snippet('about', slots: true) ?&gt;
+
+    &lt;?php slot('title') ?&gt;
+    alexa ann bonomo
+    &lt;?php endslot() ?&gt;
+
+    &lt;?php slot('sidebar') ?&gt;
+    &lt;figure&gt;
+        &lt;p class=&quot;me&quot;&gt;
+            &lt;?= $page-&gt;image() ?&gt;
+        &lt;/p&gt;
+        &lt;figcaption&gt;me in the woods&lt;/figcaption&gt;
+    &lt;?php endslot() ?&gt;
+
+    &lt;?php slot('text') ?&gt;
+        &lt;p&gt;
+            about me text
+        &lt;/p&gt;
+    &lt;?php endslot() ?&gt;
+
+    &lt;?php endsnippet() ?&gt;
+&lt;?php endsnippet() ?&gt;</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>in snippets <code>about.php</code></p>
+            <pre><code>&lt;article&gt;
+    &lt;h1 class=&quot;h1&quot;&gt;&lt;?= $slots-&gt;title() ?? $page-&gt;title() ?&gt;&lt;/h1&gt;
+    &lt;div class=&quot;columns&quot;&gt;
+        &lt;div class=&quot;text&quot;&gt;
+            &lt;?= $slots-&gt;text() ?&gt;
+        &lt;/div&gt;
+        &lt;aside&gt;
+            &lt;?= $slots-&gt;sidebar() ?&gt;
+        &lt;/aside&gt;
+    &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                <p>if you don’t have custom content in the slot, then fallback on what is written in the panel page</p>
+                <code>&lt;h1 class=&quot;h1&quot;&gt;&lt;?= $slots-&gt;title() ?? $page-&gt;title() ?&gt;&lt;/h1&gt;</code>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <p>in css</p>
+            <pre><code>.columns{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.columns img {
+    width: 100%;
+}</code></pre>
+    <p>look at the code snippet slots examples to add cards, codeblocks, or forms if you want</p>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="slide-item summary">
+    <div class="slide-content">
+        <div class="message">
+            <p>All done!</p>
+            <p style="font-size: 100px; font-family: 'ITC Garamond';">In this module,<br>you should have completed:</p>
+        </div>
+        <div class="completed">
+            <ul>
+                <li>What is a CMS?</li>
+                <li>Setting Up the Code Environment</li>
+                <li>CMS Basics</li>
+                <li>Creating Content</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
