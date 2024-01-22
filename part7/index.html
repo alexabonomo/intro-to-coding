@@ -72,7 +72,7 @@
 <div class="slide-item single-col-text" >
     <div class="slide-content">
         <div>
-            <p>Download the <a href="https://getkirby.com/docs/guide/quickstart">starter kit</a> from this link. Place it in your desktop</p>
+            <p>Download the <a href="https://getkirby.com/docs/guide/quickstart">plain kit</a> from this link. Place it in your desktop</p>
             <p><a href="https://brew.sh/">install homebrew</a></p>
             <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
 
@@ -154,7 +154,7 @@
     <div class="slide-content">
         <div>
             <h1>the <code>media</code> folder</h1>
-            <p>as soon as the url of the mile is called in the browser, the file is copied to the media folder</p>
+            <p>as soon as the url of the file is called in the browser, the file is copied to the media folder</p>
             <p>in addition to files and thumbnails, it also stores assets in the folder. it should stay untouched. and when you update Kirby, it is reccomended that the media folder be deleted.</p>
         </div>
     </div>
@@ -193,7 +193,7 @@
             <p>create a projects folder to create your first kirby page</p>
             <p>go to <code>http://localhost:8000/projects</code></p>
             <p>change <code>project/default.txt</code> to <code>projects.txt</code></p>
-            <p>look at <code>project/default.txt</code> , and write</p>
+            <p>look at <code>project/projects.txt</code> , and write</p>
             <pre><code>Title: projects
 
 ----
@@ -294,7 +294,7 @@ Text: these are my projects
             &lt;/main&gt;
             
             &lt;footer class=&quot;footer&quot;&gt;
-                &lt;a href=&quot;https://instagram.com/&lt;?= $site-&gt;twitter() ?&gt;&quot;&gt;instagram&lt;/a&gt;
+                &lt;a href=&quot;https://instagram.com/&lt;?= $site-&gt;instagram() ?&gt;&quot;&gt;instagram&lt;/a&gt;
             &lt;/footer&gt;</code></pre>
         </div>
     </div>
@@ -338,9 +338,7 @@ Text: these are my projects
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
-        
-    </div>
+  
 </div>
 </div><div class="slide-item single-col-text" >
     <div class="slide-content">
@@ -354,39 +352,40 @@ Text: these are my projects
 </div>
 </div><div class="slide-item single-col-text" >
     <div class="slide-content">
-        <h1>snippets</h1>
-        <p>how do we create additional templates?</p>
-        <p>projects folder and rename <code>default.txt</code> to <code>projects.txt</code></p>
-        <pre><code>
-title: Projects Page
-
-columns:
-  main:
-    width: 2/3
-    sections:
-      fields:
-        type: fields
-        fields:
-          text:
-            type: textarea
-            size: huge
-  sidebar:
-    width: 1/3
-    sections:
-      pages:
-        type: pages
-        template: project
-      files:
-        type: files
-        </code></pre>
+        <div>
+            <p>how do we create additional templates?</p>
+            <p>projects folder and rename <code>default.txt</code> to <code>projects.txt</code></p>
+            <pre><code>
+            title: Projects Page
+            
+            columns:
+              main:
+                width: 2/3
+                sections:
+                  fields:
+            type: fields
+            fields:
+              text:
+                type: textarea
+                size: huge
+              sidebar:
+                width: 1/3
+                sections:
+                  pages:
+            type: pages
+            template: project
+                  files:
+            type: files
+            </code></pre>
+        </div>
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
     <div class="slide-content">
-        <p>for every project, make sure to include this file to make sure that your page loads the corresponding template</p>
+        <h1>snippets</h1>
         <p>as sites become more complex, adding new blocks of code to templates can become repetitive and risks error when editing code.</p>
-        <p>lets edit the <code>defaut.php</code> file to be less redundant</p>
-        <p>copy the <code>&lt;head&gt;</code> and <code>&lt;header&gt;</code>in the html of the <code>default.php</code> file and copy it into a new file in the snippets folder in a file named <code>header.php</code></p>
+        <p>lets edit the <code>default.php</code> file to be less redundant</p>
+        <p>copy the <code>&lt;nav&gt;</code> and <code>&lt;header&gt;</code>in the html of the <code>default.php</code> file and copy it into a new file in the snippets folder in a file named <code>header.php</code>, <code>menu.php</code>, and <code>footer.php</code></p>
         <pre><code>&lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
     &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -431,9 +430,9 @@ columns:
     <div class="slide-content">
         <div>
             <h1>How to add a grid of projects</h1>
-            <p>in <code>projects.php</code> copy and paste the code from the nav section into the main section</p>
-            <pre><code>&lt;?php foreach ($site-&gt;children()-&gt;listed()   as $item): ?&gt;
-                &lt;li&gt;&lt;a href=&quot;&lt;?= $item-&gt;url()?&gt;&quot;&gt;&lt;?= $item-&gt;title() ?&gt;&lt;/a&gt;&lt;/li&gt;
+            <p>in templates, copy the <code>default.php</code> and rename it <code>projects.php</code> and copy and paste the code from the nav section into the main section</p>
+            <pre><code>&lt;?php foreach ($page-&gt;children()-&gt;listed()   as $project): ?&gt;
+                &lt;li&gt;&lt;a href=&quot;&lt;?= $project-&gt;url()?&gt;&quot;&gt;&lt;?= $project-&gt;title() ?&gt;&lt;/a&gt;&lt;/li&gt;
             &lt;?php endforeach ?&gt;</code></pre>
             </div>
     </div>
@@ -445,7 +444,7 @@ columns:
             <pre><code>&lt;main class=&quot;main&quot;&gt;
             &lt;h1&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/h1&gt;
             &lt;ul&gt;
-                &lt;?php foreach ($site-&gt;children()-&gt;listed()   as $project): ?&gt;
+                &lt;?php foreach ($page-&gt;children()-&gt;listed()   as $project): ?&gt;
                 &lt;li&gt;
             &lt;a href=&quot;&lt;?= $project-&gt;url()?&gt;&quot;&gt;&lt;?= $project-&gt;title() ?&gt;&lt;/a&gt;
                 &lt;/li&gt;
@@ -465,14 +464,39 @@ columns:
                 &lt;figcaption&gt;&lt;?= $project-&gt;title() ?&gt;&lt;/figcaption&gt;
             &lt;/figure&gt;
             &lt;/a&gt;</code></pre>
-            <p>add this in the figure element</p>
-        <code>&lt;?php $project-&gt;files() ?&gt;</code>
+            <p>add this in the figure element instead of img </p>
+        <code>&lt;?php $project-&gt;image()->url() ?&gt;</code>
         </div>
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
     <div class="slide-content">
         <div>
+            <p>now add a <code>class="projects"</code> to the <code>main</code> element and write this css</p>
+            <pre><code>.projects{
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 3rem;
+}
+
+.projects img{
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.projects figure{
+    margin: 0;
+}</code></pre>
+        </div>
+    </div>
+</div>
+</div><div class="slide-item single-col-text" >
+    <div class="slide-content">
+        <div>
+            <h1>Build a Project Page</p>
             <p>create a new div with the class of <code>project-layout </code> with an other div with a class of <code>project-info</code> and an other div with a class of <code>project-gallery</code></p>
             <pre><code>&lt;?php snippet('header') ?&gt;
 
@@ -520,19 +544,19 @@ columns:
         <div>
             <p>inside project-info you can add input for data</p>
             <pre><code>&lt;dl&gt;
-&lt;dt&gt;Title&lt;/dt&gt;
+&lt;dt&gt;Year&lt;/dt&gt;
 &lt;dd&gt;&lt;/dd&gt;
 
-&lt;dt&gt;Date&lt;/dt&gt;
+&lt;dt&gt;Link&lt;/dt&gt;
 &lt;dd&gt;&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
                 <p>to this:</p>
                 <pre><code>&lt;dl&gt;
-    &lt;dt&gt;Title&lt;/dt&gt;
-    &lt;dd&gt;&lt;?= $page-&gt;date() ?&gt;&lt;/dd&gt;
+    &lt;dt&gt;Year&lt;/dt&gt;
+    &lt;dd&gt;&lt;?= $page-&gt;year() ?&gt;&lt;/dd&gt;
 
-    &lt;dt&gt;Date&lt;/dt&gt;
-    &lt;dd&gt;&lt;?= $page-&gt;client() ?&gt;&lt;/dd&gt;
+    &lt;dt&gt;Link&lt;/dt&gt;
+    &lt;dd&gt;&lt;?= $page-&gt;link() ?&gt;&lt;/dd&gt;
 &lt;/dl&gt;</code></pre>
         </div>
     </div>
@@ -541,29 +565,27 @@ columns:
     <div class="slide-content">
         <div>
             <p>add this to make the link not show up if empty</p>
-            <pre><code>&lt;?php if ($page-&gt;text()-&gt;isNotEmpty()): ?&gt;
+            <pre><code>
 &lt;div class=&quot;project-info&quot;&gt;
-    &lt;div class=&quot;project-text&quot;&gt;
-        &lt;?= $page-&gt;text() ?&gt;
-    &lt;/div&gt;
-    &lt;?php endif ?&gt;
 
     &lt;dl&gt;
-        &lt;?php if ($page-&gt;text()-&gt;isNotEmpty()): ?&gt;
-        &lt;dt&gt;Title&lt;/dt&gt;
+        &lt;?php if ($page-&gt;year()-&gt;isNotEmpty()): ?&gt;
+        &lt;dt&gt;Year&lt;/dt&gt;
         &lt;dd&gt;&lt;?= $page-&gt;title() ?&gt;&lt;/dd&gt;
         &lt;?php endif ?&gt;
         
-        &lt;?php if ($page-&gt;text()-&gt;isNotEmpty()): ?&gt;
-        &lt;dt&gt;Date&lt;/dt&gt;
+        &lt;?php if ($page-&gt;link()-&gt;isNotEmpty()): ?&gt;
+        &lt;dt&gt;Link&lt;/dt&gt;
         &lt;dd&gt;&lt;?= $page-&gt;date() ?&gt;&lt;/dd&gt;
         &lt;?php endif ?&gt;
-        
-        &lt;?php if ($page-&gt;text()-&gt;isNotEmpty()): ?&gt;
-        &lt;dt&gt;Link&lt;/dt&gt;
-        &lt;dd&gt;&lt;?= $page-&gt;link() ?&gt;&lt;/dd&gt;
-        &lt;?php endif ?&gt;
-    &lt;/dl&gt;</code></pre>
+    
+    &lt;/dl&gt;
+
+    &lt;div class=&quot;project-text&quot;&gt;
+    &lt;?php if ($page-&gt;text()-&gt;isNotEmpty()): ?&gt;
+        &lt;?= $page-&gt;text() ?&gt;
+    &lt;?php endif ?&gt;
+    &lt;/div&gt;</code></pre>
         </div>
     </div>
 </div>
@@ -621,6 +643,7 @@ columns:
     
 .project-gallery img {
     width: 100%;
+    height: 100%
 }</code></pre>
     </div>
 </div>
@@ -923,7 +946,7 @@ fields:
     <div class="slide-content">
         <div>
             <p>in projects add  <code>template: gallery-image</code>  in <code>blueprints</code> > <code>pages</code> > <code>project.yml</code></p>
-            <code>title: Project
+            <pre><code>title: Project
 
 columns:
   - width: 1/2
@@ -962,8 +985,13 @@ columns:
         layout: cards
         template: gallery-image
         image:
-          ratio: 1/1</code>
+          ratio: 1/1</code></pre>
         </div>
+    </div>
+</div>
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
@@ -1418,7 +1446,11 @@ return function ($page) {
         </div>
     </div>
 </div>
-
+<div class="slide-item single-col-text" >
+    <div class="slide-content">
+        
+    </div>
+</div>
 </div><div class="slide-item single-col-text" >
     <div class="slide-content">
         <div>
@@ -1757,6 +1789,8 @@ welcome to my homepage!
         </div>
     </div>
 </div>
-
+<div class="back">
+    <a href="../index.html">back</a>
+</div>
 </body>
 </html>
