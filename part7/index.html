@@ -1024,9 +1024,6 @@ columns:
     &gt;       
     &lt;/a&gt;
 &lt;/li&gt;</code></pre>
-                <pre><code>----
-
-Template: gallery-image</code></pre>
         </div>
     </div>
 </div>
@@ -1121,7 +1118,7 @@ fields:
             <p>clean up code by making new <code>$projects</code> and <code>$pagination</code> variables</p>
             <pre><code>&lt;?php
 
-$projects = $page-&gt;children()-&gt;listed()-&gt;paginate(3)
+$projects = $page-&gt;children()-&gt;listed()-&gt;paginate(3);
 $pagination = $projects-&gt;pagination()
 
 ?&gt;</code></pre>
@@ -1136,7 +1133,7 @@ $pagination = $projects-&gt;pagination()
 
 &lt;?php
 
-$projects = $page-&gt;children()-&gt;listed()-&gt;paginate(3)
+$projects = $page-&gt;children()-&gt;listed()-&gt;paginate(3);
 $pagination = $projects-&gt;pagination()
 
 ?&gt;
@@ -1189,7 +1186,7 @@ $pagination = $projects-&gt;pagination()
     <div class="slide-content">
         <div>
             <p>to fix the arrows when there is only one</p>
-            <pre><code>&lt;?php if ($pagination-&gt;hasPrevPage()): ?&gt;
+            <pre><code>&lt;?php if ($pagination-&gt;hasPages()): ?&gt;
             &lt;a href=&quot;&lt;?= $pagination-&gt;prevPageUrl() ?&gt;&quot;&gt;&amp;larr;&lt;/a&gt;
             &lt;?php endif ?&gt;
             &lt;?php if ($pagination-&gt;hasNextPage()): ?&gt;
@@ -1278,7 +1275,7 @@ $pagination = $projects-&gt;pagination()
         &lt;small&gt;&lt;?= $project-&gt;category() ?&gt;&lt;/small&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
-                <p>to create a filter of projects by category, see this <code>filterBy()</code> where the first argument is the field and and the value as a the second argument</p>
+                <p>to create a filter of projects by category, see this <code>filterBy()</code> where the first argument is the field and the value as a the second argument</p>
                 <pre><code>$projects = $page
     -&gt;children()
     -&gt;listed()
@@ -1365,7 +1362,7 @@ $projects = $unfiltered
 
 
 $pagination = $projects-&gt;pagination();
-$filters = $page-&gt;pluck('category');
+$filters = $projects-&gt;pluck('category');
 
 ?&gt;
 
@@ -1607,7 +1604,7 @@ return function() {
 </div><div class="slide-item single-col-text" >
     <div class="slide-content">
         <div>
-            <p>make a new <code>layouts.php</code> file in snippets</p>
+            <p>make a new <code>layout.php</code> file in snippets</p>
             <pre><code>&lt;html lang=&quot;en&quot;&gt;
     &lt;head&gt;
         &lt;meta charset=&quot;UTF-8&quot;&gt;

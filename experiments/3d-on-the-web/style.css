@@ -29,4 +29,26 @@ a:visited {
     color: white;
 }
 
+p{
+    color: white;
+}
+
+.about-container{
+
+    padding-top: 100px;
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about{
+    width: 400px;
+    padding-top: 100px
+}
+
+.back{
+    text-align: center;
+}
+
 

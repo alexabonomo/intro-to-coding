@@ -30,7 +30,7 @@ scene.add(directionalLight);
 let object; // Variable to hold the loaded 3D object
 
 loader.load(
-    'public/perfume.gltf',
+    'public/clock.glb',
     function (gltf) {
         object = gltf.scene;
         scene.add(object);

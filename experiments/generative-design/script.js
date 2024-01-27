@@ -70,9 +70,7 @@ function setup() {
   function trails(){
     trail.push([mouseX, mouseY]);
   for(let i = 0; i < trail.length; i++) {
-  noStroke();
-  fill(255, 20, 189, a);
-//   ellipse(trail[i][0], trail[i][1], 8);
+  
 image(gif, trail[i][0],trail[i][1], 100, 100);
 
     if(a > 255) {
@@ -81,5 +79,6 @@ image(gif, trail[i][0],trail[i][1], 100, 100);
     }
     a += 8;
   }
+  
   console.log(trail.length);
   }
