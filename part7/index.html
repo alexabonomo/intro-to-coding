@@ -209,7 +209,7 @@ Text: these are my projects
         <img src="images/cms-06.png" alt="">
     </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="template">
         <p>creating your first template</p>
         <p>site > templates > default.php</p>
         <img src="images/cms-07.png" alt="" width="800px">
@@ -341,7 +341,7 @@ Text: these are my projects
   
 </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="blueprints">
        <div>
            <h1>Creating a Blueprint</h1>
            <p>you have to set up a pages section in your page or site blueprint, with the status set to <code>draft</code> or <code>all</code>.</p>
@@ -381,7 +381,7 @@ Text: these are my projects
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="snippets">
         <h1>snippets</h1>
         <p>as sites become more complex, adding new blocks of code to templates can become repetitive and risks error when editing code.</p>
         <p>lets edit the <code>default.php</code> file to be less redundant</p>
@@ -427,7 +427,7 @@ Text: these are my projects
 </div>
 
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="grid-of-projects">
         <div>
             <h1>How to add a grid of projects</h1>
             <p>in templates, copy the <code>default.php</code> and rename it <code>projects.php</code> and copy and paste the code from the nav section into the main section</p>
@@ -494,7 +494,7 @@ Text: these are my projects
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="project-page">
         <div>
             <h1>Build a Project Page</p>
             <p>create a new div with the class of <code>project-layout </code> with an other div with a class of <code>project-info</code> and an other div with a class of <code>project-gallery</code></p>
@@ -906,7 +906,7 @@ columns:
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="assets">
         <div>
             <h1>Asset Management</h1>
             <p>images are stored individually in your page folders instead of global asset folder</p>
@@ -1087,7 +1087,7 @@ fields:
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="pagination">
         <div>
             <h1>Pagination</h1>
             <p>in <code>projects.php</code> add <code>->paginate(3</code>)</p>
@@ -1264,7 +1264,7 @@ $pagination = $projects-&gt;pagination()
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="filter">
         <div>
             <h1>Create a filter menu</h1>
             <p>in <code>projects.php</code> add <code>&lt;small&gt;&lt;?= $project-&gt;category() ?&gt;&lt;/small&gt;</code> </p>
@@ -1401,7 +1401,7 @@ $filters = $unfiltered->pluck('category');</code></pre>
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="controllers">
         <div>
             <h1>controllers</h1>
             <p>create a folder called controllers in the site folder and make a <code>projects.php</code> file</p>
@@ -1478,7 +1478,7 @@ return function ($page) {
 </div>
 
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="collections">
         <div>
             <h1>Collections</h1>
             <p>Make a snippet file named projects.php and copy this from the template in</p>
@@ -1547,7 +1547,7 @@ return function() {
     </div>
 </div>
 </div><div class="slide-item single-col-text" >
-    <div class="slide-content">
+    <div class="slide-content" id="slots">
         <div>
             <h1>Snippets with Slots</h1>
             <p>you can create ways to pass information into variables with slots </p>
