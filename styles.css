@@ -10,9 +10,15 @@
     src: url(fonts/ABCDiatype-Light.woff2);
 }
 
+@font-face {
+    font-family: 'ABC Diatype-Italic';
+    src: url(fonts/font-italic.woff);
+    src: url(fonts/font-italic.woff2);
+}
+
 body{
     font-family: 'ITC Garamond';
-    font-size: 8.5rem;
+    font-size: 6.25rem;
     color: black;
 }
 
@@ -27,4 +33,8 @@ a:hover{
 
 a:visited{
     color: black;
+}
+
+em{
+    font-family: 'ABC Diatype-Italic';
 }
